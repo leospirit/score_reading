@@ -1,0 +1,1961 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+{% macro get_level(score) -%}
+    {% if score >= 90 %}Advanced{% elif score >= 80 %}High-Intermediate{% elif score >= 70 %}Intermediate{% elif score >= 60 %}Basic{% else %}Beginner{% endif %}
+{%- endmacro %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>口语评分报告 - {{ meta.student_name or meta.student_id }}</title>
+    <!-- 引入 WaveSurfer.js 和 Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- 引入 Google Fonts (Skill 推荐: Outfit + Work Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Work+Sans:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-ok: #00C853;     /* Green */
+            --color-weak: #FF9100;   /* Orange */
+            --color-missing: #FF1744; /* Red */
+            --color-poor: #AA00FF;    /* Purple */
+            
+            /* Light Theme */
+            --bg-page: #F8FAFC;      /* Skill 建议: Slate-50 冷色调浅灰 */
+            --bg-card: #ffffff;
+            --text-primary: #1E293B; /* Slate-800 */
+            --text-secondary: #64748B; /* Slate-500 */
+            --accent: #2979FF;       /* Blue */
+            
+            /* Gradients */
+            --grad-overall: linear-gradient(135deg, #00E5FF 0%, #2979FF 100%);
+            --grad-pronunciation: linear-gradient(to right, #2979FF, #448AFF);
+            --grad-fluency: linear-gradient(to right, #FF9100, #FFB74D);
+            --grad-intonation: linear-gradient(to right, #00C853, #69F0AE);
+            --grad-completeness: linear-gradient(to right, #AA00FF, #EA80FC);
+            
+            /* Shadows (Soft UI) */
+            --shadow-card: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+            --shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            
+            --font-heading: 'Outfit', sans-serif;
+            --font-body: 'Work Sans', sans-serif;
+            --font-text: 'Inter', sans-serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            background: var(--bg-page);
+            color: var(--text-primary);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        h1, h2, h3, .number, .value, .skill-score {
+            font-family: var(--font-heading);
+        }
+        
+        .container {
+            max-width: 800px; /* 紧凑宽度 */
+            margin: 0 auto;
+        }
+        
+        /* 头部信息 - 极简 */
+        .header {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 16px 24px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow-card);
+            border: 1px solid rgba(0,0,0,0.02);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .header h1 {
+            font-size: 1.2rem; /* 减小标题 */
+            margin-bottom: 0;
+            color: var(--accent);
+        }
+        
+        .meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+        
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .meta-item .label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+            opacity: 0.7;
+        }
+        
+        .meta-item .value {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+        
+        /* 分数区域 - 左右布局 */
+        .scores-section {
+            display: grid;
+            grid-template-columns: 200px 1fr; /* 左侧圆环，右侧分项 */
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        /* 综合评分卡片 */
+        .overall-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: var(--shadow-card);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(0,0,0,0.02);
+            height: 100%;
+        }
+        
+        .ring-container {
+            width: 140px; /* 缩小圆环 */
+            height: 140px;
+            margin-bottom: 10px;
+        }
+        
+        .ring-center .value {
+            font-size: 2rem;
+            margin-bottom: 2px;
+        }
+
+        .overall-feedback {
+            text-align: center;
+        }
+        
+        .overall-feedback h2 {
+            display: none; /* 隐藏标题以节省空间 */
+        }
+        
+        .overall-feedback .level-badge {
+            margin-bottom: 0;
+            padding: 4px 10px;
+            font-size: 0.8rem;
+        }
+        
+        .overall-feedback p {
+            display: none; /* 隐藏长文本建议，单页放不下 */
+        }
+
+        /* 分项评分 - 紧凑网格 */
+        .breakdown-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 16px;
+        }
+        
+        .skill-card {
+            padding: 16px;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .skill-score {
+            font-size: 1.8rem; /* 减小分项分数字号 */
+            margin: 4px 0;
+        }
+        
+        .skill-label {
+            font-size: 0.9rem;
+        }
+        
+        .skill-level {
+            font-size: 0.75rem;
+        }
+        
+        @media (max-width: 768px) {
+            .overall-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 24px;
+            }
+        }
+        
+        .ring-container {
+            position: relative;
+            width: 180px;
+            height: 180px;
+            flex-shrink: 0;
+        }
+        
+        .ring-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        
+        .ring-center .value {
+            font-size: 2.6rem; /* 增大数字 */
+            font-weight: 800;
+            background: var(--grad-overall);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.1;
+            margin-bottom: 4px;
+            letter-spacing: -1px; /* 紧凑一点 */
+        }
+        
+        .ring-center .unit {
+            font-size: 0.65rem; /* 缩小等级文字 */
+            color: var(--text-secondary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px; /* 增加间距 */
+            opacity: 0.8;
+            line-height: 1.2;
+            max-width: 120px; /* 防止文字过长换行难看 */
+            margin: 0 auto;
+        }
+        
+        .overall-feedback {
+            flex: 1;
+        }
+        
+        .overall-feedback h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+        
+        .overall-feedback .level-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(41, 121, 255, 0.1);
+            color: var(--accent);
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+        }
+        
+        .overall-feedback p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            max-width: 600px;
+        }
+        
+        /* 分项评分卡片网格 */
+        .breakdown-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        
+        .skill-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: var(--shadow-card);
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+            overflow: hidden;
+            border-top: 4px solid transparent;
+            border-bottom: 1px solid rgba(0,0,0,0.02);
+            border-left: 1px solid rgba(0,0,0,0.02);
+            border-right: 1px solid rgba(0,0,0,0.02);
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .skill-card.pronunciation { border-top-color: #2979FF; }
+        .skill-card.intonation { border-top-color: #00C853; }
+        .skill-card.fluency { border-top-color: #FF9100; }
+        .skill-card.completeness { border-top-color: #AA00FF; }
+        
+        .skill-score {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 10px 0;
+            line-height: 1;
+        }
+        
+        .skill-card.pronunciation .skill-score { color: #2979FF; }
+        .skill-card.intonation .skill-score { color: #00C853; }
+        .skill-card.fluency .skill-score { color: #FF9100; }
+        .skill-card.completeness .skill-score { color: #AA00FF; }
+        
+        .skill-label {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+        
+        .skill-level {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+        
+
+        
+        /* 文本高亮区域 */
+        .text-section {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .text-section h2 {
+            font-size: 1.2rem;
+            margin-bottom: 16px;
+            color: var(--accent);
+        }
+        
+        .highlighted-text {
+            font-family: var(--font-text);
+            font-size: 1.05rem; /* 减小字号 */
+            line-height: 1.8;   /* 减小行高 */
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.4);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            border-radius: 12px;
+            text-align: justify;
+        }
+        
+        .highlighted-text .word {
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin: 0 2px;
+            display: inline-block;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .highlighted-text .word:hover {
+            transform: scale(1.15);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .highlighted-text .word.playing {
+            animation: wordPulse 0.3s ease-in-out infinite alternate;
+        }
+        
+        @keyframes wordPulse {
+            from { transform: scale(1); box-shadow: 0 0 5px currentColor; }
+            to { transform: scale(1.1); box-shadow: 0 0 15px currentColor; }
+        }
+        
+        .highlighted-text .word.ok {
+            /* 正确：默认黑色 */
+            background: transparent;
+            color: var(--text-primary);
+        }
+        
+        .highlighted-text .word.weak {
+            /* 待加强：橙色 */
+            background: transparent;
+            color: var(--color-weak);
+            font-weight: 600;
+        }
+        
+        .highlighted-text .word.poor {
+            /* 需改进：红色 */
+            background: transparent;
+            color: var(--color-missing);
+            font-weight: 600;
+        }
+        
+        .highlighted-text .word.missing {
+            /* 缺失：红色删除线 */
+            background: transparent;
+            color: var(--color-missing);
+            text-decoration: line-through;
+            font-weight: 600;
+            opacity: 0.7;
+        }
+        
+        /* 底部双栏布局 */
+        .bottom-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .analysis-section, .feedback-section {
+            margin-bottom: 0; /* 移除底部间距 */
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .analysis-section h2, .text-section h2, .feedback-section h2 {
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+        }
+        
+        /* 打印样式 */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                width: 100%;
+                max-width: none;
+                box-shadow: none;
+            }
+            .header, .overall-card, .skill-card, .text-section, .analysis-section, .feedback-section {
+                box-shadow: none;
+                border: 1px solid #eee;
+                break-inside: avoid;
+            }
+        }
+        
+        .legend-item.ok { color: var(--text-primary); font-weight: 500; }
+        .legend-item.weak { color: var(--color-weak); font-weight: 600; }
+        .legend-item.poor { color: var(--color-missing); font-weight: 600; }
+        .legend-item.missing { color: var(--color-missing); text-decoration: line-through; font-weight: 600; opacity: 0.7; }
+        
+        /* 分析区域 */
+        .analysis-section {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .analysis-section h2 {
+            font-size: 1.2rem;
+            margin-bottom: 16px;
+            color: var(--accent);
+        }
+        
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+        
+        .analysis-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 16px;
+        }
+        
+        .analysis-card h3 {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+        
+        .analysis-card .items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .analysis-card .item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        
+        .analysis-card .item:hover {
+            transform: scale(1.1);
+        }
+        
+        .analysis-card .item.weak {
+            background: rgba(255, 193, 7, 0.2);
+            color: var(--color-weak);
+        }
+        
+        .analysis-card .item.missing {
+            background: rgba(244, 67, 54, 0.2);
+            color: var(--color-missing);
+        }
+        
+        /* 发音对比区域 */
+        .pronunciation-section {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .pronunciation-section h2 {
+            font-size: 1.2rem;
+            margin-bottom: 16px;
+            color: var(--accent);
+        }
+        
+        .phoneme-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+        }
+        
+        .phoneme-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 16px;
+            border-left: 4px solid var(--color-weak);
+        }
+        
+        .phoneme-card .phoneme-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        
+        .phoneme-card .phoneme-symbol {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-weak);
+        }
+        
+        .phoneme-card .phoneme-name {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+        
+        .phoneme-card .examples {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+        
+        .phoneme-card .example-word {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+        }
+        
+        .phoneme-card .tip {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            padding: 8px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+        
+        /* 建议区域 */
+        /* 建议区域 */
+        .feedback-section {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow-card);
+            border: 1px solid rgba(0,0,0,0.02);
+        }
+        
+        .feedback-section h2 {
+            font-size: 1.2rem;
+            margin-bottom: 16px;
+            color: var(--accent);
+        }
+        
+        .feedback-summary {
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+            padding: 16px;
+            background: rgba(41, 121, 255, 0.05);
+            border-radius: 12px;
+            border-left: 4px solid var(--accent);
+            color: var(--text-primary);
+        }
+        
+        .feedback-actions {
+            margin-bottom: 16px;
+        }
+        
+        .feedback-actions h3 {
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        
+        .feedback-actions ol {
+            padding-left: 20px;
+            color: var(--text-secondary);
+        }
+        
+        .feedback-actions li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+        
+        .practice-words {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 16px;
+        }
+        
+        .practice-word {
+            background: rgba(0, 0, 0, 0.05);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+        
+        /* 页脚 */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+        }
+        
+        /* 无音频提示 */
+        .no-audio-hint {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-secondary);
+        }
+        
+        .no-audio-hint svg {
+            width: 48px;
+            height: 48px;
+            opacity: 0.5;
+            margin-bottom: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部信息 -->
+        <div class="header">
+            <h1>📄 {{ audio_stem }} 口语报告</h1>
+        </div>
+        
+        <!-- 评分区域 (ELSA Style) -->
+        <div class="scores-section">
+            <!-- 综合评分大卡片 -->
+            <div class="overall-card">
+                <div class="ring-container">
+                    <canvas id="overallScoreChart"></canvas>
+                    <div class="ring-center">
+                        <div class="value">{{ scores.overall_100 | round(0) }}%</div>
+                        <div class="unit">{{ get_level(scores.overall_100) }}</div>
+                    </div>
+                </div>
+                <div class="overall-feedback">
+                    <h2>Overall Speaking Score</h2>
+                    <span class="level-badge">Current Level: {{ get_level(scores.overall_100) }}</span>
+                    <p>你的口语水平表现不错！继续保持练习，重点关注语调的自然过渡，尽量减少不自然的停顿。</p>
+                </div>
+            </div>
+            
+            <!-- 分项评分卡片组 -->
+            <div class="breakdown-grid">
+                <div class="skill-card pronunciation" onclick="openPronunciationModal()" style="cursor: pointer;">
+                    <div class="skill-score">{{ scores.pronunciation_100 | round(0) }}%</div>
+                    <div class="skill-label">Pronunciation 👆</div>
+                    <div class="skill-level">{{ get_level(scores.pronunciation_100) }}</div>
+                </div>
+                
+                <div class="skill-card intonation" onclick="openIntonationModal()" style="cursor: pointer;">
+                    <div class="skill-score">{{ scores.intonation_100 | round(0) }}%</div>
+                    <div class="skill-label">Intonation 👆</div>
+                    <div class="skill-level">{{ get_level(scores.intonation_100) }}</div>
+                </div>
+                
+                <div class="skill-card fluency" onclick="openFluencyModal()" style="cursor: pointer;">
+                    <div class="skill-score">{{ scores.fluency_100 | round(0) }}%</div>
+                    <div class="skill-label">Fluency 👆</div>
+                    <div class="skill-level">{{ get_level(scores.fluency_100) }}</div>
+                </div>
+                
+                <div class="skill-card completeness" onclick="openCompletenessModal()" style="cursor: pointer;">
+                    <div class="skill-score">{{ scores.completeness_100 | round(0) }}%</div>
+                    <div class="skill-label">Completeness 👆</div>
+                    <div class="skill-level">{{ get_level(scores.completeness_100) }}</div>
+                </div>
+            </div>
+        </div>
+        
+
+        
+        <!-- 文本高亮 -->
+        <div class="text-section">
+            <h2>📝 朗读分析</h2>
+            <div class="highlighted-text" id="highlightedText">
+                {% for word in alignment.words %}
+                <span class="word {{ word.tag }}" 
+                      title="得分: {{ word.score | round(1) }}"
+                      data-start="{{ word.start }}"
+                      data-end="{{ word.end }}"
+                      data-index="{{ loop.index0 }}">{{ word.word }}</span>
+                {% endfor %}
+            </div>
+            <div class="legend">
+                <span class="legend-item ok">正确</span>
+                <span class="legend-item weak">待加强</span>
+                <span class="legend-item poor">需改进</span>
+                <span class="legend-item missing">缺失</span>
+            </div>
+        </div>
+        
+        <!-- 分析结果与建议 - 双栏 -->
+        <div class="bottom-row">
+            <!-- 详细分析 -->
+            <div class="analysis-section">
+                <h2>🔍 重点关注</h2>
+                <div class="analysis-grid" style="grid-template-columns: 1fr;">
+                    {% if analysis.weak_words %}
+                    <div class="analysis-card" style="padding: 10px;">
+                        <h3 style="margin-bottom: 4px;">Words to improve</h3>
+                        <div class="items">
+                            {% for word in analysis.weak_words[:5] %}
+                            <span class="item weak">{{ word }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %}
+                    
+                    {% if analysis.missing_words %}
+                    <div class="analysis-card" style="padding: 10px;">
+                        <h3 style="margin-bottom: 4px;">Missing words</h3>
+                        <div class="items">
+                            {% for word in analysis.missing_words[:5] %}
+                            <span class="item missing">{{ word }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- 改进建议 -->
+            <div class="feedback-section">
+                <h2>💡 学习建议</h2>
+                <div class="feedback-content" style="font-size: 0.9rem;">
+                    <p style="margin-bottom: 8px;">{{ feedback.cn_summary }}</p>
+                    <ul class="action-list">
+                        {% for action in feedback.cn_actions[:2] %}
+                        <li>{{ action }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 发音指导 -->
+        {% if phoneme_tips %}
+        <div class="pronunciation-section">
+            <h2>🎯 发音指导</h2>
+            <div class="phoneme-cards">
+                {% for tip in phoneme_tips %}
+                <div class="phoneme-card">
+                    <div class="phoneme-title">
+                        <span class="phoneme-symbol">/{{ tip.phoneme }}/</span>
+                        <span class="phoneme-name">{{ tip.name }}</span>
+                    </div>
+                    <div class="examples">
+                        {% for example in tip.examples %}
+                        <span class="example-word">{{ example }}</span>
+                        {% endfor %}
+                    </div>
+                    <div class="tip">{{ tip.advice }}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+        
+        <!-- 反馈建议 -->
+        {% if feedback.cn_summary or feedback.cn_actions %}
+        <div class="feedback-section">
+            <h2>💡 改进建议</h2>
+            {% if feedback.cn_summary %}
+            <div class="feedback-summary">
+                {{ feedback.cn_summary }}
+            </div>
+            {% endif %}
+            
+            {% if feedback.cn_actions %}
+            <div class="feedback-actions">
+                <h3>练习建议</h3>
+                <ol>
+                    {% for action in feedback.cn_actions %}
+                    <li>{{ action }}</li>
+                    {% endfor %}
+                </ol>
+            </div>
+            {% endif %}
+            
+            {% if feedback.practice %}
+            <div class="practice-words">
+                {% for pair in feedback.practice %}
+                <span class="practice-word">{{ pair }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+        {% endif %}
+        
+    </div>
+
+    <!-- 发音分析详情 Modal -->
+    <div id="pronunciationModal" class="modal-overlay">
+        <div class="modal-container" style="max-width: 900px;">
+            <div class="modal-header">
+                <h2>🎙️ 发音详情 (Pronunciation)</h2>
+                <button class="close-btn" onclick="closePronunciationModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <!-- 顶部得分状态 -->
+                <div class="pro-header">
+                    <div class="ring-container small">
+                         <!-- 复用 Doughnut Chart 需要独立 Canvas ID -->
+                         <div class="ring-center">
+                            <div class="value" style="font-size: 1.8rem; color: #2979FF;">{{ scores.pronunciation_100 | round(0) }}%</div>
+                            <div class="unit">{{ get_level(scores.pronunciation_100) }}</div>
+                        </div>
+                    </div>
+                    <div class="pro-status">
+                        <h3>发音表现: {{ get_level(scores.pronunciation_100) }}</h3>
+                        <p>请重点关注下方列出的音素。这是提高分数的关键哦！ 💪</p>
+                    </div>
+                </div>
+
+                <h3 style="margin: 20px 0 16px;">🔍 你的主要发音问题 (Top Errors)</h3>
+
+                <!-- 错误详情网格 -->
+                <div class="phoneme-analysis-grid">
+                    {% for item in pronunciation_analysis %}
+                    <div class="pattern-card">
+                        <div class="pattern-header">
+                            <span class="phoneme-badge">Sound {{ item.target }}</span>
+                            <span class="phoneme-name">{{ item.name }}</span>
+                        </div>
+                        
+                        <div class="pattern-section">
+                            <div class="mistake-list">
+                                {% for mistake in item.mistakes %}
+                                <div class="mistake-item">
+                                    <!-- 对比视图 -->
+                                    <div class="comparison-row">
+                                        <div class="comp-box error">
+                                            <div class="label">❌ 你的发音</div>
+                                            <div class="value">{{ mistake.actual }}</div>
+                                        </div>
+                                        <div class="comp-arrow">➔</div>
+                                        <div class="comp-box target">
+                                            <div class="label">✅ 标准发音</div>
+                                            <div class="value">{{ item.target }}</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="mistake-desc">{{ mistake.desc }}</div>
+
+                                    <div class="example-area">
+                                        <div class="example-label">单词示例:</div>
+                                        <ul class="example-words">
+                                            {% for w in mistake.words %}
+                                            <li>
+                                                <span class="ex-text">{{ w.text }}</span>
+                                                <span class="ex-ipa">{{ w.ipa | safe }}</span>
+                                            </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <div class="pattern-section footer">
+                            <p>{{ item.advice }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 语调分析详情 Modal (保留) -->
+    <div id="intonationModal" class="modal-overlay">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2>🗣️ 语调分析 (Intonation)</h2>
+                <button class="close-btn" onclick="closeIntonationModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-desc">
+                    <strong>可视化说明：</strong> 
+                    <span style="font-size: 1.2rem; font-weight: bold;">大字号</span> 代表重读/强调，
+                    <span style="font-size: 0.8rem; color: #999;">小字号</span> 代表弱读。
+                    <span style="color: var(--color-missing); font-weight: bold;">红色</span> 代表需要改进。
+                </p>
+                
+                <div class="intonation-visualizer">
+                    {% for word in alignment.words %}
+                    {% set size = 1 + (word.stress|default(0.5) * 1.5) %}
+                    {% set color = '#1F2937' %} {# Default Black #}
+                    {% if word.stress|default(0.5) < 0.4 %}
+                        {% set color = '#9CA3AF' %} {# Light Gray for unstressed #}
+                    {% endif %}
+                    {% if word.tag in ['weak', 'poor', 'missing'] %}
+                        {% set color = '#FF1744' %} {# Error Red #}
+                    {% endif %}
+                    
+                    <span class="viz-word" 
+                          style="font-size: {{ size }}rem; color: {{ color }};"
+                          title="Stress: {{ word.stress|default(0.5) }}">
+                        {{ word.word }}
+                    </span>
+                    {% endfor %}
+                </div>
+
+                <div class="modal-tips">
+                    <h3>💡 练习建议</h3>
+                    <p>尝试模仿上述的重音起伏。英语的韵律感来自于 "Stressed" (重读) 和 "Unstressed" (弱读) 的交替。确保核心名词和动词读得饱满响亮。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- 页脚 -->
+        <div class="footer">
+            <p>由口语评分系统自动生成 | Submission ID: {{ meta.submission_id }}</p>
+        </div>
+    </div>
+    
+    <style>
+        /* Modal Styles */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            backdrop-filter: blur(4px);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-container {
+            background: white;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            animation: slideUp 0.3s ease-out;
+            display: flex;
+            flex-direction: column;
+            max-height: 90vh;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .modal-header {
+            padding: 20px 24px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h2 {
+            font-size: 1.4rem;
+            margin: 0;
+            color: var(--accent);
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 2rem;
+            line-height: 1;
+            cursor: pointer;
+            color: #999;
+        }
+
+        .modal-body {
+            padding: 24px;
+            overflow-y: auto;
+        }
+
+        .modal-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            padding: 12px;
+            background: #F8FAFC;
+            border-radius: 8px;
+        }
+
+        .intonation-visualizer {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline; /* 关键：基线对齐 */
+            gap: 8px 12px;
+            line-height: 1.8;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .viz-word {
+            font-family: var(--font-heading); /* 使用 Heading 字体显得更有力 */
+            transition: transform 0.2s;
+        }
+
+        .viz-word:hover {
+            transform: scale(1.1);
+        }
+
+        .modal-tips {
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        .modal-tips h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+        
+        .modal-tips p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+    </style>
+
+        /* 发音详情样式 - Parent Friendly Optimized */
+        .pro-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 24px;
+        }
+        
+        .phoneme-analysis-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+        
+        .pattern-card {
+            background: white;
+            border: 1px solid #eee;
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            transition: transform 0.2s;
+        }
+        .pattern-card:hover { transition: transform 0.2s; transform: translateY(-2px); box-shadow: 0 8px 16px rgba(0,0,0,0.06); }
+        
+        .pattern-header {
+            background: #F8FAFC;
+            padding: 14px 20px;
+            border-bottom: 1px solid #EEF2F6;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .phoneme-badge {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            background: white;
+            padding: 4px 10px;
+            border-radius: 6px;
+            border: 1px solid #E2E8F0;
+            color: var(--text-primary);
+        }
+        
+        .phoneme-name {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        
+        .pattern-section {
+            padding: 20px;
+        }
+        
+        .mistake-item {
+            margin-bottom: 24px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #F1F5F9;
+        }
+        .mistake-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+        
+        /* 对比视图核心样式 */
+        .comparison-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        
+        .comp-box {
+            flex: 1;
+            background: #F8FAFC;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+            border: 1px solid transparent;
+        }
+        
+        .comp-box.error {
+            background: #FEF2F2;
+            border-color: #FEE2E2;
+        }
+        
+        .comp-box.target {
+            background: #F0FDF4;
+            border-color: #DCFCE7;
+        }
+        
+        .comp-box .label {
+            font-size: 0.75rem;
+            color: #64748B;
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+        
+        .comp-box.error .label { color: #EF4444; }
+        .comp-box.target .label { color: #10B981; }
+        
+        .comp-box .value {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+        
+        .comp-arrow {
+            color: #CBD5E1;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        
+        .mistake-desc {
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+            color: var(--text-secondary);
+            text-align: center;
+            background: #F8FAFC;
+            padding: 6px;
+            border-radius: 6px;
+        }
+        
+        .example-area {
+            background: #FFFFF;
+            border: 1px dashed #E2E8F0;
+            border-radius: 8px;
+            padding: 12px;
+        }
+        
+        .example-label {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .example-words {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        
+        .example-words li {
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .ex-text {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+        
+        .ex-ipa {
+            color: #94A3B8;
+            font-family: inherit;
+        }
+        
+        .ex-ipa .err {
+            color: var(--color-missing);
+            font-weight: 700;
+            background: #FEF2F2; /* 轻微红色背景 */
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+        
+        .pattern-section.footer {
+            margin-top: auto;
+            border-top: 1px solid #EEF2F6;
+            background: #F8FAFC;
+            padding: 16px 20px;
+        }
+        
+        .pattern-section.footer p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #475569;
+        }
+    </style>
+
+    <script>
+        // Modal Control
+        function openIntonationModal() {
+            document.getElementById('intonationModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeIntonationModal() {
+            document.getElementById('intonationModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        function openPronunciationModal() {
+            document.getElementById('pronunciationModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePronunciationModal() {
+            document.getElementById('pronunciationModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close events
+        document.querySelectorAll('.modal-overlay').forEach(modal => {
+            modal.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal-overlay.active').forEach(modal => {
+                     modal.classList.remove('active');
+                     document.body.style.overflow = '';
+                });
+            }
+        });
+
+        // ========== 综合评分圆环图 ==========
+        const overallCtx = document.getElementById('overallScoreChart').getContext('2d');
+        const overallScore = {{ scores.overall_100 | round(0) }};
+        
+        // 创建渐变色 (Blue -> Cyan)
+        const gradient = overallCtx.createLinearGradient(0, 0, 0, 180);
+        gradient.addColorStop(0, '#00E5FF');
+        gradient.addColorStop(1, '#2979FF');
+
+        new Chart(overallCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Score', 'Remaining'],
+                datasets: [{
+                    data: [overallScore, 100 - overallScore],
+                    backgroundColor: [
+                        gradient,
+                        '#f0f2f5' // 浅灰背景
+                    ],
+                    borderWidth: 0,
+                    borderRadius: 10, // 圆角
+                    hoverOffset: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '85%',
+                plugins: {
+                    legend: { display: false },
+                    tooltip: { enabled: false }
+                },
+                animation: {
+                    animateScale: true,
+                    animateRotate: true
+                }
+            }
+        });
+
+        // (已移除雷达图)
+        
+
+        
+        // ========== 分析项点击跳转 ==========
+        document.querySelectorAll('.analysis-card .item[data-word]').forEach(item => {
+            item.addEventListener('click', () => {
+                const word = item.dataset.word.toLowerCase();
+                const wordEl = document.querySelector(`.highlighted-text .word[data-word="${word}"]`);
+                if (wordEl) {
+                    wordEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    wordEl.style.animation = 'none';
+                    wordEl.offsetHeight; // trigger reflow
+                    wordEl.style.animation = 'wordPulse 0.3s ease-in-out 3';
+                }
+            });
+        });
+    </script>
+    <!-- 流利度分析详情 Modal (Fluency/Pausing/Hesitations) -->
+    <div id="fluencyModal" class="modal-overlay">
+        <div class="modal-container" style="max-width: 900px; max-height: 90vh; overflow-y: auto;">
+            <div class="modal-header">
+                <h2>〰️ 流利度分析 (Fluency Analysis)</h2>
+                <button class="close-btn" onclick="closeFluencyModal()">×</button>
+            </div>
+            
+            <!-- Tab Navigation -->
+            <div class="modal-tabs">
+                <button class="tab-btn active" onclick="switchFluencyTab('pausing')">Pausing (停顿)</button>
+                <button class="tab-btn" onclick="switchFluencyTab('pace')">Pace (语速)</button>
+                <button class="tab-btn" onclick="switchFluencyTab('hesitations')">Hesitations (迟疑)</button>
+            </div>
+
+            <div class="modal-body">
+                 
+                 <!-- Tab 1: Pausing -->
+                 <div id="tab-pausing" class="tab-content active">
+                    <!-- 顶部得分状态 -->
+                    <div class="pro-header">
+                        <div class="ring-container small">
+                             <div class="ring-center">
+                                <div class="value" style="font-size: 1.8rem; color: #FFA000;">{{ scores.fluency_100 | round(0) }}%</div>
+                                <div class="unit">{{ get_level(scores.fluency_100) }}</div>
+                            </div>
+                        </div>
+                        <div class="pro-status">
+                            <h3>停顿分析 (Pausing Analysis)</h3>
+                            <p>合理的停顿能让表达更清晰。看看你的停顿分布吧！</p>
+                        </div>
+                    </div>
+
+                    <!-- 图例 Legend -->
+                    <div class="legend-bar">
+                        <div class="legend-item"><span class="mark-icon good">H</span> Good Pauses (合理停顿)</div>
+                        <div class="legend-item"><span class="mark-icon optional">H</span> Optional Pauses (可选停顿)</div>
+                        <div class="legend-item"><span class="mark-icon bad">H</span> Bad Pauses (不当卡顿)</div>
+                        <div class="legend-item"><span class="mark-icon missed">I</span> Missed Pauses (漏停)</div>
+                    </div>
+
+                    <!-- Transcript Area -->
+                    <div class="transcript-box">
+                        <h3>Transcript</h3>
+                        <div class="transcript-content">
+                            {% for word in alignment.words %}
+                                <span class="t-word">{{ word.word }}</span>
+                                
+                                {% if word.pause %}
+                                    {% if word.pause.type == 'missed' %}
+                                        <span class="pause-mark missed" title="Missed Pause"></span>
+                                    {% else %}
+                                        <!-- Dynamic width based on duration (mock logic: 0.1s = 5px) -->
+                                        <span class="pause-mark h-bar {{ word.pause.type }}" 
+                                              style="width: 40px;" 
+                                              title="{{ word.pause.type|capitalize }}: {{ word.pause.duration }}">
+                                        </span>
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                 </div>
+
+                 <!-- Tab 2: Pace -->
+                 <div id="tab-pace" class="tab-content">
+                    <div class="pace-box" style="margin-top: 0; border: none; padding: 0;">
+                        <div class="pace-header">
+                            <h3>语速趋势 (Pace Trend)</h3>
+                            <div class="pace-legend">
+                                <span class="dot-legend natural"></span> Natural Pace Zone (100-150 wpm)
+                            </div>
+                        </div>
+                        <p class="pace-desc">保持在绿色区间内会让你的表达听起来既自然又自信。</p>
+                        <div class="chart-container" style="height: 300px; width: 100%;">
+                            <canvas id="paceChart"></canvas>
+                        </div>
+                    </div>
+                 </div>
+
+                 <!-- Tab 3: Hesitations -->
+                 {% if hesitations %}
+                 <div id="tab-hesitations" class="tab-content">
+                    <div class="hesi-dashboard">
+                        <div class="hesi-ring">
+                            <div class="ring-circle">
+                                <span>≈</span>
+                                <div class="label">{{ hesitations.score_label }}</div>
+                            </div>
+                        </div>
+                        <div class="hesi-info">
+                            <h3>Hesitations (迟疑)</h3>
+                            <p>{{ hesitations.desc }}</p>
+                        </div>
+                    </div>
+                    
+                    <div class="hesi-cols">
+                        <div class="hesi-col">
+                            <h4>Frequent filler words</h4>
+                            <div class="filler-chart">
+                                {% for item in hesitations.fillers %}
+                                <div class="filler-row">
+                                    <span class="f-word">{{ item.word }}</span>
+                                    <div class="f-bar-container">
+                                        <div class="f-bar" style="width: {{ item.count * 20 }}px;"></div>
+                                    </div>
+                                    <span class="f-count">{{ item.count }} times</span>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="hesi-col">
+                            <h4>Say these sentences confidently</h4>
+                            {% for ex in hesitations.examples %}
+                            <div class="hesi-example">
+                                <div class="ex-row you">
+                                    <span class="label">You:</span>
+                                    <span class="text">{{ ex.original | safe }}</span>
+                                </div>
+                                <div class="ex-row try">
+                                    <span class="label">Try instead:</span>
+                                    <span class="text">{{ ex.corrected }}</span>
+                                </div>
+                            </div>
+                            {% endfor %}
+                            <div class="hesi-tips">
+                                <h4>Suggestion</h4>
+                                <ul>
+                                    {% for tip in hesitations.tips %}
+                                    <li>✅ {{ tip }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+                 {% endif %}
+
+            </div>
+        </div>
+    </div>
+
+    <style>
+        /* Modal Tabs */
+        .modal-tabs {
+            display: flex;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 20px;
+            padding: 0 24px;
+        }
+        .tab-btn {
+            padding: 12px 20px;
+            background: none;
+            border: none;
+            font-size: 1rem;
+            color: #64748B;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            font-weight: 500;
+        }
+        .tab-btn.active {
+            color: #2563EB;
+            border-bottom-color: #2563EB;
+        }
+        
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Fluency Specific Styles */
+        .legend-bar {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            padding: 12px;
+            background: #FAFAFA;
+            border-radius: 8px;
+            border: 1px solid #eee;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            color: #555;
+        }
+        
+        .mark-icon {
+            display: inline-block;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+        .mark-icon.good { color: #4CAF50; }
+        .mark-icon.bad { color: #FF5252; }
+        .mark-icon.optional { color: #9E9E9E; }
+        .mark-icon.missed { color: #FF5252; border-left: 3px solid #FF5252; height: 12px; width: 0; content: ' '; }
+        
+        .transcript-box {
+            background: white;
+            border: 1px solid #eee;
+            border-radius: 12px;
+            padding: 24px;
+        }
+        
+        .transcript-content {
+            font-size: 1.1rem;
+            line-height: 2.2; /* High line-height for pause bars */
+            color: #333;
+        }
+        
+        .t-word {
+            display: inline-block;
+        }
+        
+        /* Pause Visualization */
+        .pause-mark {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 6px;
+            position: relative;
+        }
+        
+        /* Missed Pause (I-Bar) */
+        .pause-mark.missed {
+            height: 24px;
+            width: 4px;
+            background-color: #FF5252;
+            border-radius: 2px;
+            transform: translateY(-2px);
+        }
+        
+        /* H-Bar Style */
+        .pause-mark.h-bar {
+            height: 14px;
+            border-left: 2px solid;
+            border-right: 2px solid;
+            min-width: 20px;
+        }
+        
+        .pause-mark.h-bar::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: currentColor;
+            transform: translateY(-50%);
+        }
+        
+        .pause-mark.good { color: #4CAF50; border-color: #4CAF50; }
+        .pause-mark.bad { color: #FF5252; border-color: #FF5252; }
+        .pause-mark.optional { color: #BDBDBD; border-color: #BDBDBD; }
+        
+        /* Pace Chart Styles */
+        .pace-box {
+            background: white;
+            border: 1px solid #eee;
+            border-radius: 12px;
+            padding: 24px;
+        }
+        .pace-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        .pace-legend {
+            font-size: 0.85rem;
+            color: #666;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .dot-legend.natural {
+            width: 12px;
+            height: 12px;
+            background-color: rgba(76, 175, 80, 0.2);
+            border: 1px solid rgba(76, 175, 80, 0.5); 
+            display: inline-block;
+        }
+        .pace-desc {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 20px;
+        }
+        
+        /* Hesitations Styles */
+        .hesi-dashboard {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #F8FAFC;
+            border-radius: 12px;
+        }
+        .hesi-ring .ring-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 6px solid #4CAF50;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #4CAF50;
+        }
+        .hesi-ring span { font-size: 2rem; line-height: 1; }
+        .hesi-ring .label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase;}
+        
+        .hesi-cols { display: flex; gap: 40px; }
+        .hesi-col { flex: 1; }
+        .hesi-col h4 { margin-top: 0; margin-bottom: 16px; font-size: 1rem; color: #334155;}
+        
+        .filler-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+        }
+        .f-word { width: 60px; font-weight: 500; }
+        .f-bar-container { flex: 1; margin: 0 12px; }
+        .f-bar { height: 8px; background: #FCD34D; border-radius: 4px; }
+        .f-count { width: 60px; text-align: right; color: #94A3B8; font-size: 0.8rem;}
+        
+        .hesi-example {
+            background: #fff;
+            border: 1px solid #E2E8F0;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 20px;
+        }
+        .ex-row { display: flex; gap: 12px; margin-bottom: 8px; font-size: 0.95rem; }
+        .ex-row:last-child { margin-bottom: 0; }
+        .ex-row .label { font-weight: 600; width: 80px; flex-shrink: 0; }
+        .ex-row.you .label { color: #64748B; }
+        .ex-row.try .label { color: #10B981; }
+        .ex-row .text .filler { color: #F59E0B; font-weight: bold; }
+        
+        .hesi-tips ul { padding-left: 20px; margin: 0; }
+        .hesi-tips li { margin-bottom: 8px; color: #475569; font-size: 0.9rem; }
+
+    </style>
+
+    <script>
+        // Fluency Modal Tab Logic
+        function switchFluencyTab(tabName) {
+            // Update Tab Buttons
+            document.querySelectorAll('.modal-tabs .tab-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Update Content
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            document.getElementById(`tab-${tabName}`).classList.add('active');
+            
+            // Re-render chart if switching to Pace tab (to ensure correct size)
+            if (tabName === 'pace' && paceChartInstance) {
+                paceChartInstance.resize();
+            }
+        }
+        
+        // Fluency Modal
+        let paceChartInstance = null;
+        
+        function openFluencyModal() {
+            document.getElementById('fluencyModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            // Initialize Pace Chart if not already (Lazy Load)
+            if (!paceChartInstance && document.getElementById('paceChart')) {
+                initPaceChart();
+            }
+        }
+
+        function closeFluencyModal() {
+            document.getElementById('fluencyModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        function initPaceChart() {
+            const ctx = document.getElementById('paceChart').getContext('2d');
+            
+            // Parse Pace Data
+            const rawData = {{ pac_chart_data | default(pace_chart_data) | tojson | default('[]') }}; 
+            
+            // Custom Plugin to draw the "Natural Zone" background
+            const naturalZonePlugin = {
+                id: 'naturalZone',
+                beforeDraw: (chart) => {
+                    const { ctx, chartArea: { top, bottom, left, right }, scales: { y } } = chart;
+                    const yHigh = y.getPixelForValue(150);
+                    const yLow = y.getPixelForValue(100);
+                    
+                    ctx.save();
+                    ctx.fillStyle = 'rgba(76, 175, 80, 0.15)'; // Light Green
+                    ctx.fillRect(left, yHigh, right - left, yLow - yHigh);
+                    
+                    // Add Text Labels
+                    ctx.fillStyle = '#4CAF50';
+                    ctx.font = '10px Roboto';
+                    ctx.textAlign = 'right';
+                    ctx.fillText('Natural Pace', right - 10, yHigh + 15);
+                    
+                    ctx.restore();
+                }
+            };
+
+            paceChartInstance = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    datasets: [{
+                        label: 'WPM (Words Per Minute)',
+                        data: rawData,
+                        borderColor: '#2979FF',
+                        backgroundColor: '#2979FF',
+                        borderWidth: 2,
+                        tension: 0.4, // Smooth curve
+                        pointRadius: 4,
+                        pointBackgroundColor: '#2979FF'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 200,
+                            title: { display: true, text: 'WPM' },
+                            grid: { display: false } // Cleaner look
+                        },
+                        x: {
+                            type: 'linear',
+                            title: { display: true, text: 'Time (s)' },
+                            grid: { display: false },
+                            ticks: { stepSize: 2 }
+                        }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.raw.y + ' wpm';
+                                }
+                            }
+                        }
+                    }
+                },
+                plugins: [naturalZonePlugin]
+            });
+        }
+    </script>
+    <!-- 完整度分析详情 Modal (Completeness) -->
+    <div id="completenessModal" class="modal-overlay">
+        <div class="modal-container" style="max-width: 900px;">
+            <div class="modal-header">
+                <h2>🧩 完整度分析 (Completeness Analysis)</h2>
+                <button class="close-btn" onclick="closeCompletenessModal()">×</button>
+            </div>
+            <div class="modal-body">
+                {% if completeness_analysis %}
+                <!-- Metrics Dashboard -->
+                <div class="comp-dashboard">
+                    <div class="comp-metric main">
+                        <div class="c-value">{{ completeness_analysis.coverage }}%</div>
+                        <div class="c-label">Content Coverage</div>
+                    </div>
+                    <div class="comp-divider"></div>
+                    <div class="comp-metric">
+                        <div class="c-value red">{{ completeness_analysis.missing_stats.total }}</div>
+                        <div class="c-label">Missed Words</div>
+                    </div>
+                    <div class="comp-metric">
+                        <div class="c-value">{{ completeness_analysis.missing_stats.keywords }}</div>
+                        <div class="c-label">Keywords Missed</div>
+                    </div>
+                    <div class="comp-metric">
+                        <div class="c-value">{{ completeness_analysis.missing_stats.function_words }}</div>
+                        <div class="c-label">Function Words Missed</div>
+                    </div>
+                </div>
+
+                <!-- Insight Alert -->
+                <div class="comp-insight">
+                    <span class="icon">💡</span>
+                    <span class="text">{{ completeness_analysis.insight }}</span>
+                </div>
+
+                <!-- Ghost Text View -->
+                <div class="ghost-box">
+                    <h3>Ghost Words View (幽灵文字)</h3>
+                    <p class="ghost-desc">
+                        下文中 <span class="ghost-word demo">faded words</span> 是你漏读的部分。
+                    </p>
+                    <div class="ghost-content">
+                        {% for word in alignment.words %}
+                            {% if word.tag == 'missing' %}
+                                <span class="ghost-word" title="You missed this word">{{ word.word }}</span>
+                            {% else %}
+                                <span class="normal-word">{{ word.word }}</span>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <!-- Tips -->
+                <div class="comp-tips">
+                    <h4>Suggestions</h4>
+                    <ul>
+                        {% for tip in completeness_analysis.tips %}
+                        <li>🎯 {{ tip }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <style>
+        /* Completeness Styles */
+        .comp-dashboard {
+            display: flex;
+            align-items: center;
+            background: #F8FAFC;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            justify-content: space-around;
+        }
+        .comp-metric { text-align: center; }
+        .comp-metric .c-value { font-size: 1.8rem; font-weight: 700; color: #1E293B; line-height: 1.2; }
+        .comp-metric .c-value.red { color: #EF4444; }
+        .comp-metric.main .c-value { font-size: 2.5rem; color: #3B82F6; }
+        .comp-metric .c-label { font-size: 0.8rem; color: #64748B; text-transform: uppercase; margin-top: 4px; font-weight: 600; }
+        .comp-divider { width: 1px; height: 50px; background: #E2E8F0; }
+
+        .comp-insight {
+            background: #EFF6FF;
+            border: 1px solid #DBEAFE;
+            padding: 16px;
+            border-radius: 8px;
+            color: #1E40AF;
+            margin-bottom: 24px;
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+
+        .ghost-box {
+            background: white;
+            border: 2px dashed #E2E8F0;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+        .ghost-box h3 { margin-top: 0; color: #334155; }
+        .ghost-desc { color: #64748B; font-size: 0.9rem; margin-bottom: 16px; }
+        
+        .ghost-content {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #1E293B;
+        }
+        .normal-word { margin-right: 4px; }
+        .ghost-word {
+            display: inline-block;
+            color: #EF4444;
+            opacity: 0.4;
+            text-decoration: line-through;
+            margin-right: 4px;
+            font-weight: bold;
+        }
+        .ghost-word.demo { margin: 0 4px; }
+
+        .comp-tips h4 { color: #334155; margin-bottom: 12px; }
+        .comp-tips ul { padding-left: 20px; color: #475569; }
+        .comp-tips li { margin-bottom: 8px; }
+    </style>
+
+    <script>
+        function openCompletenessModal() {
+            document.getElementById('completenessModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeCompletenessModal() {
+            document.getElementById('completenessModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    </script>
+</body>
+</html>

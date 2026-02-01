@@ -1,0 +1,8 @@
+tasks:
+  reading-001:
+    script_text: "Hello world this is a test"
+    engine: auto
+  
+  reading-002:
+    script_text: "The quick brown fox jumps over the lazy dog"
+    engine: auto

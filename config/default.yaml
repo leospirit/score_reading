@@ -1,0 +1,80 @@
+# 默认配置
+# 朗读/背诵口语评分 CLI 框架
+
+# 音频预处理配置
+audio:
+  sample_rate: 16000          # 采样率（Hz）
+  channels: 1                 # 声道数（mono）
+  bit_depth: 16               # 位深度
+
+# 音频质量阈值（用于 auto 引擎选择）
+quality_thresholds:
+  min_duration_sec: 2.5       # 低于此值使用 fast 引擎
+  max_silence_ratio: 0.35     # 高于此值使用 fast 引擎
+  min_rms_db: -28             # 低于此值使用 fast 引擎
+  max_clipping_ratio: 0.1     # 高于此值记录警告
+
+# 分数归一化配置
+normalization:
+  # GOP 分数映射（GOP 分数通常为负数，越接近 0 越好）
+  gop:
+    min: -10.0                # 对应 0 分
+    max: 0.0                  # 对应 100 分
+  
+  # 流利度计算权重
+  fluency:
+    silence_penalty_weight: 50  # silence_ratio 每增加 0.1 扣多少分
+    pause_penalty_weight: 20    # 异常停顿每次扣多少分
+  
+  # 语调评分（简化方案）
+  intonation:
+    energy_variance_weight: 0.5  # 能量变化贡献权重
+
+# 分析模块配置
+analysis:
+  weak_words_top_n: 3         # 取分数最低的 N 个词
+  weak_phonemes_top_n: 2      # 取分数最低的 N 个音素
+  confusions_top_n: 2         # 取混淆次数最多的 N 对
+  
+  # 标签阈值
+  word_thresholds:
+    ok: 70                    # >= 70 为 ok
+    weak: 40                  # >= 40 为 weak，< 40 为 poor
+  
+  phoneme_thresholds:
+    ok: 70
+    weak: 40
+
+# 回退策略配置
+fallback:
+  max_missing_words_ratio: 0.25  # 超过此比例触发回退
+  retry_count: 1                  # 最大重试次数
+
+# HTML 报告配置
+report:
+  colors:
+    ok: "#4CAF50"             # 绿色
+    weak: "#FFC107"           # 黄色
+    missing: "#F44336"        # 红色
+    poor: "#E91E63"           # 粉红色
+  
+  show_audio_player: true     # 是否显示音频播放器
+  show_phoneme_details: true  # 是否显示音素级别详情
+
+# 引擎配置
+engines:
+  standard:
+    docker_image: "score-reading/kaldi-gop:latest"
+    timeout_sec: 120
+  
+  fast:
+    service_url: "http://gentle:8765"
+    timeout_sec: 30
+  
+  pro:
+    enabled: false            # 预留，暂未启用
+
+# 并发配置
+concurrency:
+  default_jobs: 4             # 默认并发数
+  max_jobs: 16                # 最大并发数

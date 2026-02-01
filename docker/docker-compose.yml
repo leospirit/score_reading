@@ -1,0 +1,41 @@
+version: "3.8"
+
+services:
+  # 主应用服务
+  app:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    volumes:
+      - ../data/in:/app/data/in:ro
+      - ../data/out:/app/data/out
+      - ../data/models:/app/data/models:ro
+    depends_on:
+      - gentle
+    networks:
+      - score_network
+
+  # Gentle 服务（Fast 引擎）
+  gentle:
+    image: lowerquality/gentle:latest
+    ports:
+      - "8765:8765"
+    networks:
+      - score_network
+
+  # Kaldi-GOP 引擎服务（可选，用于独立运行）
+  kaldi_engine:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.kaldi
+    volumes:
+      - ../data/work:/app/data/work
+      - ../data/models:/app/data/models:ro
+    networks:
+      - score_network
+    profiles:
+      - kaldi # 仅在需要时启动
+
+networks:
+  score_network:
+    driver: bridge
