@@ -1,0 +1,30 @@
+
+[2026-02-03 14:13:54.979100] Kaldi Failed (Code 1):
+CMD: docker run --rm --platform linux/amd64 --entrypoint /bin/bash -v /Users/liying/.gemini/antigravity/playground/nodal-granule/score_reading/data/work/tmprnb8n2b6/audio_input:/app/audio_dir:ro -v /Users/liying/.gemini/antigravity/playground/nodal-granule/score_reading/data/work/tmprnb8n2b6/result:/app/result_dir -v /Users/liying/.gemini/antigravity/playground/nodal-granule/score_reading/docker/local_run.sh:/app/run.sh:ro score-reading/kaldi-gop:latest /app/run.sh /app/audio_dir /app/data_dir /app/result_dir
+STDOUT: === Kaldi-GOP Real Scoring Start ===
+Audio: /app/audio_dir
+Output: /app/result_dir
+Generating minimal L.fst...
+
+STDERR: FATAL: FstCompiler: Symbol "1" is not mapped to any integer arc ilabel, symbol table = /app/data_dir/lang/phones.txt, source = /app/data_dir/lang/L.txt, line = 1
+
+
+[2026-02-03 14:14:39.909332] Kaldi Failed (Code 1):
+CMD: docker run --rm --platform linux/amd64 --entrypoint /bin/bash -v /Users/liying/.gemini/antigravity/playground/nodal-granule/score_reading/data/work/tmps7by076r/audio_input:/app/audio_dir:ro -v /Users/liying/.gemini/antigravity/playground/nodal-granule/score_reading/data/work/tmps7by076r/result:/app/result_dir -v /Users/liying/.gemini/antigravity/playground/nodal-granule/score_reading/docker/local_run.sh:/app/run.sh:ro score-reading/kaldi-gop:latest /app/run.sh /app/audio_dir /app/data_dir /app/result_dir
+STDOUT: === Kaldi-GOP Real Scoring Start ===
+Audio: /app/audio_dir
+Output: /app/result_dir
+Generating minimal L.fst...
+
+STDERR: FATAL: FstCompiler: Symbol "1" is not mapped to any integer arc ilabel, symbol table = /app/data_dir/lang/phones.txt, source = /app/data_dir/lang/L.txt, line = 1
+
+
+[2026-02-03 14:17:13.156254] Kaldi Failed (Code 1):
+CMD: docker run --rm --platform linux/amd64 --entrypoint /bin/bash -v /Users/liying/.gemini/antigravity/playground/nodal-granule/score_reading/data/work/tmp2l1z2ny8/audio_input:/app/audio_dir:ro -v /Users/liying/.gemini/antigravity/playground/nodal-granule/score_reading/data/work/tmp2l1z2ny8/result:/app/result_dir -v /Users/liying/.gemini/antigravity/playground/nodal-granule/score_reading/docker/local_run.sh:/app/run.sh:ro score-reading/kaldi-gop:latest /app/run.sh /app/audio_dir /app/data_dir /app/result_dir
+STDOUT: === Kaldi-GOP Real Scoring Start ===
+Audio: /app/audio_dir
+Output: /app/result_dir
+Generating minimal L.fst...
+
+STDERR: FATAL: FstCompiler: Symbol "1" is not mapped to any integer arc ilabel, symbol table = /app/data_dir/lang/phones.txt, source = /app/data_dir/lang/L.txt, line = 1
+

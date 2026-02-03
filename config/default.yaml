@@ -9,22 +9,26 @@ audio:
 
 # 音频质量阈值（用于 auto 引擎选择）
 quality_thresholds:
-  min_duration_sec: 2.5       # 低于此值使用 fast 引擎
-  max_silence_ratio: 0.35     # 高于此值使用 fast 引擎
-  min_rms_db: -28             # 低于此值使用 fast 引擎
+  min_duration_sec: 1.0       # Relaxed duration check
+  max_silence_ratio: 0.85     # Allow more silence (User scenario involves pauses)
+  min_rms_db: -60             # Allow very quiet audio (previously -28 triggered fallback)
   max_clipping_ratio: 0.1     # 高于此值记录警告
 
 # 分数归一化配置
 normalization:
   # GOP 分数映射（GOP 分数通常为负数，越接近 0 越好）
   gop:
-    min: -10.0                # 对应 0 分
-    max: 0.0                  # 对应 100 分
+    mode: "sigmoid"            # "linear" 或 "sigmoid"
+    sigmoid:
+      k: 1.5                   # 陡峭度，越大区分度越高
+      center: -4.0             # 中心点，对应 50 分
+    min: -8.0                 # 对应 0 分 (线性模式回退值)
+    max: -1.0                 # 对应 100 分 (线性模式回退值)
   
   # 流利度计算权重
   fluency:
     silence_penalty_weight: 50  # silence_ratio 每增加 0.1 扣多少分
-    pause_penalty_weight: 20    # 异常停顿每次扣多少分
+    pause_penalty_weight: 40    # 异常停顿每次扣多少分 (之前为 20，加倍惩罚)
   
   # 语调评分（简化方案）
   intonation:
@@ -38,12 +42,12 @@ analysis:
   
   # 标签阈值
   word_thresholds:
-    ok: 70                    # >= 70 为 ok
-    weak: 40                  # >= 40 为 weak，< 40 为 poor
+    ok: 70                    # Matches Rubric [70-100] Good
+    weak: 40                  # Matches Rubric [41-69] Weak
   
   phoneme_thresholds:
-    ok: 70
-    weak: 40
+    ok: 75
+    weak: 45
 
 # 回退策略配置
 fallback:
@@ -53,26 +57,46 @@ fallback:
 # HTML 报告配置
 report:
   colors:
-    ok: "#4CAF50"             # 绿色
-    weak: "#FFC107"           # 黄色
-    missing: "#F44336"        # 红色
-    poor: "#E91E63"           # 粉红色
+    ok: "#111111"             # 极专业黑色
+    weak: "#FF8C00"           # 醒目的橙色
+    missing: "#EF4444"        # 红色
+    poor: "#EF4444"           # 红色
   
   show_audio_player: true     # 是否显示音频播放器
   show_phoneme_details: true  # 是否显示音素级别详情
 
 # 引擎配置
 engines:
-  standard:
-    docker_image: "score-reading/kaldi-gop:latest"
-    timeout_sec: 120
+  
+  wav2vec2:
+    model: "facebook/wav2vec2-base-960h" # Default English model
+    device: "auto"                       # "cpu", "cuda", or "auto"
   
   fast:
     service_url: "http://gentle:8765"
-    timeout_sec: 30
+    timeout_sec: 120          # 增加超时容忍度
   
   pro:
-    enabled: false            # 预留，暂未启用
+    enabled: true             # 启用 AI 增强引擎
+    prefer_pro_mode: true     # 默认优先使用 PRO 模式 (Azure > 本地 Pro)
+    model_size: "base"        # Whisper 模型大小
+  
+  azure:
+    api_key: ""               # 必填：您的 Azure Speech API Key
+    region: "eastus"          # 您的 Azure 区域 (例如: eastus, japaneast)
+    language: "en-US"         # 评测语言
+  
+  gemini:
+    api_key: ""               # 用于【语音惊喜识别】(Multimodal Audio)
+    model: "gemini-1.5-flash"
+    alignment_source: "gop"    # Options: "whisper", "gop"
+
+# AI 老师配置 (支持 OpenAI / Zhipu GLM)
+llm:
+  api_key: ""               # 用于【AI 老师点评】(Text Advisor) - 填入智谱 Key (id.secret)
+  provider: "openai"        # 智谱也兼容 openai 协议
+  base_url: "https://open.bigmodel.cn/api/paas/v4/" # 智谱默认地址
+  model: "glm-4-flash"
 
 # 并发配置
 concurrency:

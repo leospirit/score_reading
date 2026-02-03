@@ -118,6 +118,121 @@ def get_phoneme_tips(weak_phonemes: list[str]) -> list[dict[str, Any]]:
     return tips
 
 
+def generate_pronunciation_analysis(
+    weak_words: list[str],
+    weak_phonemes: list[str],
+    phoneme_alignments: list[dict[str, Any]] | None = None,
+) -> list[dict[str, Any]]:
+    """
+    生成发音问题分析数据
+    
+    当有详细的音素对齐数据时，基于该数据生成分析；
+    否则基于 weak_phonemes 和 weak_words 生成分析。
+    
+    Args:
+        weak_words: 弱词列表
+        weak_phonemes: 弱音素列表
+        phoneme_alignments: 音素对齐数据（包含 in_word 字段）
+        
+    Returns:
+        发音问题分析列表，用于模板渲染
+    """
+    analysis = []
+    
+    # 扩展的音素信息映射（包括大小写变体）
+    phoneme_tips_extended = {
+        # 原始键
+        **PHONEME_TIPS,
+        # 小写变体
+        "æ": PHONEME_TIPS.get("æ", {"name": "开前元音 æ", "advice": "嘴巴张大，舌头放平并往前。"}),
+        "ɛ": {"name": "中前元音 ɛ", "advice": "嘴巴半开，舌头中位靠前。类似中文'诶'但更放松。"},
+        "ɪ": {"name": "短元音 ɪ", "advice": "嘴巴微开，舌头高位靠前。类似中文'衣'但更短促。"},
+        "ɔ": {"name": "中后元音 ɔ", "advice": "嘴巴半开，舌头中位靠后。类似中文'哦'但嘴型更圆。"},
+        # 大写变体（用于匹配 Whisper 输出）
+        "Æ": {"name": "开前元音 æ", "advice": "嘴巴张大，舌头放平并往前。"},
+        "Ɛ": {"name": "中前元音 ɛ", "advice": "嘴巴半开，舌头中位靠前。类似中文'诶'但更放松。"},
+    }
+    
+    # 1. 优先使用详细的音素对齐数据
+    if phoneme_alignments:
+        # 按音素分组
+        phoneme_groups: dict[str, list[str]] = {}
+        for pa in phoneme_alignments:
+            phoneme = pa.get("phoneme", "")
+            in_word = pa.get("in_word", "")
+            if phoneme and in_word:
+                if phoneme not in phoneme_groups:
+                    phoneme_groups[phoneme] = []
+                if in_word not in phoneme_groups[phoneme]:
+                    phoneme_groups[phoneme].append(in_word)
+        
+        # 为每个音素生成分析
+        for phoneme, words in list(phoneme_groups.items())[:3]:
+            phoneme_info = phoneme_tips_extended.get(phoneme) or phoneme_tips_extended.get(phoneme.lower())
+            if phoneme_info:
+                analysis.append({
+                    "target": phoneme,
+                    "name": phoneme_info.get("name", f"音素 {phoneme}"),
+                    "mistakes": [{
+                        "actual": "发音需改进",
+                        "desc": phoneme_info.get("advice", "注意发音位置和气流控制。"),
+                        "words": [{"text": w, "ipa": f"/{phoneme}/"} for w in words[:4]],
+                    }],
+                })
+    
+    # 2. 如果没有详细数据，使用 weak_phonemes 列表
+    if not analysis and weak_phonemes:
+        for phoneme in weak_phonemes[:3]:
+            # 尝试匹配音素（大小写不敏感）
+            phoneme_info = phoneme_tips_extended.get(phoneme) or phoneme_tips_extended.get(phoneme.lower())
+            if phoneme_info:
+                # 找出可能相关的弱词
+                related_words = []
+                for word in weak_words:
+                    related_words.append({"text": word, "ipa": f"/{phoneme}/"})
+                    if len(related_words) >= 4:
+                        break
+                
+                analysis.append({
+                    "target": phoneme,
+                    "name": phoneme_info.get("name", f"音素 {phoneme}"),
+                    "mistakes": [{
+                        "actual": "发音需练习",
+                        "desc": phoneme_info.get("advice", "注意发音位置和气流控制。"),
+                        "words": related_words if related_words else [{"text": "(无示例词)", "ipa": ""}],
+                    }],
+                })
+    
+    # 3. 最后回退：如果没有音素分析但有弱词
+    if not analysis and weak_words:
+        # 尝试从弱词中提取一些常见的音素挑战（简单规则）
+        challenges = []
+        for word in weak_words:
+            w_lower = word.lower()
+            if 'th' in w_lower: challenges.append("θ/ð")
+            if 'v' in w_lower: challenges.append("v")
+            if 'l' in w_lower: challenges.append("l")
+            if 'r' in w_lower: challenges.append("r")
+            if 'ng' in w_lower: challenges.append("ŋ")
+        
+        # 提取独特的挑战
+        unique_challenges = list(dict.fromkeys(challenges))[:2]
+        challenge_desc = f"重点关注音素: {', '.join(unique_challenges)}" if unique_challenges else "整体发音清晰度"
+
+        analysis.append({
+            "target": "📖",
+            "name": "重点词汇练习",
+            "is_fallback": True,
+            "mistakes": [{
+                "actual": challenge_desc,
+                "desc": "以下单词的发音得分较低，建议反复跟读，特别注意元音的饱满度和辅音的清晰度。",
+                "words": [{"text": w, "ipa": ""} for w in weak_words[:5]],
+            }],
+        })
+    
+    return analysis
+
+
 def render_html_report(
     result: ScoringResult,
     output_path: Path,
@@ -159,6 +274,8 @@ def render_html_report(
             "start": word.start,
             "end": word.end,
             "stress": word.stress,
+            "expected_stress": word.expected_stress,
+            "is_linked": word.is_linked,
         }
         # 如果存在 Pause 信息，转换为字典
         if word.pause:
@@ -223,10 +340,17 @@ def render_html_report(
             "weak_words": result.analysis.weak_words,
             "weak_phonemes": result.analysis.weak_phonemes,
             "missing_words": result.analysis.missing_words,
+            "mistakes": result.analysis.mistakes,
         },
+        "pronunciation_analysis": generate_pronunciation_analysis(
+            result.analysis.weak_words,
+            result.analysis.weak_phonemes,
+            [p.to_dict() if hasattr(p, "to_dict") else vars(p) for p in result.alignment.phonemes]
+        ),
         "hesitations": hesitations_data,
         "completeness_analysis": completeness_data,
         "pace_chart_data": pace_chart_data,
+        "pitch_contour": [{"t": p.t, "f": p.f0} for p in result.analysis.pitch_contour],
         "feedback": {
             "cn_summary": result.feedback.cn_summary,
             "cn_actions": result.feedback.cn_actions,
@@ -237,9 +361,17 @@ def render_html_report(
             "cn_actions": result.feedback.cn_actions,
             "practice": result.feedback.practice,
         },
+        "advisor_feedback": result.advisor_feedback,
         "colors": colors,
         "audio_base64": audio_base64,
         "phoneme_tips": phoneme_tips,
+        "pronunciation_analysis": generate_pronunciation_analysis(
+            result.analysis.weak_words or [],
+            result.analysis.weak_phonemes or [],
+            [{"phoneme": p.phoneme, "in_word": p.in_word, "score": p.score} 
+             for p in result.alignment.phonemes] if result.alignment.phonemes else None,
+        ),
+        "engine_raw": result.engine_raw,
         # 优先使用音频文件名，如果没有则使用输出文件名，最后回退到 unknown
         "audio_stem": audio_path.stem if audio_path else (output_path.stem if output_path else "Unknown"),
     }
@@ -298,6 +430,14 @@ def regenerate_report_from_json(json_path: Path, output_path: Path) -> None:
     # 确保没有 audio_base64（从 JSON 重新生成时不嵌入音频）
     if "audio_base64" not in data:
         data["audio_base64"] = None
+
+    # 确保 advisor_feedback 存在
+    if "advisor_feedback" not in data:
+        data["advisor_feedback"] = None
+
+    # 确保 engine_raw 存在 (解决 UndefinedError)
+    if "engine_raw" not in data:
+        data["engine_raw"] = {}
     
     # 渲染 HTML
     html_content = template.render(**data)

@@ -71,3 +71,32 @@ class TestAssignTags:
         assert alignment.words[0].tag == WordTag.OK
         assert alignment.words[1].tag == WordTag.WEAK
         assert alignment.words[2].tag == WordTag.POOR
+
+
+class TestDetectLinking:
+    """测试连读检测"""
+    
+    def test_detect_linking_between_words(self):
+        """应该检测到相邻词之间的连读"""
+        from src.models import Alignment, WordAlignment
+        from src.pipeline.analyze import detect_linking
+        
+        # 模拟 "pick up"
+        # pick: 0.1 - 0.4
+        # up:   0.38 - 0.6  (有重叠，典型的连读特征)
+        alignment = Alignment(
+            words=[
+                WordAlignment(word="pick", start=0.1, end=0.4, score=90),
+                WordAlignment(word="up", start=0.38, end=0.6, score=90),
+                WordAlignment(word="now", start=0.65, end=0.9, score=90), # 间隙 0.05，非连读
+            ],
+            phonemes=[],
+        )
+        
+        detect_linking(alignment)
+        
+        # pick 和 up 应该被标记为 has_linking (或类似字段)
+        # Note: 我们需要先在 WordAlignment 模型中添加这个字段，或者通过 tag 实现
+        # 根据 implementation_plan，我们可能需要扩展模型或者使用 metadata
+        assert alignment.words[0].is_linked is True
+        assert alignment.words[1].is_linked is False # 它是被连读的那一个，通常标记在前一个词后面

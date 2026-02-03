@@ -13,6 +13,9 @@ logger = logging.getLogger(__name__)
 
 # 默认配置文件路径
 DEFAULT_CONFIG_PATH = Path(__file__).parent.parent / "config" / "default.yaml"
+import os
+# User config path (can be overridden by env var for Docker)
+USER_CONFIG_PATH = Path(os.getenv("USER_CONFIG_PATH", Path.home() / ".score_reading" / "config.yaml"))
 
 
 class Config:
@@ -31,20 +34,71 @@ class Config:
         """
         加载配置文件
         
-        Args:
-            config_path: 配置文件路径，如果为 None 则使用默认路径
+        优先加载如果指定的 config_path。
+        如果未指定，则加载默认配置，并尝试合并用户配置。
         """
-        path = config_path or DEFAULT_CONFIG_PATH
+        # 1. 加载默认配置
+        self._data = self._get_default_config()
         
-        if not path.exists():
-            logger.warning(f"配置文件不存在: {path}，使用默认配置")
-            self._data = self._get_default_config()
-            return
+        # 2. 如果有默认配置文件，覆盖内置默认值 (可选)
+        if DEFAULT_CONFIG_PATH.exists():
+            with open(DEFAULT_CONFIG_PATH, encoding="utf-8") as f:
+                default_file_data = yaml.safe_load(f) or {}
+                self._merge_config(self._data, default_file_data)
+
+        # 3. 如果指定了配置文件，加载并覆盖
+        if config_path:
+            if config_path.exists():
+                with open(config_path, encoding="utf-8") as f:
+                    custom_data = yaml.safe_load(f) or {}
+                    self._merge_config(self._data, custom_data)
+                logger.info(f"已加载自定义配置文件: {config_path}")
+            else:
+                logger.warning(f"指定配置文件不存在: {config_path}")
+                
+        # 4. 如果没指定配置文件，尝试加载用户配置 (~/.score_reading/config.yaml)
+        elif USER_CONFIG_PATH.exists():
+            try:
+                with open(USER_CONFIG_PATH, encoding="utf-8") as f:
+                    user_data = yaml.safe_load(f) or {}
+                    self._merge_config(self._data, user_data)
+                logger.info(f"已加载用户配置文件: {USER_CONFIG_PATH}")
+            except Exception as e:
+                logger.warning(f"加载用户配置失败: {e}")
+
+    def save_user_config(self, updates: dict[str, Any]) -> None:
+        """
+        保存用户配置
         
-        with open(path, encoding="utf-8") as f:
-            self._data = yaml.safe_load(f) or {}
+        Args:
+            updates: 要更新的配置项 (合并到现有用户配置)
+        """
+        USER_CONFIG_PATH.parent.mkdir(parents=True, exist_ok=True)
         
-        logger.info(f"已加载配置文件: {path}")
+        current_user_data = {}
+        if USER_CONFIG_PATH.exists():
+            try:
+                with open(USER_CONFIG_PATH, encoding="utf-8") as f:
+                    current_user_data = yaml.safe_load(f) or {}
+            except Exception:
+                pass
+        
+        self._merge_config(current_user_data, updates)
+        
+        with open(USER_CONFIG_PATH, "w", encoding="utf-8") as f:
+            yaml.safe_dump(current_user_data, f, allow_unicode=True, default_flow_style=False)
+            
+        # Reload to apply changes
+        self.load()
+        logger.info(f"已保存用户配置: {USER_CONFIG_PATH}")
+
+    def _merge_config(self, base: dict, update: dict) -> None:
+        """递归合并配置字典"""
+        for k, v in update.items():
+            if k in base and isinstance(base[k], dict) and isinstance(v, dict):
+                self._merge_config(base[k], v)
+            else:
+                base[k] = v
     
     def get(self, key: str, default: Any = None) -> Any:
         """

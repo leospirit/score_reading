@@ -192,6 +192,31 @@ def generate_demo_report():
                 "功能词虽然不重读，但也不能完全省略哦。"
             ]
         },
+        "pitch_contour": [
+            {"t": 0.0, "f": 150}, {"t": 0.2, "f": 160}, {"t": 0.4, "f": 155}, # Word 1
+            {"t": 0.5, "f": 180}, {"t": 0.8, "f": 190}, {"t": 1.0, "f": 140}, # Word 2 (Pause)
+            {"t": 1.3, "f": 130}, {"t": 1.6, "f": 135}, {"t": 2.0, "f": 125}, # Word 3
+            {"t": 2.2, "f": 110}, {"t": 2.4, "f": 100}, # Shift
+        ],
+        "advisor_feedback": {
+            "overall_comment": "整体阅读非常流畅，语音语调自然。你对 'long-term' 和 'global' 的重音处理得很好，但需要注意几个连词发音不够清晰。",
+            "specific_feedback": [
+                {
+                    "target": "Change",
+                    "issue": "元音 /eɪ/ 发音不够饱满",
+                    "suggestion": "试着把嘴巴张大一点，从 /e/ 滑向 /ɪ/，延长发音时间。"
+                },
+                {
+                    "target": "Specificially",
+                    "issue": "吞音 /s/ (s-cluster error)",
+                    "suggestion": "注意 /sp/ 组合，/s/ 的气流声要清晰，不要直接发 /p/。"
+                }
+            ],
+            "practice_tips": [
+                "每天练习 5 分钟绕口令，特别是包含 /s/ 和 /θ/ 的组合。",
+                "模仿 Native Speaker 的语调起伏，尝试'影子跟读' (Shadowing)。"
+            ]
+        },
         "audio_stem": "ZhangSan_Unit1_Lesson2", # 模拟音频文件名
     }
 
