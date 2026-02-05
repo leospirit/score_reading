@@ -1,0 +1,5452 @@
+{
+  "meta": {
+    "task_id": "upload",
+    "student_id": "蒋淇悦6单元背诵",
+    "student_name": "蒋淇悦6单元背诵",
+    "submission_id": "web_20260203190727_b5328ace",
+    "timestamp": "2026-02-03T19:08:08.610044",
+    "engine_used": "wav2vec2",
+    "fallback_chain": [
+      "pro",
+      "gemini",
+      "azure"
+    ],
+    "processing_time_ms": 66091,
+    "is_auto_transcribed": false
+  },
+  "audio": {
+    "duration_sec": 55.104,
+    "silence_ratio": 0.41249092229484385,
+    "rms_db": -29.66471512586505,
+    "clipping_ratio": 0.0
+  },
+  "script_text": "Lily,today is the last day of school.Where are you going in\r\nyour winter vacation?\r\nI'm going to Harbin with my parents.I don't like cold weather.\r\nI'm afraid of getting a cold.\r\nOh,you'll be fine.What are you going to do there?\r\nWe're going to see ice lanterns and play in the snow.My\r\nuncle's family live there.We're going to visit them.\r\nAre you going to ski?\r\nYes.I can't ski now,but I'm going to have skiing lessons.\r\nOK,have a nice winter vacation!\r\nYou too!I'm going to bring back some sausages for you!I hear\r\nthey are famous in Harbin.\r\nThank you.",
+  "scores": {
+    "overall_100": 78.1,
+    "pronunciation_100": 75.7,
+    "fluency_100": 68.3,
+    "intonation_100": 95.9,
+    "completeness_100": 100
+  },
+  "engine_raw": {
+    "source": "Wav2Vec2-GOP",
+    "overall_score": 75.6899167784128,
+    "integrated_feedback": {
+      "overall_comment": "整体表现不错，但在部分单词的发音细节上可以更精准。",
+      "specific_suggestions": [
+        "重点练习以下单词的发音：LILY, TODAY, IS。尝试把每个音节发饱满。"
+      ],
+      "practice_tips": [
+        "每天坚持跟读 10 分钟",
+        "遇到难读的长难句可以拆分成小节练习"
+      ],
+      "fun_challenge": "🌟 挑战：尝试用这种语调朗读一段你最喜欢的电影台词！"
+    },
+    "pronunciation_score": 75.6899167784128,
+    "fluency_score": 68.32000000000001,
+    "intonation_score": 95.94655692577362,
+    "completeness_score": 100,
+    "wpm": 118.71483027772737,
+    "pause_count": 15,
+    "total_pause_duration": 8.339999999999996,
+    "energy_std": 0.022466598078608513,
+    "f0_std": 63.02365423257934,
+    "pitch_contour": [
+      {
+        "t": 0.0,
+        "f": 65.40639132514966
+      },
+      {
+        "t": 0.32,
+        "f": 65.40639132514966
+      },
+      {
+        "t": 0.64,
+        "f": 65.40639132514966
+      },
+      {
+        "t": 0.96,
+        "f": 65.40639132514966
+      },
+      {
+        "t": 1.28,
+        "f": 65.40639132514966
+      },
+      {
+        "t": 1.6,
+        "f": 437.46578647972086
+      },
+      {
+        "t": 1.92,
+        "f": 488.2105677098518
+      },
+      {
+        "t": 2.24,
+        "f": 405.81912517781325
+      },
+      {
+        "t": 2.56,
+        "f": 333.4576446322876
+      },
+      {
+        "t": 2.88,
+        "f": 369.9944227116344
+      },
+      {
+        "t": 3.2,
+        "f": 398.84739550836855
+      },
+      {
+        "t": 3.52,
+        "f": 410.5345162761952
+      },
+      {
+        "t": 3.84,
+        "f": 369.9944227116344
+      },
+      {
+        "t": 4.16,
+        "f": 357.39105439674364
+      },
+      {
+        "t": 4.48,
+        "f": 396.5502035487653
+      },
+      {
+        "t": 4.8,
+        "f": 410.5345162761952
+      },
+      {
+        "t": 5.12,
+        "f": 396.5502035487653
+      },
+      {
+        "t": 5.44,
+        "f": 367.86341164694414
+      },
+      {
+        "t": 5.76,
+        "f": 367.86341164694414
+      },
+      {
+        "t": 6.08,
+        "f": 380.8360868427029
+      },
+      {
+        "t": 6.4,
+        "f": 427.4740541075866
+      },
+      {
+        "t": 6.72,
+        "f": 466.1637615180899
+      },
+      {
+        "t": 7.04,
+        "f": 374.29355081837645
+      },
+      {
+        "t": 7.36,
+        "f": 359.461399713042
+      },
+      {
+        "t": 7.68,
+        "f": 422.5640958224419
+      },
+      {
+        "t": 8.0,
+        "f": 429.9503861110682
+      },
+      {
+        "t": 8.32,
+        "f": 380.8360868427029
+      },
+      {
+        "t": 8.64,
+        "f": 372.1377785978373
+      },
+      {
+        "t": 8.96,
+        "f": 376.4618113003449
+      },
+      {
+        "t": 9.28,
+        "f": 353.2860680198856
+      },
+      {
+        "t": 9.6,
+        "f": 341.2518476034216
+      },
+      {
+        "t": 9.92,
+        "f": 341.2518476034216
+      },
+      {
+        "t": 10.24,
+        "f": 376.4618113003449
+      },
+      {
+        "t": 10.56,
+        "f": 365.74467430282664
+      },
+      {
+        "t": 10.88,
+        "f": 369.9944227116344
+      },
+      {
+        "t": 11.2,
+        "f": 398.84739550836855
+      },
+      {
+        "t": 11.52,
+        "f": 458.1553471153147
+      },
+      {
+        "t": 11.84,
+        "f": 412.91271853530293
+      },
+      {
+        "t": 12.16,
+        "f": 378.64263238750516
+      },
+      {
+        "t": 12.48,
+        "f": 361.54373841774776
+      },
+      {
+        "t": 12.8,
+        "f": 385.26118901858945
+      },
+      {
+        "t": 13.12,
+        "f": 357.39105439674364
+      },
+      {
+        "t": 13.44,
+        "f": 347.21682482900223
+      },
+      {
+        "t": 13.76,
+        "f": 349.2282314330038
+      },
+      {
+        "t": 14.08,
+        "f": 325.8414615030442
+      },
+      {
+        "t": 14.4,
+        "f": 331.5370699244067
+      },
+      {
+        "t": 14.72,
+        "f": 343.22869944588433
+      },
+      {
+        "t": 15.04,
+        "f": 337.3322358273121
+      },
+      {
+        "t": 15.36,
+        "f": 361.54373841774776
+      },
+      {
+        "t": 15.68,
+        "f": 307.5533855193843
+      },
+      {
+        "t": 16.0,
+        "f": 312.9293240034019
+      },
+      {
+        "t": 16.32,
+        "f": 385.26118901858945
+      },
+      {
+        "t": 16.64,
+        "f": 380.8360868427029
+      },
+      {
+        "t": 16.96,
+        "f": 378.64263238750516
+      },
+      {
+        "t": 17.28,
+        "f": 349.2282314330038
+      },
+      {
+        "t": 17.6,
+        "f": 343.22869944588433
+      },
+      {
+        "t": 17.92,
+        "f": 391.9954359817493
+      },
+      {
+        "t": 18.24,
+        "f": 385.26118901858945
+      },
+      {
+        "t": 18.56,
+        "f": 355.3326333920185
+      },
+      {
+        "t": 18.88,
+        "f": 349.2282314330038
+      },
+      {
+        "t": 19.2,
+        "f": 365.74467430282664
+      },
+      {
+        "t": 19.52,
+        "f": 297.0769881570017
+      },
+      {
+        "t": 19.84,
+        "f": 369.9944227116344
+      },
+      {
+        "t": 20.16,
+        "f": 357.39105439674364
+      },
+      {
+        "t": 20.48,
+        "f": 425.01198472693204
+      },
+      {
+        "t": 20.8,
+        "f": 412.91271853530293
+      },
+      {
+        "t": 21.12,
+        "f": 355.3326333920185
+      },
+      {
+        "t": 21.44,
+        "f": 394.2662424412591
+      },
+      {
+        "t": 21.76,
+        "f": 383.04224785029453
+      },
+      {
+        "t": 22.08,
+        "f": 353.2860680198856
+      },
+      {
+        "t": 22.4,
+        "f": 357.39105439674364
+      },
+      {
+        "t": 22.72,
+        "f": 378.64263238750516
+      },
+      {
+        "t": 23.04,
+        "f": 285.30470202322215
+      },
+      {
+        "t": 23.36,
+        "f": 396.5502035487653
+      },
+      {
+        "t": 23.68,
+        "f": 343.22869944588433
+      },
+      {
+        "t": 24.0,
+        "f": 380.8360868427029
+      },
+      {
+        "t": 24.32,
+        "f": 389.7377084050387
+      },
+      {
+        "t": 24.64,
+        "f": 391.9954359817493
+      },
+      {
+        "t": 24.96,
+        "f": 380.8360868427029
+      },
+      {
+        "t": 25.28,
+        "f": 422.5640958224419
+      },
+      {
+        "t": 25.6,
+        "f": 372.1377785978373
+      },
+      {
+        "t": 25.92,
+        "f": 383.04224785029453
+      },
+      {
+        "t": 26.24,
+        "f": 357.39105439674364
+      },
+      {
+        "t": 26.56,
+        "f": 355.3326333920185
+      },
+      {
+        "t": 26.88,
+        "f": 345.2170030745703
+      },
+      {
+        "t": 27.2,
+        "f": 391.9954359817493
+      },
+      {
+        "t": 27.52,
+        "f": 439.99999999999994
+      },
+      {
+        "t": 27.84,
+        "f": 369.9944227116344
+      },
+      {
+        "t": 28.16,
+        "f": 355.3326333920185
+      },
+      {
+        "t": 28.48,
+        "f": 359.461399713042
+      },
+      {
+        "t": 28.8,
+        "f": 363.6381399878532
+      },
+      {
+        "t": 29.12,
+        "f": 357.39105439674364
+      },
+      {
+        "t": 29.44,
+        "f": 355.3326333920185
+      },
+      {
+        "t": 29.76,
+        "f": 385.26118901858945
+      },
+      {
+        "t": 30.08,
+        "f": 359.461399713042
+      },
+      {
+        "t": 30.4,
+        "f": 363.6381399878532
+      },
+      {
+        "t": 30.72,
+        "f": 283.6614678567074
+      },
+      {
+        "t": 31.04,
+        "f": 422.5640958224419
+      },
+      {
+        "t": 31.36,
+        "f": 405.81912517781325
+      },
+      {
+        "t": 31.68,
+        "f": 378.64263238750516
+      },
+      {
+        "t": 32.0,
+        "f": 372.1377785978373
+      },
+      {
+        "t": 32.32,
+        "f": 401.1578949656154
+      },
+      {
+        "t": 32.64,
+        "f": 367.86341164694414
+      },
+      {
+        "t": 32.96,
+        "f": 372.1377785978373
+      },
+      {
+        "t": 33.28,
+        "f": 403.4817790100553
+      },
+      {
+        "t": 33.6,
+        "f": 367.86341164694414
+      },
+      {
+        "t": 33.92,
+        "f": 353.2860680198856
+      },
+      {
+        "t": 34.24,
+        "f": 337.3322358273121
+      },
+      {
+        "t": 34.56,
+        "f": 320.24370022528115
+      },
+      {
+        "t": 34.88,
+        "f": 322.09885310803753
+      },
+      {
+        "t": 35.2,
+        "f": 357.39105439674364
+      },
+      {
+        "t": 35.52,
+        "f": 351.2512899969259
+      },
+      {
+        "t": 35.84,
+        "f": 347.21682482900223
+      },
+      {
+        "t": 36.16,
+        "f": 355.3326333920185
+      },
+      {
+        "t": 36.48,
+        "f": 376.4618113003449
+      },
+      {
+        "t": 36.8,
+        "f": 298.79793764201077
+      },
+      {
+        "t": 37.12,
+        "f": 398.84739550836855
+      },
+      {
+        "t": 37.44,
+        "f": 403.4817790100553
+      },
+      {
+        "t": 37.76,
+        "f": 420.1303057205832
+      },
+      {
+        "t": 38.08,
+        "f": 365.74467430282664
+      },
+      {
+        "t": 38.4,
+        "f": 394.2662424412591
+      },
+      {
+        "t": 38.72,
+        "f": 396.5502035487653
+      },
+      {
+        "t": 39.04,
+        "f": 343.22869944588433
+      },
+      {
+        "t": 39.36,
+        "f": 347.21682482900223
+      },
+      {
+        "t": 39.68,
+        "f": 347.21682482900223
+      },
+      {
+        "t": 40.0,
+        "f": 351.2512899969259
+      },
+      {
+        "t": 40.32,
+        "f": 398.84739550836855
+      },
+      {
+        "t": 40.64,
+        "f": 322.09885310803753
+      },
+      {
+        "t": 40.96,
+        "f": 439.99999999999994
+      },
+      {
+        "t": 41.28,
+        "f": 427.4740541075866
+      },
+      {
+        "t": 41.6,
+        "f": 394.2662424412591
+      },
+      {
+        "t": 41.92,
+        "f": 380.8360868427029
+      },
+      {
+        "t": 42.24,
+        "f": 385.26118901858945
+      },
+      {
+        "t": 42.56,
+        "f": 378.64263238750516
+      },
+      {
+        "t": 42.88,
+        "f": 394.2662424412591
+      },
+      {
+        "t": 43.2,
+        "f": 408.1700114541761
+      },
+      {
+        "t": 43.52,
+        "f": 398.84739550836855
+      },
+      {
+        "t": 43.84,
+        "f": 385.26118901858945
+      },
+      {
+        "t": 44.16,
+        "f": 429.9503861110682
+      },
+      {
+        "t": 44.48,
+        "f": 389.7377084050387
+      },
+      {
+        "t": 44.8,
+        "f": 394.2662424412591
+      },
+      {
+        "t": 45.12,
+        "f": 389.7377084050387
+      },
+      {
+        "t": 45.44,
+        "f": 312.9293240034019
+      },
+      {
+        "t": 45.76,
+        "f": 81.46036537576103
+      },
+      {
+        "t": 46.08,
+        "f": 65.40639132514966
+      },
+      {
+        "t": 46.4,
+        "f": 65.40639132514966
+      },
+      {
+        "t": 46.72,
+        "f": 65.40639132514966
+      },
+      {
+        "t": 47.04,
+        "f": 369.9944227116344
+      },
+      {
+        "t": 47.36,
+        "f": 427.4740541075866
+      },
+      {
+        "t": 47.68,
+        "f": 372.1377785978373
+      },
+      {
+        "t": 48.0,
+        "f": 357.39105439674364
+      },
+      {
+        "t": 48.32,
+        "f": 378.64263238750516
+      },
+      {
+        "t": 48.64,
+        "f": 378.64263238750516
+      },
+      {
+        "t": 48.96,
+        "f": 412.91271853530293
+      },
+      {
+        "t": 49.28,
+        "f": 447.69106452518196
+      },
+      {
+        "t": 49.6,
+        "f": 347.21682482900223
+      },
+      {
+        "t": 49.92,
+        "f": 408.1700114541761
+      },
+      {
+        "t": 50.24,
+        "f": 425.01198472693204
+      },
+      {
+        "t": 50.56,
+        "f": 389.7377084050387
+      },
+      {
+        "t": 50.88,
+        "f": 394.2662424412591
+      },
+      {
+        "t": 51.2,
+        "f": 410.5345162761952
+      },
+      {
+        "t": 51.52,
+        "f": 347.21682482900223
+      },
+      {
+        "t": 51.84,
+        "f": 383.04224785029453
+      },
+      {
+        "t": 52.16,
+        "f": 357.39105439674364
+      },
+      {
+        "t": 52.48,
+        "f": 357.39105439674364
+      },
+      {
+        "t": 52.8,
+        "f": 353.2860680198856
+      },
+      {
+        "t": 53.12,
+        "f": 383.04224785029453
+      },
+      {
+        "t": 53.44,
+        "f": 408.1700114541761
+      },
+      {
+        "t": 53.76,
+        "f": 380.8360868427029
+      },
+      {
+        "t": 54.08,
+        "f": 376.4618113003449
+      },
+      {
+        "t": 54.4,
+        "f": 353.2860680198856
+      },
+      {
+        "t": 54.72,
+        "f": 357.39105439674364
+      },
+      {
+        "t": 55.04,
+        "f": 347.21682482900223
+      },
+      {
+        "t": 55.36,
+        "f": 405.81912517781325
+      },
+      {
+        "t": 55.68,
+        "f": 378.64263238750516
+      },
+      {
+        "t": 56.0,
+        "f": 383.04224785029453
+      },
+      {
+        "t": 56.32,
+        "f": 389.7377084050387
+      },
+      {
+        "t": 56.64,
+        "f": 357.39105439674364
+      },
+      {
+        "t": 56.96,
+        "f": 314.74210513575684
+      },
+      {
+        "t": 57.28,
+        "f": 394.2662424412591
+      },
+      {
+        "t": 57.6,
+        "f": 458.1553471153147
+      },
+      {
+        "t": 57.92,
+        "f": 345.2170030745703
+      },
+      {
+        "t": 58.24,
+        "f": 394.2662424412591
+      },
+      {
+        "t": 58.56,
+        "f": 353.2860680198856
+      },
+      {
+        "t": 58.88,
+        "f": 387.49298438230534
+      },
+      {
+        "t": 59.2,
+        "f": 405.81912517781325
+      },
+      {
+        "t": 59.52,
+        "f": 369.9944227116344
+      },
+      {
+        "t": 59.84,
+        "f": 398.84739550836855
+      },
+      {
+        "t": 60.16,
+        "f": 369.9944227116344
+      },
+      {
+        "t": 60.48,
+        "f": 398.84739550836855
+      },
+      {
+        "t": 60.8,
+        "f": 401.1578949656154
+      },
+      {
+        "t": 61.12,
+        "f": 309.33502415691686
+      },
+      {
+        "t": 61.44,
+        "f": 460.8094140410758
+      },
+      {
+        "t": 61.76,
+        "f": 391.9954359817493
+      },
+      {
+        "t": 62.08,
+        "f": 396.5502035487653
+      },
+      {
+        "t": 62.4,
+        "f": 361.54373841774776
+      },
+      {
+        "t": 62.72,
+        "f": 361.54373841774776
+      },
+      {
+        "t": 63.04,
+        "f": 363.6381399878532
+      },
+      {
+        "t": 63.36,
+        "f": 355.3326333920185
+      },
+      {
+        "t": 63.68,
+        "f": 343.22869944588433
+      },
+      {
+        "t": 64.0,
+        "f": 343.22869944588433
+      },
+      {
+        "t": 64.32,
+        "f": 376.4618113003449
+      },
+      {
+        "t": 64.64,
+        "f": 341.2518476034216
+      },
+      {
+        "t": 64.96,
+        "f": 369.9944227116344
+      },
+      {
+        "t": 65.28,
+        "f": 378.64263238750516
+      },
+      {
+        "t": 65.6,
+        "f": 351.2512899969259
+      },
+      {
+        "t": 65.92,
+        "f": 353.2860680198856
+      },
+      {
+        "t": 66.24,
+        "f": 355.3326333920185
+      },
+      {
+        "t": 66.56,
+        "f": 387.49298438230534
+      },
+      {
+        "t": 66.88,
+        "f": 359.461399713042
+      },
+      {
+        "t": 67.2,
+        "f": 347.21682482900223
+      },
+      {
+        "t": 67.52,
+        "f": 363.6381399878532
+      },
+      {
+        "t": 67.84,
+        "f": 367.86341164694414
+      },
+      {
+        "t": 68.16,
+        "f": 389.7377084050387
+      },
+      {
+        "t": 68.48,
+        "f": 322.09885310803753
+      },
+      {
+        "t": 68.8,
+        "f": 372.1377785978373
+      },
+      {
+        "t": 69.12,
+        "f": 422.5640958224419
+      },
+      {
+        "t": 69.44,
+        "f": 396.5502035487653
+      },
+      {
+        "t": 69.76,
+        "f": 367.86341164694414
+      },
+      {
+        "t": 70.08,
+        "f": 365.74467430282664
+      },
+      {
+        "t": 70.4,
+        "f": 378.64263238750516
+      },
+      {
+        "t": 70.72,
+        "f": 367.86341164694414
+      },
+      {
+        "t": 71.04,
+        "f": 374.29355081837645
+      },
+      {
+        "t": 71.36,
+        "f": 427.4740541075866
+      },
+      {
+        "t": 71.68,
+        "f": 391.9954359817493
+      },
+      {
+        "t": 72.0,
+        "f": 387.49298438230534
+      },
+      {
+        "t": 72.32,
+        "f": 363.6381399878532
+      },
+      {
+        "t": 72.64,
+        "f": 359.461399713042
+      },
+      {
+        "t": 72.96,
+        "f": 401.1578949656154
+      },
+      {
+        "t": 73.28,
+        "f": 357.39105439674364
+      },
+      {
+        "t": 73.6,
+        "f": 376.4618113003449
+      },
+      {
+        "t": 73.92,
+        "f": 325.8414615030442
+      },
+      {
+        "t": 74.24,
+        "f": 347.21682482900223
+      },
+      {
+        "t": 74.56,
+        "f": 369.9944227116344
+      },
+      {
+        "t": 74.88,
+        "f": 307.5533855193843
+      },
+      {
+        "t": 75.2,
+        "f": 165.76853496220332
+      }
+    ]
+  },
+  "alignment": {
+    "words": [
+      {
+        "word": "Lily",
+        "start": 0.0,
+        "end": 0.08,
+        "tag": "weak",
+        "score": 40,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "today",
+        "start": 0.16,
+        "end": 2.08,
+        "tag": "weak",
+        "score": 40.2,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "is",
+        "start": 2.24,
+        "end": 2.38,
+        "tag": "weak",
+        "score": 48.7,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "the",
+        "start": 2.6,
+        "end": 2.82,
+        "tag": "ok",
+        "score": 75.2,
+        "pause": {
+          "type": "bad",
+          "duration": 0.68
+        },
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "last",
+        "start": 3.5,
+        "end": 3.78,
+        "tag": "ok",
+        "score": 76.5,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "day",
+        "start": 3.98,
+        "end": 4.18,
+        "tag": "ok",
+        "score": 80.0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "of",
+        "start": 4.3,
+        "end": 4.48,
+        "tag": "weak",
+        "score": 68.6,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "school",
+        "start": 4.58,
+        "end": 4.96,
+        "tag": "ok",
+        "score": 88.3,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "Where",
+        "start": 5.08,
+        "end": 5.94,
+        "tag": "weak",
+        "score": 63.6,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "are",
+        "start": 6.0,
+        "end": 6.22,
+        "tag": "ok",
+        "score": 79.9,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "you",
+        "start": 6.32,
+        "end": 6.46,
+        "tag": "ok",
+        "score": 84.2,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "going",
+        "start": 6.6,
+        "end": 7.02,
+        "tag": "ok",
+        "score": 85.0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "in",
+        "start": 7.06,
+        "end": 7.16,
+        "tag": "weak",
+        "score": 61.2,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "your",
+        "start": 7.42,
+        "end": 7.6,
+        "tag": "ok",
+        "score": 85.7,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "winter",
+        "start": 7.68,
+        "end": 8.06,
+        "tag": "ok",
+        "score": 77.6,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "vacation",
+        "start": 8.14,
+        "end": 8.9,
+        "tag": "ok",
+        "score": 70.1,
+        "pause": {
+          "type": "optional",
+          "duration": 0.42
+        },
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "I'm",
+        "start": 9.32,
+        "end": 9.46,
+        "tag": "ok",
+        "score": 81.9,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "going",
+        "start": 9.52,
+        "end": 9.82,
+        "tag": "ok",
+        "score": 86.0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "to",
+        "start": 9.86,
+        "end": 10.0,
+        "tag": "weak",
+        "score": 68.6,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "Harbin",
+        "start": 10.14,
+        "end": 10.66,
+        "tag": "ok",
+        "score": 77.6,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "with",
+        "start": 10.82,
+        "end": 10.98,
+        "tag": "ok",
+        "score": 88.8,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "my",
+        "start": 11.06,
+        "end": 11.22,
+        "tag": "ok",
+        "score": 70.8,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "parents",
+        "start": 11.3,
+        "end": 11.96,
+        "tag": "ok",
+        "score": 74.4,
+        "pause": {
+          "type": "bad",
+          "duration": 0.64
+        },
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "I",
+        "start": 12.6,
+        "end": 12.66,
+        "tag": "ok",
+        "score": 83.1,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "don't",
+        "start": 12.74,
+        "end": 12.96,
+        "tag": "ok",
+        "score": 87.9,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "like",
+        "start": 13.04,
+        "end": 13.34,
+        "tag": "ok",
+        "score": 81.6,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "cold",
+        "start": 13.5,
+        "end": 13.98,
+        "tag": "ok",
+        "score": 76.3,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "weather",
+        "start": 14.04,
+        "end": 14.52,
+        "tag": "weak",
+        "score": 69.6,
+        "pause": {
+          "type": "bad",
+          "duration": 0.76
+        },
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "I'm",
+        "start": 15.28,
+        "end": 15.44,
+        "tag": "ok",
+        "score": 78.6,
+        "pause": {
+          "type": "optional",
+          "duration": 0.32
+        },
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "afraid",
+        "start": 15.76,
+        "end": 16.08,
+        "tag": "ok",
+        "score": 77.0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "of",
+        "start": 16.2,
+        "end": 16.4,
+        "tag": "ok",
+        "score": 71.5,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "getting",
+        "start": 16.5,
+        "end": 16.86,
+        "tag": "ok",
+        "score": 86.5,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "a",
+        "start": 17.0,
+        "end": 17.12,
+        "tag": "weak",
+        "score": 52.5,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "cold",
+        "start": 17.26,
+        "end": 17.66,
+        "tag": "ok",
+        "score": 77.4,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "Oh",
+        "start": 17.78,
+        "end": 18.46,
+        "tag": "weak",
+        "score": 66.8,
+        "pause": {
+          "type": "optional",
+          "duration": 0.4
+        },
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "you'll",
+        "start": 18.86,
+        "end": 19.4,
+        "tag": "ok",
+        "score": 81.2,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "be",
+        "start": 19.46,
+        "end": 19.58,
+        "tag": "ok",
+        "score": 88.7,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "fine",
+        "start": 19.68,
+        "end": 19.96,
+        "tag": "weak",
+        "score": 64.6,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "What",
+        "start": 20.06,
+        "end": 20.36,
+        "tag": "weak",
+        "score": 69.4,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "are",
+        "start": 20.5,
+        "end": 20.74,
+        "tag": "ok",
+        "score": 77.1,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "you",
+        "start": 20.8,
+        "end": 20.92,
+        "tag": "ok",
+        "score": 88.2,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "going",
+        "start": 21.06,
+        "end": 21.42,
+        "tag": "ok",
+        "score": 78.2,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "to",
+        "start": 21.56,
+        "end": 22.28,
+        "tag": "weak",
+        "score": 62.7,
+        "pause": {
+          "type": "optional",
+          "duration": 0.48
+        },
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "do",
+        "start": 22.76,
+        "end": 22.9,
+        "tag": "ok",
+        "score": 90.7,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "there",
+        "start": 23.06,
+        "end": 23.36,
+        "tag": "ok",
+        "score": 90.7,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "We're",
+        "start": 23.48,
+        "end": 24.18,
+        "tag": "ok",
+        "score": 73.8,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "going",
+        "start": 24.26,
+        "end": 24.5,
+        "tag": "ok",
+        "score": 84.3,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "to",
+        "start": 24.54,
+        "end": 24.66,
+        "tag": "ok",
+        "score": 76.6,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "see",
+        "start": 24.78,
+        "end": 25.0,
+        "tag": "ok",
+        "score": 75.5,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "ice",
+        "start": 25.06,
+        "end": 25.18,
+        "tag": "weak",
+        "score": 40,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "lanterns",
+        "start": 25.36,
+        "end": 25.88,
+        "tag": "ok",
+        "score": 81.7,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "and",
+        "start": 25.96,
+        "end": 26.14,
+        "tag": "ok",
+        "score": 74.6,
+        "pause": {
+          "type": "optional",
+          "duration": 0.32
+        },
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "play",
+        "start": 26.46,
+        "end": 26.82,
+        "tag": "ok",
+        "score": 70.1,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "in",
+        "start": 26.92,
+        "end": 27.0,
+        "tag": "ok",
+        "score": 85.1,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "the",
+        "start": 27.1,
+        "end": 27.24,
+        "tag": "ok",
+        "score": 70.2,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "snow",
+        "start": 27.38,
+        "end": 27.64,
+        "tag": "ok",
+        "score": 71.3,
+        "pause": {
+          "type": "bad",
+          "duration": 0.6
+        },
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "My",
+        "start": 28.24,
+        "end": 28.38,
+        "tag": "ok",
+        "score": 78.0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "uncle's",
+        "start": 28.58,
+        "end": 28.92,
+        "tag": "ok",
+        "score": 88.1,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "family",
+        "start": 29.02,
+        "end": 29.62,
+        "tag": "ok",
+        "score": 71.5,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "live",
+        "start": 29.74,
+        "end": 30.06,
+        "tag": "ok",
+        "score": 81.0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "there",
+        "start": 30.12,
+        "end": 30.38,
+        "tag": "ok",
+        "score": 89.0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "We're",
+        "start": 30.54,
+        "end": 31.32,
+        "tag": "ok",
+        "score": 71.0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "going",
+        "start": 31.4,
+        "end": 31.7,
+        "tag": "ok",
+        "score": 85.9,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "to",
+        "start": 31.74,
+        "end": 31.9,
+        "tag": "ok",
+        "score": 71.8,
+        "pause": {
+          "type": "bad",
+          "duration": 0.7
+        },
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "visit",
+        "start": 32.6,
+        "end": 33.04,
+        "tag": "ok",
+        "score": 81.6,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "them",
+        "start": 33.16,
+        "end": 33.38,
+        "tag": "ok",
+        "score": 83.5,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "Are",
+        "start": 33.6,
+        "end": 34.82,
+        "tag": "ok",
+        "score": 75.4,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "you",
+        "start": 34.88,
+        "end": 35.0,
+        "tag": "ok",
+        "score": 83.3,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "going",
+        "start": 35.1,
+        "end": 35.32,
+        "tag": "ok",
+        "score": 88.4,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "to",
+        "start": 35.38,
+        "end": 35.5,
+        "tag": "ok",
+        "score": 85.8,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "ski",
+        "start": 35.54,
+        "end": 35.8,
+        "tag": "ok",
+        "score": 78.1,
+        "pause": {
+          "type": "optional",
+          "duration": 0.52
+        },
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "Yes",
+        "start": 36.32,
+        "end": 36.7,
+        "tag": "ok",
+        "score": 74.5,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "I",
+        "start": 36.98,
+        "end": 37.04,
+        "tag": "ok",
+        "score": 74.9,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "can't",
+        "start": 37.12,
+        "end": 37.4,
+        "tag": "ok",
+        "score": 83.3,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "ski",
+        "start": 37.44,
+        "end": 37.76,
+        "tag": "ok",
+        "score": 73.5,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "now",
+        "start": 37.86,
+        "end": 38.08,
+        "tag": "ok",
+        "score": 71.0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "but",
+        "start": 38.28,
+        "end": 38.46,
+        "tag": "weak",
+        "score": 69.6,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "I'm",
+        "start": 38.66,
+        "end": 38.8,
+        "tag": "ok",
+        "score": 85.4,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "going",
+        "start": 38.94,
+        "end": 39.42,
+        "tag": "ok",
+        "score": 79.8,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "to",
+        "start": 39.5,
+        "end": 39.76,
+        "tag": "weak",
+        "score": 64.2,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "have",
+        "start": 39.94,
+        "end": 40.24,
+        "tag": "ok",
+        "score": 75.7,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "skiing",
+        "start": 40.32,
+        "end": 40.76,
+        "tag": "ok",
+        "score": 77.3,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "lessons",
+        "start": 40.88,
+        "end": 41.44,
+        "tag": "weak",
+        "score": 67.8,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "OK",
+        "start": 41.54,
+        "end": 42.26,
+        "tag": "weak",
+        "score": 55.9,
+        "pause": {
+          "type": "optional",
+          "duration": 0.5
+        },
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "have",
+        "start": 42.76,
+        "end": 43.04,
+        "tag": "ok",
+        "score": 81.1,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "a",
+        "start": 43.16,
+        "end": 43.18,
+        "tag": "ok",
+        "score": 96.5,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "nice",
+        "start": 43.28,
+        "end": 43.42,
+        "tag": "weak",
+        "score": 57.9,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "winter",
+        "start": 43.62,
+        "end": 44.0,
+        "tag": "ok",
+        "score": 80.0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "vacation",
+        "start": 44.06,
+        "end": 44.84,
+        "tag": "ok",
+        "score": 70.4,
+        "pause": {
+          "type": "optional",
+          "duration": 0.5
+        },
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "You",
+        "start": 45.34,
+        "end": 45.52,
+        "tag": "weak",
+        "score": 67.0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "too",
+        "start": 45.6,
+        "end": 45.66,
+        "tag": "ok",
+        "score": 93.9,
+        "pause": {
+          "type": "bad",
+          "duration": 0.68
+        },
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "I'm",
+        "start": 46.34,
+        "end": 46.5,
+        "tag": "ok",
+        "score": 81.5,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "going",
+        "start": 46.58,
+        "end": 47.06,
+        "tag": "ok",
+        "score": 80.0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "to",
+        "start": 47.16,
+        "end": 47.66,
+        "tag": "weak",
+        "score": 57.1,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "bring",
+        "start": 47.84,
+        "end": 48.08,
+        "tag": "ok",
+        "score": 88.7,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "back",
+        "start": 48.12,
+        "end": 48.36,
+        "tag": "ok",
+        "score": 74.3,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "some",
+        "start": 48.44,
+        "end": 48.68,
+        "tag": "ok",
+        "score": 73.4,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "sausages",
+        "start": 48.74,
+        "end": 49.34,
+        "tag": "ok",
+        "score": 74.5,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "for",
+        "start": 49.4,
+        "end": 49.62,
+        "tag": "weak",
+        "score": 69.2,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "you",
+        "start": 49.74,
+        "end": 49.96,
+        "tag": "ok",
+        "score": 77.2,
+        "pause": {
+          "type": "bad",
+          "duration": 0.82
+        },
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "I",
+        "start": 50.78,
+        "end": 50.82,
+        "tag": "ok",
+        "score": 93.6,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "hear",
+        "start": 50.98,
+        "end": 51.38,
+        "tag": "ok",
+        "score": 72.4,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "they",
+        "start": 51.54,
+        "end": 51.76,
+        "tag": "ok",
+        "score": 88.1,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "are",
+        "start": 51.84,
+        "end": 52.08,
+        "tag": "ok",
+        "score": 71.1,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "famous",
+        "start": 52.16,
+        "end": 52.98,
+        "tag": "ok",
+        "score": 70.9,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "in",
+        "start": 53.18,
+        "end": 53.28,
+        "tag": "ok",
+        "score": 80.7,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "Harbin",
+        "start": 53.4,
+        "end": 54.04,
+        "tag": "ok",
+        "score": 71.6,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "Thank",
+        "start": 54.18,
+        "end": 54.54,
+        "tag": "ok",
+        "score": 77.3,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "you",
+        "start": 54.6,
+        "end": 55.09,
+        "tag": "weak",
+        "score": 59.5,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      }
+    ],
+    "phonemes": []
+  },
+  "analysis": {
+    "weak_words": [
+      "Lily",
+      "ice",
+      "today"
+    ],
+    "weak_phonemes": [
+      "r",
+      "w"
+    ],
+    "missing_words": [],
+    "confusions": [],
+    "mistakes": [
+      {
+        "type": "accuracy",
+        "target": "L",
+        "word": "Lily",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 0.0
+      },
+      {
+        "type": "accuracy",
+        "target": "I",
+        "word": "Lily",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 0.0
+      },
+      {
+        "type": "accuracy",
+        "target": "L",
+        "word": "Lily",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 0.0
+      },
+      {
+        "type": "accuracy",
+        "target": "Y",
+        "word": "Lily",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 0.0
+      },
+      {
+        "type": "accuracy",
+        "target": "T",
+        "word": "today",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 0.0
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "today",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 0.0
+      },
+      {
+        "type": "accuracy",
+        "target": "D",
+        "word": "today",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 0.0
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "today",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 28.689048767089844
+      },
+      {
+        "type": "accuracy",
+        "target": "Y",
+        "word": "today",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 63.73139190673828
+      },
+      {
+        "type": "accuracy",
+        "target": "I",
+        "word": "is",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 0.0
+      },
+      {
+        "type": "accuracy",
+        "target": "S",
+        "word": "is",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 38.91802978515625
+      },
+      {
+        "type": "accuracy",
+        "target": "H",
+        "word": "the",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 64.76655578613281
+      },
+      {
+        "type": "accuracy",
+        "target": "E",
+        "word": "the",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 46.800086975097656
+      },
+      {
+        "type": "accuracy",
+        "target": "L",
+        "word": "last",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 50.33734893798828
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "last",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 63.00346374511719
+      },
+      {
+        "type": "accuracy",
+        "target": "D",
+        "word": "day",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 43.9423828125
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "of",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 15.371917724609375
+      },
+      {
+        "type": "accuracy",
+        "target": "S",
+        "word": "school",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 58.175376892089844
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "school",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 43.797367095947266
+      },
+      {
+        "type": "accuracy",
+        "target": "W",
+        "word": "Where",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 0.0
+      },
+      {
+        "type": "accuracy",
+        "target": "H",
+        "word": "Where",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 33.53123474121094
+      },
+      {
+        "type": "accuracy",
+        "target": "E",
+        "word": "Where",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 62.036766052246094
+      },
+      {
+        "type": "accuracy",
+        "target": "R",
+        "word": "Where",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 27.343185424804688
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "are",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 17.67969512939453
+      },
+      {
+        "type": "accuracy",
+        "target": "Y",
+        "word": "you",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 56.543025970458984
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "going",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 36.8327751159668
+      },
+      {
+        "type": "accuracy",
+        "target": "I",
+        "word": "going",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 58.2724723815918
+      },
+      {
+        "type": "accuracy",
+        "target": "I",
+        "word": "in",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 35.95210266113281
+      },
+      {
+        "type": "accuracy",
+        "target": "N",
+        "word": "in",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 39.80815505981445
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "your",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 62.52288055419922
+      },
+      {
+        "type": "accuracy",
+        "target": "I",
+        "word": "winter",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 31.52947998046875
+      },
+      {
+        "type": "accuracy",
+        "target": "T",
+        "word": "winter",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 42.8894157409668
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "vacation",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 48.231285095214844
+      },
+      {
+        "type": "accuracy",
+        "target": "C",
+        "word": "vacation",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 29.878753662109375
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "vacation",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 24.461593627929688
+      },
+      {
+        "type": "accuracy",
+        "target": "T",
+        "word": "vacation",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 64.94200134277344
+      },
+      {
+        "type": "accuracy",
+        "target": "I",
+        "word": "vacation",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 60.01316833496094
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "vacation",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 24.184951782226562
+      },
+      {
+        "type": "accuracy",
+        "target": "G",
+        "word": "going",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 40.8998908996582
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "going",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 61.69863510131836
+      },
+      {
+        "type": "accuracy",
+        "target": "T",
+        "word": "to",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 48.526432037353516
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "to",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 51.12135314941406
+      },
+      {
+        "type": "accuracy",
+        "target": "H",
+        "word": "Harbin",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 63.87190628051758
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "Harbin",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 44.471221923828125
+      },
+      {
+        "type": "accuracy",
+        "target": "I",
+        "word": "Harbin",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 53.69868087768555
+      },
+      {
+        "type": "accuracy",
+        "target": "W",
+        "word": "with",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 57.1612434387207
+      },
+      {
+        "type": "accuracy",
+        "target": "M",
+        "word": "my",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 58.73594284057617
+      },
+      {
+        "type": "accuracy",
+        "target": "Y",
+        "word": "my",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 47.93855667114258
+      },
+      {
+        "type": "accuracy",
+        "target": "P",
+        "word": "parents",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 59.17387390136719
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "parents",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 21.669532775878906
+      },
+      {
+        "type": "accuracy",
+        "target": "R",
+        "word": "parents",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 38.64850997924805
+      },
+      {
+        "type": "accuracy",
+        "target": "T",
+        "word": "parents",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 64.66672134399414
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "don't",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 46.43733596801758
+      },
+      {
+        "type": "accuracy",
+        "target": "L",
+        "word": "like",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 23.08300018310547
+      },
+      {
+        "type": "accuracy",
+        "target": "I",
+        "word": "like",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 61.69136047363281
+      },
+      {
+        "type": "accuracy",
+        "target": "C",
+        "word": "cold",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 56.82662582397461
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "cold",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 45.59414291381836
+      },
+      {
+        "type": "accuracy",
+        "target": "D",
+        "word": "cold",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 58.936119079589844
+      },
+      {
+        "type": "accuracy",
+        "target": "E",
+        "word": "weather",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 27.97734832763672
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "weather",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 7.7458953857421875
+      },
+      {
+        "type": "accuracy",
+        "target": "T",
+        "word": "weather",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 39.5173225402832
+      },
+      {
+        "type": "accuracy",
+        "target": "H",
+        "word": "weather",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 30.212997436523438
+      },
+      {
+        "type": "accuracy",
+        "target": "I",
+        "word": "I'm",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 57.70195007324219
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "afraid",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 20.157730102539062
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "afraid",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 43.362335205078125
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "of",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 32.46807098388672
+      },
+      {
+        "type": "accuracy",
+        "target": "E",
+        "word": "getting",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 57.451419830322266
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "a",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 23.987472534179688
+      },
+      {
+        "type": "accuracy",
+        "target": "C",
+        "word": "cold",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 54.4343147277832
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "cold",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 36.20706558227539
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "Oh",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 0.0
+      },
+      {
+        "type": "accuracy",
+        "target": "Y",
+        "word": "you'll",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 49.821868896484375
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "you'll",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 50.97711181640625
+      },
+      {
+        "type": "accuracy",
+        "target": "L",
+        "word": "you'll",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 62.32373046875
+      },
+      {
+        "type": "accuracy",
+        "target": "E",
+        "word": "be",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 63.772117614746094
+      },
+      {
+        "type": "accuracy",
+        "target": "I",
+        "word": "fine",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 20.06787872314453
+      },
+      {
+        "type": "accuracy",
+        "target": "N",
+        "word": "fine",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 0.0
+      },
+      {
+        "type": "accuracy",
+        "target": "E",
+        "word": "fine",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 60.53920364379883
+      },
+      {
+        "type": "accuracy",
+        "target": "W",
+        "word": "What",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 14.367042541503906
+      },
+      {
+        "type": "accuracy",
+        "target": "H",
+        "word": "What",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 42.17811965942383
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "are",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 5.745513916015625
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "you",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 43.32771682739258
+      },
+      {
+        "type": "accuracy",
+        "target": "G",
+        "word": "going",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 38.54325866699219
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "going",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 40.2470703125
+      },
+      {
+        "type": "accuracy",
+        "target": "I",
+        "word": "going",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 53.96187210083008
+      },
+      {
+        "type": "accuracy",
+        "target": "T",
+        "word": "to",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 21.205421447753906
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "to",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 59.392784118652344
+      },
+      {
+        "type": "accuracy",
+        "target": "W",
+        "word": "We're",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 0.0
+      },
+      {
+        "type": "accuracy",
+        "target": "'",
+        "word": "We're",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 32.261573791503906
+      },
+      {
+        "type": "accuracy",
+        "target": "G",
+        "word": "going",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 54.53925704956055
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "going",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 47.73701477050781
+      },
+      {
+        "type": "accuracy",
+        "target": "T",
+        "word": "to",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 63.331687927246094
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "to",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 61.7054557800293
+      },
+      {
+        "type": "accuracy",
+        "target": "S",
+        "word": "see",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 58.09577178955078
+      },
+      {
+        "type": "accuracy",
+        "target": "E",
+        "word": "see",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 60.98377227783203
+      },
+      {
+        "type": "accuracy",
+        "target": "E",
+        "word": "see",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 63.50764083862305
+      },
+      {
+        "type": "accuracy",
+        "target": "I",
+        "word": "ice",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 0.0
+      },
+      {
+        "type": "accuracy",
+        "target": "C",
+        "word": "ice",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 0.0
+      },
+      {
+        "type": "accuracy",
+        "target": "E",
+        "word": "ice",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 49.306339263916016
+      },
+      {
+        "type": "accuracy",
+        "target": "L",
+        "word": "lanterns",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 58.13901901245117
+      },
+      {
+        "type": "accuracy",
+        "target": "N",
+        "word": "lanterns",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 57.96476364135742
+      },
+      {
+        "type": "accuracy",
+        "target": "E",
+        "word": "lanterns",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 48.9825553894043
+      },
+      {
+        "type": "accuracy",
+        "target": "R",
+        "word": "lanterns",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 63.74757766723633
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "and",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 0.0
+      },
+      {
+        "type": "accuracy",
+        "target": "P",
+        "word": "play",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 41.5645637512207
+      },
+      {
+        "type": "accuracy",
+        "target": "L",
+        "word": "play",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 59.7302131652832
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "play",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 32.09471130371094
+      },
+      {
+        "type": "accuracy",
+        "target": "T",
+        "word": "the",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 33.96025848388672
+      },
+      {
+        "type": "accuracy",
+        "target": "H",
+        "word": "the",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 43.49528121948242
+      },
+      {
+        "type": "accuracy",
+        "target": "S",
+        "word": "snow",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 43.26930618286133
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "snow",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 26.067947387695312
+      },
+      {
+        "type": "accuracy",
+        "target": "W",
+        "word": "snow",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 60.166412353515625
+      },
+      {
+        "type": "accuracy",
+        "target": "M",
+        "word": "My",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 63.1478271484375
+      },
+      {
+        "type": "accuracy",
+        "target": "C",
+        "word": "uncle's",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 38.16991424560547
+      },
+      {
+        "type": "accuracy",
+        "target": "F",
+        "word": "family",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 46.67840576171875
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "family",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 33.188987731933594
+      },
+      {
+        "type": "accuracy",
+        "target": "M",
+        "word": "family",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 55.77900314331055
+      },
+      {
+        "type": "accuracy",
+        "target": "I",
+        "word": "family",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 64.26197052001953
+      },
+      {
+        "type": "accuracy",
+        "target": "L",
+        "word": "family",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 64.7703742980957
+      },
+      {
+        "type": "accuracy",
+        "target": "Y",
+        "word": "family",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 62.15077590942383
+      },
+      {
+        "type": "accuracy",
+        "target": "L",
+        "word": "live",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 59.395442962646484
+      },
+      {
+        "type": "accuracy",
+        "target": "I",
+        "word": "live",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 54.094173431396484
+      },
+      {
+        "type": "accuracy",
+        "target": "E",
+        "word": "live",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 64.82353973388672
+      },
+      {
+        "type": "accuracy",
+        "target": "W",
+        "word": "We're",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 0.0
+      },
+      {
+        "type": "accuracy",
+        "target": "E",
+        "word": "We're",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 63.77360153198242
+      },
+      {
+        "type": "accuracy",
+        "target": "'",
+        "word": "We're",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 34.380592346191406
+      },
+      {
+        "type": "accuracy",
+        "target": "G",
+        "word": "going",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 58.29126739501953
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "going",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 57.01378631591797
+      },
+      {
+        "type": "accuracy",
+        "target": "T",
+        "word": "to",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 51.764366149902344
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "to",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 58.13908767700195
+      },
+      {
+        "type": "accuracy",
+        "target": "V",
+        "word": "visit",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 56.764488220214844
+      },
+      {
+        "type": "accuracy",
+        "target": "I",
+        "word": "visit",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 53.214107513427734
+      },
+      {
+        "type": "accuracy",
+        "target": "M",
+        "word": "them",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 55.45832824707031
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "Are",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 0.0
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "you",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 63.74482727050781
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "going",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 52.15574645996094
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "to",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 62.10308074951172
+      },
+      {
+        "type": "accuracy",
+        "target": "K",
+        "word": "ski",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 36.93125534057617
+      },
+      {
+        "type": "accuracy",
+        "target": "I",
+        "word": "ski",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 61.80774688720703
+      },
+      {
+        "type": "accuracy",
+        "target": "Y",
+        "word": "Yes",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 44.16617202758789
+      },
+      {
+        "type": "accuracy",
+        "target": "S",
+        "word": "Yes",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 64.26123809814453
+      },
+      {
+        "type": "accuracy",
+        "target": "I",
+        "word": "I",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 59.78932571411133
+      },
+      {
+        "type": "accuracy",
+        "target": "C",
+        "word": "can't",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 42.945491790771484
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "can't",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 52.376922607421875
+      },
+      {
+        "type": "accuracy",
+        "target": "K",
+        "word": "ski",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 39.8444938659668
+      },
+      {
+        "type": "accuracy",
+        "target": "I",
+        "word": "ski",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 52.52317810058594
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "now",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 22.305160522460938
+      },
+      {
+        "type": "accuracy",
+        "target": "W",
+        "word": "now",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 63.34372329711914
+      },
+      {
+        "type": "accuracy",
+        "target": "B",
+        "word": "but",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 45.62464904785156
+      },
+      {
+        "type": "accuracy",
+        "target": "U",
+        "word": "but",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 32.11482238769531
+      },
+      {
+        "type": "accuracy",
+        "target": "'",
+        "word": "I'm",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 62.20960998535156
+      },
+      {
+        "type": "accuracy",
+        "target": "G",
+        "word": "going",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 30.108840942382812
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "going",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 41.91699981689453
+      },
+      {
+        "type": "accuracy",
+        "target": "T",
+        "word": "to",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 39.91057586669922
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "to",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 45.44234085083008
+      },
+      {
+        "type": "accuracy",
+        "target": "H",
+        "word": "have",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 55.568031311035156
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "have",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 35.498802185058594
+      },
+      {
+        "type": "accuracy",
+        "target": "S",
+        "word": "skiing",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 64.89827346801758
+      },
+      {
+        "type": "accuracy",
+        "target": "K",
+        "word": "skiing",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 57.140323638916016
+      },
+      {
+        "type": "accuracy",
+        "target": "I",
+        "word": "skiing",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 36.45209884643555
+      },
+      {
+        "type": "accuracy",
+        "target": "E",
+        "word": "lessons",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 40.925968170166016
+      },
+      {
+        "type": "accuracy",
+        "target": "S",
+        "word": "lessons",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 41.26169204711914
+      },
+      {
+        "type": "accuracy",
+        "target": "S",
+        "word": "lessons",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 0.102020263671875
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "lessons",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 48.62772750854492
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "OK",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 0.0
+      },
+      {
+        "type": "accuracy",
+        "target": "K",
+        "word": "OK",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 64.55013275146484
+      },
+      {
+        "type": "accuracy",
+        "target": "H",
+        "word": "have",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 14.184341430664062
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "have",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 64.81309509277344
+      },
+      {
+        "type": "accuracy",
+        "target": "I",
+        "word": "nice",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 25.339706420898438
+      },
+      {
+        "type": "accuracy",
+        "target": "C",
+        "word": "nice",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 0.0
+      },
+      {
+        "type": "accuracy",
+        "target": "E",
+        "word": "nice",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 53.3050537109375
+      },
+      {
+        "type": "accuracy",
+        "target": "W",
+        "word": "winter",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 62.55266571044922
+      },
+      {
+        "type": "accuracy",
+        "target": "N",
+        "word": "winter",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 44.59523010253906
+      },
+      {
+        "type": "accuracy",
+        "target": "T",
+        "word": "winter",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 55.10563278198242
+      },
+      {
+        "type": "accuracy",
+        "target": "E",
+        "word": "winter",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 64.87034606933594
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "vacation",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 57.900360107421875
+      },
+      {
+        "type": "accuracy",
+        "target": "C",
+        "word": "vacation",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 29.45885467529297
+      },
+      {
+        "type": "accuracy",
+        "target": "T",
+        "word": "vacation",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 25.699966430664062
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "vacation",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 18.1510009765625
+      },
+      {
+        "type": "accuracy",
+        "target": "N",
+        "word": "vacation",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 64.37478256225586
+      },
+      {
+        "type": "accuracy",
+        "target": "Y",
+        "word": "You",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 30.414993286132812
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "You",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 57.866703033447266
+      },
+      {
+        "type": "accuracy",
+        "target": "U",
+        "word": "You",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 53.33798599243164
+      },
+      {
+        "type": "accuracy",
+        "target": "I",
+        "word": "I'm",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 57.70793151855469
+      },
+      {
+        "type": "accuracy",
+        "target": "G",
+        "word": "going",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 51.2066535949707
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "going",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 33.27320861816406
+      },
+      {
+        "type": "accuracy",
+        "target": "I",
+        "word": "going",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 58.33571243286133
+      },
+      {
+        "type": "accuracy",
+        "target": "T",
+        "word": "to",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 14.006095886230469
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "to",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 48.802574157714844
+      },
+      {
+        "type": "accuracy",
+        "target": "R",
+        "word": "bring",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 61.52336883544922
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "back",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 28.73120880126953
+      },
+      {
+        "type": "accuracy",
+        "target": "K",
+        "word": "back",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 42.07243347167969
+      },
+      {
+        "type": "accuracy",
+        "target": "S",
+        "word": "some",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 49.48143005371094
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "some",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 35.204063415527344
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "sausages",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 14.490501403808594
+      },
+      {
+        "type": "accuracy",
+        "target": "S",
+        "word": "sausages",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 37.15744400024414
+      },
+      {
+        "type": "accuracy",
+        "target": "G",
+        "word": "sausages",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 48.273658752441406
+      },
+      {
+        "type": "accuracy",
+        "target": "F",
+        "word": "for",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 31.880264282226562
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "for",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 50.142974853515625
+      },
+      {
+        "type": "accuracy",
+        "target": "Y",
+        "word": "you",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 28.46197509765625
+      },
+      {
+        "type": "accuracy",
+        "target": "U",
+        "word": "you",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 62.25083923339844
+      },
+      {
+        "type": "accuracy",
+        "target": "H",
+        "word": "hear",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 19.150917053222656
+      },
+      {
+        "type": "accuracy",
+        "target": "E",
+        "word": "hear",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 48.4360237121582
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "are",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 21.09637451171875
+      },
+      {
+        "type": "accuracy",
+        "target": "R",
+        "word": "are",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 63.31073760986328
+      },
+      {
+        "type": "accuracy",
+        "target": "F",
+        "word": "famous",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 61.90974807739258
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "famous",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 38.03330612182617
+      },
+      {
+        "type": "accuracy",
+        "target": "M",
+        "word": "famous",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 60.65121078491211
+      },
+      {
+        "type": "accuracy",
+        "target": "S",
+        "word": "famous",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 19.397056579589844
+      },
+      {
+        "type": "accuracy",
+        "target": "N",
+        "word": "in",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 60.27104568481445
+      },
+      {
+        "type": "accuracy",
+        "target": "H",
+        "word": "Harbin",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 1.2935943603515625
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "Harbin",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 38.9829216003418
+      },
+      {
+        "type": "accuracy",
+        "target": "I",
+        "word": "Harbin",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 47.28085708618164
+      },
+      {
+        "type": "accuracy",
+        "target": "T",
+        "word": "Thank",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 23.441558837890625
+      },
+      {
+        "type": "accuracy",
+        "target": "H",
+        "word": "Thank",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 54.15229034423828
+      },
+      {
+        "type": "accuracy",
+        "target": "K",
+        "word": "Thank",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 58.35365295410156
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "you",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 14.644462585449219
+      },
+      {
+        "type": "accuracy",
+        "target": "U",
+        "word": "you",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 20.0
+      }
+    ],
+    "pace_chart_data": [
+      {
+        "x": 0.0,
+        "y": 30
+      },
+      {
+        "x": 0.5,
+        "y": 60
+      },
+      {
+        "x": 1.0,
+        "y": 60
+      },
+      {
+        "x": 1.5,
+        "y": 60
+      },
+      {
+        "x": 2.0,
+        "y": 90
+      },
+      {
+        "x": 2.5,
+        "y": 60
+      },
+      {
+        "x": 3.0,
+        "y": 90
+      },
+      {
+        "x": 3.5,
+        "y": 120
+      },
+      {
+        "x": 4.0,
+        "y": 120
+      },
+      {
+        "x": 4.5,
+        "y": 120
+      },
+      {
+        "x": 5.0,
+        "y": 120
+      },
+      {
+        "x": 5.5,
+        "y": 120
+      },
+      {
+        "x": 6.0,
+        "y": 120
+      },
+      {
+        "x": 6.5,
+        "y": 150
+      },
+      {
+        "x": 7.0,
+        "y": 180
+      },
+      {
+        "x": 7.5,
+        "y": 120
+      },
+      {
+        "x": 8.0,
+        "y": 120
+      },
+      {
+        "x": 8.5,
+        "y": 120
+      },
+      {
+        "x": 9.0,
+        "y": 120
+      },
+      {
+        "x": 9.5,
+        "y": 150
+      },
+      {
+        "x": 10.0,
+        "y": 150
+      },
+      {
+        "x": 10.5,
+        "y": 150
+      },
+      {
+        "x": 11.0,
+        "y": 120
+      },
+      {
+        "x": 11.5,
+        "y": 90
+      },
+      {
+        "x": 12.0,
+        "y": 120
+      },
+      {
+        "x": 12.5,
+        "y": 120
+      },
+      {
+        "x": 13.0,
+        "y": 120
+      },
+      {
+        "x": 13.5,
+        "y": 150
+      },
+      {
+        "x": 14.0,
+        "y": 90
+      },
+      {
+        "x": 14.5,
+        "y": 90
+      },
+      {
+        "x": 15.0,
+        "y": 90
+      },
+      {
+        "x": 15.5,
+        "y": 90
+      },
+      {
+        "x": 16.0,
+        "y": 120
+      },
+      {
+        "x": 16.5,
+        "y": 150
+      },
+      {
+        "x": 17.0,
+        "y": 120
+      },
+      {
+        "x": 17.5,
+        "y": 120
+      },
+      {
+        "x": 18.0,
+        "y": 90
+      },
+      {
+        "x": 18.5,
+        "y": 60
+      },
+      {
+        "x": 19.0,
+        "y": 120
+      },
+      {
+        "x": 19.5,
+        "y": 120
+      },
+      {
+        "x": 20.0,
+        "y": 180
+      },
+      {
+        "x": 20.5,
+        "y": 180
+      },
+      {
+        "x": 21.0,
+        "y": 150
+      },
+      {
+        "x": 21.5,
+        "y": 120
+      },
+      {
+        "x": 22.0,
+        "y": 90
+      },
+      {
+        "x": 22.5,
+        "y": 90
+      },
+      {
+        "x": 23.0,
+        "y": 90
+      },
+      {
+        "x": 23.5,
+        "y": 120
+      },
+      {
+        "x": 24.0,
+        "y": 150
+      },
+      {
+        "x": 24.5,
+        "y": 150
+      },
+      {
+        "x": 25.0,
+        "y": 150
+      },
+      {
+        "x": 25.5,
+        "y": 150
+      },
+      {
+        "x": 26.0,
+        "y": 150
+      },
+      {
+        "x": 26.5,
+        "y": 150
+      },
+      {
+        "x": 27.0,
+        "y": 150
+      },
+      {
+        "x": 27.5,
+        "y": 150
+      },
+      {
+        "x": 28.0,
+        "y": 120
+      },
+      {
+        "x": 28.5,
+        "y": 120
+      },
+      {
+        "x": 29.0,
+        "y": 120
+      },
+      {
+        "x": 29.5,
+        "y": 120
+      },
+      {
+        "x": 30.0,
+        "y": 120
+      },
+      {
+        "x": 30.5,
+        "y": 90
+      },
+      {
+        "x": 31.0,
+        "y": 120
+      },
+      {
+        "x": 31.5,
+        "y": 90
+      },
+      {
+        "x": 32.0,
+        "y": 90
+      },
+      {
+        "x": 32.5,
+        "y": 120
+      },
+      {
+        "x": 33.0,
+        "y": 60
+      },
+      {
+        "x": 33.5,
+        "y": 90
+      },
+      {
+        "x": 34.0,
+        "y": 90
+      },
+      {
+        "x": 34.5,
+        "y": 120
+      },
+      {
+        "x": 35.0,
+        "y": 150
+      },
+      {
+        "x": 35.5,
+        "y": 120
+      },
+      {
+        "x": 36.0,
+        "y": 120
+      },
+      {
+        "x": 36.5,
+        "y": 120
+      },
+      {
+        "x": 37.0,
+        "y": 150
+      },
+      {
+        "x": 37.5,
+        "y": 180
+      },
+      {
+        "x": 38.0,
+        "y": 180
+      },
+      {
+        "x": 38.5,
+        "y": 150
+      },
+      {
+        "x": 39.0,
+        "y": 120
+      },
+      {
+        "x": 39.5,
+        "y": 120
+      },
+      {
+        "x": 40.0,
+        "y": 120
+      },
+      {
+        "x": 40.5,
+        "y": 120
+      },
+      {
+        "x": 41.0,
+        "y": 120
+      },
+      {
+        "x": 41.5,
+        "y": 90
+      },
+      {
+        "x": 42.0,
+        "y": 90
+      },
+      {
+        "x": 42.5,
+        "y": 120
+      },
+      {
+        "x": 43.0,
+        "y": 120
+      },
+      {
+        "x": 43.5,
+        "y": 150
+      },
+      {
+        "x": 44.0,
+        "y": 120
+      },
+      {
+        "x": 44.5,
+        "y": 90
+      },
+      {
+        "x": 45.0,
+        "y": 90
+      },
+      {
+        "x": 45.5,
+        "y": 90
+      },
+      {
+        "x": 46.0,
+        "y": 120
+      },
+      {
+        "x": 46.5,
+        "y": 120
+      },
+      {
+        "x": 47.0,
+        "y": 120
+      },
+      {
+        "x": 47.5,
+        "y": 120
+      },
+      {
+        "x": 48.0,
+        "y": 120
+      },
+      {
+        "x": 48.5,
+        "y": 120
+      },
+      {
+        "x": 49.0,
+        "y": 150
+      },
+      {
+        "x": 49.5,
+        "y": 120
+      },
+      {
+        "x": 50.0,
+        "y": 120
+      },
+      {
+        "x": 50.5,
+        "y": 120
+      },
+      {
+        "x": 51.0,
+        "y": 120
+      },
+      {
+        "x": 51.5,
+        "y": 120
+      },
+      {
+        "x": 52.0,
+        "y": 120
+      },
+      {
+        "x": 52.5,
+        "y": 120
+      },
+      {
+        "x": 53.0,
+        "y": 90
+      },
+      {
+        "x": 53.5,
+        "y": 120
+      },
+      {
+        "x": 54.0,
+        "y": 120
+      },
+      {
+        "x": 54.5,
+        "y": 90
+      },
+      {
+        "x": 55.0,
+        "y": 60
+      }
+    ],
+    "pitch_contour": [
+      {
+        "t": 0.0,
+        "f": 65.40639132514966
+      },
+      {
+        "t": 0.32,
+        "f": 65.40639132514966
+      },
+      {
+        "t": 0.64,
+        "f": 65.40639132514966
+      },
+      {
+        "t": 0.96,
+        "f": 65.40639132514966
+      },
+      {
+        "t": 1.28,
+        "f": 65.40639132514966
+      },
+      {
+        "t": 1.6,
+        "f": 437.46578647972086
+      },
+      {
+        "t": 1.92,
+        "f": 488.2105677098518
+      },
+      {
+        "t": 2.24,
+        "f": 405.81912517781325
+      },
+      {
+        "t": 2.56,
+        "f": 333.4576446322876
+      },
+      {
+        "t": 2.88,
+        "f": 369.9944227116344
+      },
+      {
+        "t": 3.2,
+        "f": 398.84739550836855
+      },
+      {
+        "t": 3.52,
+        "f": 410.5345162761952
+      },
+      {
+        "t": 3.84,
+        "f": 369.9944227116344
+      },
+      {
+        "t": 4.16,
+        "f": 357.39105439674364
+      },
+      {
+        "t": 4.48,
+        "f": 396.5502035487653
+      },
+      {
+        "t": 4.8,
+        "f": 410.5345162761952
+      },
+      {
+        "t": 5.12,
+        "f": 396.5502035487653
+      },
+      {
+        "t": 5.44,
+        "f": 367.86341164694414
+      },
+      {
+        "t": 5.76,
+        "f": 367.86341164694414
+      },
+      {
+        "t": 6.08,
+        "f": 380.8360868427029
+      },
+      {
+        "t": 6.4,
+        "f": 427.4740541075866
+      },
+      {
+        "t": 6.72,
+        "f": 466.1637615180899
+      },
+      {
+        "t": 7.04,
+        "f": 374.29355081837645
+      },
+      {
+        "t": 7.36,
+        "f": 359.461399713042
+      },
+      {
+        "t": 7.68,
+        "f": 422.5640958224419
+      },
+      {
+        "t": 8.0,
+        "f": 429.9503861110682
+      },
+      {
+        "t": 8.32,
+        "f": 380.8360868427029
+      },
+      {
+        "t": 8.64,
+        "f": 372.1377785978373
+      },
+      {
+        "t": 8.96,
+        "f": 376.4618113003449
+      },
+      {
+        "t": 9.28,
+        "f": 353.2860680198856
+      },
+      {
+        "t": 9.6,
+        "f": 341.2518476034216
+      },
+      {
+        "t": 9.92,
+        "f": 341.2518476034216
+      },
+      {
+        "t": 10.24,
+        "f": 376.4618113003449
+      },
+      {
+        "t": 10.56,
+        "f": 365.74467430282664
+      },
+      {
+        "t": 10.88,
+        "f": 369.9944227116344
+      },
+      {
+        "t": 11.2,
+        "f": 398.84739550836855
+      },
+      {
+        "t": 11.52,
+        "f": 458.1553471153147
+      },
+      {
+        "t": 11.84,
+        "f": 412.91271853530293
+      },
+      {
+        "t": 12.16,
+        "f": 378.64263238750516
+      },
+      {
+        "t": 12.48,
+        "f": 361.54373841774776
+      },
+      {
+        "t": 12.8,
+        "f": 385.26118901858945
+      },
+      {
+        "t": 13.12,
+        "f": 357.39105439674364
+      },
+      {
+        "t": 13.44,
+        "f": 347.21682482900223
+      },
+      {
+        "t": 13.76,
+        "f": 349.2282314330038
+      },
+      {
+        "t": 14.08,
+        "f": 325.8414615030442
+      },
+      {
+        "t": 14.4,
+        "f": 331.5370699244067
+      },
+      {
+        "t": 14.72,
+        "f": 343.22869944588433
+      },
+      {
+        "t": 15.04,
+        "f": 337.3322358273121
+      },
+      {
+        "t": 15.36,
+        "f": 361.54373841774776
+      },
+      {
+        "t": 15.68,
+        "f": 307.5533855193843
+      },
+      {
+        "t": 16.0,
+        "f": 312.9293240034019
+      },
+      {
+        "t": 16.32,
+        "f": 385.26118901858945
+      },
+      {
+        "t": 16.64,
+        "f": 380.8360868427029
+      },
+      {
+        "t": 16.96,
+        "f": 378.64263238750516
+      },
+      {
+        "t": 17.28,
+        "f": 349.2282314330038
+      },
+      {
+        "t": 17.6,
+        "f": 343.22869944588433
+      },
+      {
+        "t": 17.92,
+        "f": 391.9954359817493
+      },
+      {
+        "t": 18.24,
+        "f": 385.26118901858945
+      },
+      {
+        "t": 18.56,
+        "f": 355.3326333920185
+      },
+      {
+        "t": 18.88,
+        "f": 349.2282314330038
+      },
+      {
+        "t": 19.2,
+        "f": 365.74467430282664
+      },
+      {
+        "t": 19.52,
+        "f": 297.0769881570017
+      },
+      {
+        "t": 19.84,
+        "f": 369.9944227116344
+      },
+      {
+        "t": 20.16,
+        "f": 357.39105439674364
+      },
+      {
+        "t": 20.48,
+        "f": 425.01198472693204
+      },
+      {
+        "t": 20.8,
+        "f": 412.91271853530293
+      },
+      {
+        "t": 21.12,
+        "f": 355.3326333920185
+      },
+      {
+        "t": 21.44,
+        "f": 394.2662424412591
+      },
+      {
+        "t": 21.76,
+        "f": 383.04224785029453
+      },
+      {
+        "t": 22.08,
+        "f": 353.2860680198856
+      },
+      {
+        "t": 22.4,
+        "f": 357.39105439674364
+      },
+      {
+        "t": 22.72,
+        "f": 378.64263238750516
+      },
+      {
+        "t": 23.04,
+        "f": 285.30470202322215
+      },
+      {
+        "t": 23.36,
+        "f": 396.5502035487653
+      },
+      {
+        "t": 23.68,
+        "f": 343.22869944588433
+      },
+      {
+        "t": 24.0,
+        "f": 380.8360868427029
+      },
+      {
+        "t": 24.32,
+        "f": 389.7377084050387
+      },
+      {
+        "t": 24.64,
+        "f": 391.9954359817493
+      },
+      {
+        "t": 24.96,
+        "f": 380.8360868427029
+      },
+      {
+        "t": 25.28,
+        "f": 422.5640958224419
+      },
+      {
+        "t": 25.6,
+        "f": 372.1377785978373
+      },
+      {
+        "t": 25.92,
+        "f": 383.04224785029453
+      },
+      {
+        "t": 26.24,
+        "f": 357.39105439674364
+      },
+      {
+        "t": 26.56,
+        "f": 355.3326333920185
+      },
+      {
+        "t": 26.88,
+        "f": 345.2170030745703
+      },
+      {
+        "t": 27.2,
+        "f": 391.9954359817493
+      },
+      {
+        "t": 27.52,
+        "f": 439.99999999999994
+      },
+      {
+        "t": 27.84,
+        "f": 369.9944227116344
+      },
+      {
+        "t": 28.16,
+        "f": 355.3326333920185
+      },
+      {
+        "t": 28.48,
+        "f": 359.461399713042
+      },
+      {
+        "t": 28.8,
+        "f": 363.6381399878532
+      },
+      {
+        "t": 29.12,
+        "f": 357.39105439674364
+      },
+      {
+        "t": 29.44,
+        "f": 355.3326333920185
+      },
+      {
+        "t": 29.76,
+        "f": 385.26118901858945
+      },
+      {
+        "t": 30.08,
+        "f": 359.461399713042
+      },
+      {
+        "t": 30.4,
+        "f": 363.6381399878532
+      },
+      {
+        "t": 30.72,
+        "f": 283.6614678567074
+      },
+      {
+        "t": 31.04,
+        "f": 422.5640958224419
+      },
+      {
+        "t": 31.36,
+        "f": 405.81912517781325
+      },
+      {
+        "t": 31.68,
+        "f": 378.64263238750516
+      },
+      {
+        "t": 32.0,
+        "f": 372.1377785978373
+      },
+      {
+        "t": 32.32,
+        "f": 401.1578949656154
+      },
+      {
+        "t": 32.64,
+        "f": 367.86341164694414
+      },
+      {
+        "t": 32.96,
+        "f": 372.1377785978373
+      },
+      {
+        "t": 33.28,
+        "f": 403.4817790100553
+      },
+      {
+        "t": 33.6,
+        "f": 367.86341164694414
+      },
+      {
+        "t": 33.92,
+        "f": 353.2860680198856
+      },
+      {
+        "t": 34.24,
+        "f": 337.3322358273121
+      },
+      {
+        "t": 34.56,
+        "f": 320.24370022528115
+      },
+      {
+        "t": 34.88,
+        "f": 322.09885310803753
+      },
+      {
+        "t": 35.2,
+        "f": 357.39105439674364
+      },
+      {
+        "t": 35.52,
+        "f": 351.2512899969259
+      },
+      {
+        "t": 35.84,
+        "f": 347.21682482900223
+      },
+      {
+        "t": 36.16,
+        "f": 355.3326333920185
+      },
+      {
+        "t": 36.48,
+        "f": 376.4618113003449
+      },
+      {
+        "t": 36.8,
+        "f": 298.79793764201077
+      },
+      {
+        "t": 37.12,
+        "f": 398.84739550836855
+      },
+      {
+        "t": 37.44,
+        "f": 403.4817790100553
+      },
+      {
+        "t": 37.76,
+        "f": 420.1303057205832
+      },
+      {
+        "t": 38.08,
+        "f": 365.74467430282664
+      },
+      {
+        "t": 38.4,
+        "f": 394.2662424412591
+      },
+      {
+        "t": 38.72,
+        "f": 396.5502035487653
+      },
+      {
+        "t": 39.04,
+        "f": 343.22869944588433
+      },
+      {
+        "t": 39.36,
+        "f": 347.21682482900223
+      },
+      {
+        "t": 39.68,
+        "f": 347.21682482900223
+      },
+      {
+        "t": 40.0,
+        "f": 351.2512899969259
+      },
+      {
+        "t": 40.32,
+        "f": 398.84739550836855
+      },
+      {
+        "t": 40.64,
+        "f": 322.09885310803753
+      },
+      {
+        "t": 40.96,
+        "f": 439.99999999999994
+      },
+      {
+        "t": 41.28,
+        "f": 427.4740541075866
+      },
+      {
+        "t": 41.6,
+        "f": 394.2662424412591
+      },
+      {
+        "t": 41.92,
+        "f": 380.8360868427029
+      },
+      {
+        "t": 42.24,
+        "f": 385.26118901858945
+      },
+      {
+        "t": 42.56,
+        "f": 378.64263238750516
+      },
+      {
+        "t": 42.88,
+        "f": 394.2662424412591
+      },
+      {
+        "t": 43.2,
+        "f": 408.1700114541761
+      },
+      {
+        "t": 43.52,
+        "f": 398.84739550836855
+      },
+      {
+        "t": 43.84,
+        "f": 385.26118901858945
+      },
+      {
+        "t": 44.16,
+        "f": 429.9503861110682
+      },
+      {
+        "t": 44.48,
+        "f": 389.7377084050387
+      },
+      {
+        "t": 44.8,
+        "f": 394.2662424412591
+      },
+      {
+        "t": 45.12,
+        "f": 389.7377084050387
+      },
+      {
+        "t": 45.44,
+        "f": 312.9293240034019
+      },
+      {
+        "t": 45.76,
+        "f": 81.46036537576103
+      },
+      {
+        "t": 46.08,
+        "f": 65.40639132514966
+      },
+      {
+        "t": 46.4,
+        "f": 65.40639132514966
+      },
+      {
+        "t": 46.72,
+        "f": 65.40639132514966
+      },
+      {
+        "t": 47.04,
+        "f": 369.9944227116344
+      },
+      {
+        "t": 47.36,
+        "f": 427.4740541075866
+      },
+      {
+        "t": 47.68,
+        "f": 372.1377785978373
+      },
+      {
+        "t": 48.0,
+        "f": 357.39105439674364
+      },
+      {
+        "t": 48.32,
+        "f": 378.64263238750516
+      },
+      {
+        "t": 48.64,
+        "f": 378.64263238750516
+      },
+      {
+        "t": 48.96,
+        "f": 412.91271853530293
+      },
+      {
+        "t": 49.28,
+        "f": 447.69106452518196
+      },
+      {
+        "t": 49.6,
+        "f": 347.21682482900223
+      },
+      {
+        "t": 49.92,
+        "f": 408.1700114541761
+      },
+      {
+        "t": 50.24,
+        "f": 425.01198472693204
+      },
+      {
+        "t": 50.56,
+        "f": 389.7377084050387
+      },
+      {
+        "t": 50.88,
+        "f": 394.2662424412591
+      },
+      {
+        "t": 51.2,
+        "f": 410.5345162761952
+      },
+      {
+        "t": 51.52,
+        "f": 347.21682482900223
+      },
+      {
+        "t": 51.84,
+        "f": 383.04224785029453
+      },
+      {
+        "t": 52.16,
+        "f": 357.39105439674364
+      },
+      {
+        "t": 52.48,
+        "f": 357.39105439674364
+      },
+      {
+        "t": 52.8,
+        "f": 353.2860680198856
+      },
+      {
+        "t": 53.12,
+        "f": 383.04224785029453
+      },
+      {
+        "t": 53.44,
+        "f": 408.1700114541761
+      },
+      {
+        "t": 53.76,
+        "f": 380.8360868427029
+      },
+      {
+        "t": 54.08,
+        "f": 376.4618113003449
+      },
+      {
+        "t": 54.4,
+        "f": 353.2860680198856
+      },
+      {
+        "t": 54.72,
+        "f": 357.39105439674364
+      },
+      {
+        "t": 55.04,
+        "f": 347.21682482900223
+      },
+      {
+        "t": 55.36,
+        "f": 405.81912517781325
+      },
+      {
+        "t": 55.68,
+        "f": 378.64263238750516
+      },
+      {
+        "t": 56.0,
+        "f": 383.04224785029453
+      },
+      {
+        "t": 56.32,
+        "f": 389.7377084050387
+      },
+      {
+        "t": 56.64,
+        "f": 357.39105439674364
+      },
+      {
+        "t": 56.96,
+        "f": 314.74210513575684
+      },
+      {
+        "t": 57.28,
+        "f": 394.2662424412591
+      },
+      {
+        "t": 57.6,
+        "f": 458.1553471153147
+      },
+      {
+        "t": 57.92,
+        "f": 345.2170030745703
+      },
+      {
+        "t": 58.24,
+        "f": 394.2662424412591
+      },
+      {
+        "t": 58.56,
+        "f": 353.2860680198856
+      },
+      {
+        "t": 58.88,
+        "f": 387.49298438230534
+      },
+      {
+        "t": 59.2,
+        "f": 405.81912517781325
+      },
+      {
+        "t": 59.52,
+        "f": 369.9944227116344
+      },
+      {
+        "t": 59.84,
+        "f": 398.84739550836855
+      },
+      {
+        "t": 60.16,
+        "f": 369.9944227116344
+      },
+      {
+        "t": 60.48,
+        "f": 398.84739550836855
+      },
+      {
+        "t": 60.8,
+        "f": 401.1578949656154
+      },
+      {
+        "t": 61.12,
+        "f": 309.33502415691686
+      },
+      {
+        "t": 61.44,
+        "f": 460.8094140410758
+      },
+      {
+        "t": 61.76,
+        "f": 391.9954359817493
+      },
+      {
+        "t": 62.08,
+        "f": 396.5502035487653
+      },
+      {
+        "t": 62.4,
+        "f": 361.54373841774776
+      },
+      {
+        "t": 62.72,
+        "f": 361.54373841774776
+      },
+      {
+        "t": 63.04,
+        "f": 363.6381399878532
+      },
+      {
+        "t": 63.36,
+        "f": 355.3326333920185
+      },
+      {
+        "t": 63.68,
+        "f": 343.22869944588433
+      },
+      {
+        "t": 64.0,
+        "f": 343.22869944588433
+      },
+      {
+        "t": 64.32,
+        "f": 376.4618113003449
+      },
+      {
+        "t": 64.64,
+        "f": 341.2518476034216
+      },
+      {
+        "t": 64.96,
+        "f": 369.9944227116344
+      },
+      {
+        "t": 65.28,
+        "f": 378.64263238750516
+      },
+      {
+        "t": 65.6,
+        "f": 351.2512899969259
+      },
+      {
+        "t": 65.92,
+        "f": 353.2860680198856
+      },
+      {
+        "t": 66.24,
+        "f": 355.3326333920185
+      },
+      {
+        "t": 66.56,
+        "f": 387.49298438230534
+      },
+      {
+        "t": 66.88,
+        "f": 359.461399713042
+      },
+      {
+        "t": 67.2,
+        "f": 347.21682482900223
+      },
+      {
+        "t": 67.52,
+        "f": 363.6381399878532
+      },
+      {
+        "t": 67.84,
+        "f": 367.86341164694414
+      },
+      {
+        "t": 68.16,
+        "f": 389.7377084050387
+      },
+      {
+        "t": 68.48,
+        "f": 322.09885310803753
+      },
+      {
+        "t": 68.8,
+        "f": 372.1377785978373
+      },
+      {
+        "t": 69.12,
+        "f": 422.5640958224419
+      },
+      {
+        "t": 69.44,
+        "f": 396.5502035487653
+      },
+      {
+        "t": 69.76,
+        "f": 367.86341164694414
+      },
+      {
+        "t": 70.08,
+        "f": 365.74467430282664
+      },
+      {
+        "t": 70.4,
+        "f": 378.64263238750516
+      },
+      {
+        "t": 70.72,
+        "f": 367.86341164694414
+      },
+      {
+        "t": 71.04,
+        "f": 374.29355081837645
+      },
+      {
+        "t": 71.36,
+        "f": 427.4740541075866
+      },
+      {
+        "t": 71.68,
+        "f": 391.9954359817493
+      },
+      {
+        "t": 72.0,
+        "f": 387.49298438230534
+      },
+      {
+        "t": 72.32,
+        "f": 363.6381399878532
+      },
+      {
+        "t": 72.64,
+        "f": 359.461399713042
+      },
+      {
+        "t": 72.96,
+        "f": 401.1578949656154
+      },
+      {
+        "t": 73.28,
+        "f": 357.39105439674364
+      },
+      {
+        "t": 73.6,
+        "f": 376.4618113003449
+      },
+      {
+        "t": 73.92,
+        "f": 325.8414615030442
+      },
+      {
+        "t": 74.24,
+        "f": 347.21682482900223
+      },
+      {
+        "t": 74.56,
+        "f": 369.9944227116344
+      },
+      {
+        "t": 74.88,
+        "f": 307.5533855193843
+      },
+      {
+        "t": 75.2,
+        "f": 165.76853496220332
+      }
+    ],
+    "hesitations": {
+      "score_label": "Detected",
+      "desc": "检测到了一些填充词。尝试用停顿代替它们。",
+      "fillers": [
+        {
+          "word": "like",
+          "count": 1
+        }
+      ],
+      "examples": [],
+      "tips": [
+        "在想说什么的时候，试着深呼吸而不是发出'嗯'的声音。",
+        "尝试放慢语速，给自己更多思考时间。"
+      ]
+    },
+    "completeness": {
+      "title": "完整度分析",
+      "score_label": "优秀",
+      "coverage": 100,
+      "missing_stats": {
+        "total": 0,
+        "keywords": 0,
+        "function_words": 0
+      },
+      "insight": "内容覆盖率: 100% (漏读 0 个关键词)",
+      "tips": [
+        "完美！你没有漏掉任何单词。"
+      ]
+    }
+  },
+  "feedback": {
+    "cn_summary": "整体表现不错，但在部分单词的发音细节上可以更精准。",
+    "cn_actions": [
+      "重点练习以下单词的发音：LILY, TODAY, IS。尝试把每个音节发饱满。"
+    ],
+    "practice": [
+      "每天坚持跟读 10 分钟",
+      "遇到难读的长难句可以拆分成小节练习"
+    ]
+  },
+  "advisor_feedback": {
+    "overall_comment": "整体表现不错，但在部分单词的发音细节上可以更精准。",
+    "specific_suggestions": [
+      "重点练习以下单词的发音：LILY, TODAY, IS。尝试把每个音节发饱满。"
+    ],
+    "practice_tips": [
+      "每天坚持跟读 10 分钟",
+      "遇到难读的长难句可以拆分成小节练习"
+    ],
+    "fun_challenge": "🌟 挑战：尝试用这种语调朗读一段你最喜欢的电影台词！"
+  },
+  "error": "'engine_raw' is undefined"
+}

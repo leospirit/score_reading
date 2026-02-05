@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "task_id": "new01",
+    "student_id": "卢天亦6单元背诵",
+    "student_name": "卢天亦6单元背诵",
+    "submission_id": "web_20260203193508_b2573044",
+    "timestamp": "2026-02-03T19:35:11.460802",
+    "engine_used": "",
+    "fallback_chain": [],
+    "processing_time_ms": 277,
+    "is_auto_transcribed": false
+  },
+  "audio": {
+    "duration_sec": 47.785,
+    "silence_ratio": 0.3765961900774545,
+    "rms_db": -28.367080565567782,
+    "clipping_ratio": 0.0
+  },
+  "script_text": "",
+  "scores": {
+    "overall_100": 0.0,
+    "pronunciation_100": 0.0,
+    "fluency_100": 0.0,
+    "intonation_100": 0.0,
+    "completeness_100": 0.0
+  },
+  "engine_raw": {},
+  "alignment": {
+    "words": [],
+    "phonemes": []
+  },
+  "analysis": {
+    "weak_words": [],
+    "weak_phonemes": [],
+    "missing_words": [],
+    "confusions": [],
+    "mistakes": [],
+    "pace_chart_data": [],
+    "pitch_contour": [],
+    "hesitations": null,
+    "completeness": null
+  },
+  "feedback": {
+    "cn_summary": "",
+    "cn_actions": [],
+    "practice": []
+  },
+  "advisor_feedback": null,
+  "error": "No module named 'faster_whisper'"
+}

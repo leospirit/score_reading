@@ -1,0 +1,2145 @@
+{
+  "meta": {
+    "task_id": "upload",
+    "student_id": "郭雨鑫6单元背诵",
+    "student_name": "郭雨鑫6单元背诵",
+    "submission_id": "web_20260203190333_22679fac",
+    "timestamp": "2026-02-03T19:03:33.837962",
+    "engine_used": "gemini",
+    "fallback_chain": [
+      "pro"
+    ],
+    "processing_time_ms": 41369,
+    "is_auto_transcribed": false
+  },
+  "audio": {
+    "duration_sec": 51.246,
+    "silence_ratio": 0.46359554948272497,
+    "rms_db": -28.646280417512223,
+    "clipping_ratio": 0.0
+  },
+  "script_text": "Lily,today is the last day of school.Where are you going in\r\nyour winter vacation?\r\nI'm going to Harbin with my parents.I don't like cold weather.\r\nI'm afraid of getting a cold.\r\nOh,you'll be fine.What are you going to do there?\r\nWe're going to see ice lanterns and play in the snow.My\r\nuncle's family live there.We're going to visit them.\r\nAre you going to ski?\r\nYes.I can't ski now,but I'm going to have skiing lessons.\r\nOK,have a nice winter vacation!\r\nYou too!I'm going to bring back some sausages for you!I hear\r\nthey are famous in Harbin.\r\nThank you.",
+  "scores": {
+    "overall_100": 89.0,
+    "pronunciation_100": 90.0,
+    "fluency_100": 85.0,
+    "intonation_100": 88.5,
+    "completeness_100": 100.0
+  },
+  "engine_raw": {
+    "source": "Gemini (gemini-3-flash-preview)",
+    "overall_score": 88.5,
+    "accuracy_score": 90.0,
+    "fluency_score": 85.0,
+    "completeness_score": 100.0,
+    "gemini_feedback": "学生整体发音基础扎实，单词辨识度很高。主要的发音习惯问题在于：1. 咬舌音 /ð/ 掌握不牢，容易用齿龈音替代；2. 朗读节奏较为平均，缺乏对话中的情感起伏和意群停顿。建议加强连读练习，并模仿原声中的升降调。",
+    "detected_transcript": "Lily, today is the last day of school. Where are you going in your winter vacation? I'm going to Harbin with my parents. I don't like cold wetter. I'm afraid of getting a cold. Oh, you'll be fine. What are you going to do there? We're going to see ice lanterns and play in the snow. My uncle's family live there. We're going to visit them. Are you going to ski? Yes. I can't ski now, but I'm going to have skiing lessons. OK, have a nice winter vacation! You too! I'm going to bring back some sausages for you! I hear they are famous in Harbin. Thank you.",
+    "ai_referee": {
+      "status": "completed",
+      "conflicts": 1,
+      "conflict_details": [
+        {
+          "word": "weather",
+          "expected": "weather",
+          "got": "Said /t/ instead of /ð/",
+          "comment": "注意 'th' 的咬舌动作，现在听起来像 'wetter'。"
+        }
+      ]
+    },
+    "integrated_feedback": {
+      "overall_comment": "同学，你的声音非常悦耳且自信！你完整地完成了整段对话，大部分单词的发音都非常标准，尤其是像 'sausages' 这样复杂的词也读得很好。如果你能把语调变得更像在和朋友聊天，那就完美了。",
+      "specific_suggestions": [
+        "把 'weather' 最后的 'th' 发得更地道：舌尖轻轻顶住上齿龈下方，让气流摩擦而出。",
+        "在读 'Where are you going...' 时，尝试把 'going in your' 连起来，不要断开。"
+      ],
+      "practice_tips": [
+        "对着镜子练习 /ð/ 音，确保能看到舌尖露出。",
+        "录下自己的声音并与原声对比，重点听句子末尾的升降调。"
+      ],
+      "fun_challenge": "试着模仿‘哈尔滨导游’的语气，用更兴奋的声音读出 'see ice lanterns and play in the snow' 这一句！",
+      "top_errors": [
+        {
+          "phoneme": "/ð/",
+          "description": "将 'weather' 中的浊辅音 /ð/ 读成了类似 /t/ 或 /d/ 的音，识别为 'wetter'。",
+          "words": [
+            "weather"
+          ],
+          "improvement": "练习咬舌音。发 /ð/ 时，舌尖必须轻轻伸出并置于上下齿之间，让气流通过，同时声带振动。"
+        },
+        {
+          "phoneme": "Intonation/Rhythm",
+          "description": "断句略显生硬，部分句子呈现‘单词跳跃’感，缺乏自然的连读和语调起伏。",
+          "words": [
+            "Where are you going in your winter vacation?",
+            "I'm going to Harbin with my parents."
+          ],
+          "improvement": "尝试意群（Thought Groups）练习，不要一个词一个词地蹦，而是把 'in your winter vacation' 作为一个整体读出。"
+        }
+      ]
+    },
+    "pronunciation_score": 90.0,
+    "intonation_score": 88.5,
+    "gop_mean": -3.5
+  },
+  "alignment": {
+    "words": [
+      {
+        "word": "Lily",
+        "start": 0.3,
+        "end": 0.7,
+        "tag": "ok",
+        "score": 95.0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": "发音标准"
+      },
+      {
+        "word": "today",
+        "start": 0.7,
+        "end": 0.8,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "is",
+        "start": 0.8,
+        "end": 0.9,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "the",
+        "start": 0.9,
+        "end": 1.0,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "last",
+        "start": 1.0,
+        "end": 1.1,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "day",
+        "start": 1.1,
+        "end": 1.2,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "of",
+        "start": 1.2,
+        "end": 1.3,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "school",
+        "start": 1.3,
+        "end": 1.4,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "Where",
+        "start": 1.4,
+        "end": 1.5,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "are",
+        "start": 1.5,
+        "end": 1.6,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "you",
+        "start": 1.6,
+        "end": 1.7,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "going",
+        "start": 1.7,
+        "end": 1.8,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "in",
+        "start": 1.8,
+        "end": 1.9,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "your",
+        "start": 1.9,
+        "end": 2.0,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "winter",
+        "start": 2.0,
+        "end": 2.1,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "vacation",
+        "start": 2.1,
+        "end": 2.2,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "I'm",
+        "start": 2.2,
+        "end": 2.3,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "going",
+        "start": 2.3,
+        "end": 2.4,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "to",
+        "start": 2.4,
+        "end": 2.5,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "Harbin",
+        "start": 2.5,
+        "end": 2.6,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "with",
+        "start": 2.6,
+        "end": 2.7,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "my",
+        "start": 2.7,
+        "end": 2.8,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "parents",
+        "start": 2.8,
+        "end": 2.9,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "I",
+        "start": 2.9,
+        "end": 3.0,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "don't",
+        "start": 3.0,
+        "end": 3.1,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "like",
+        "start": 3.1,
+        "end": 3.2,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "cold",
+        "start": 3.2,
+        "end": 3.3,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "weather",
+        "start": 0.8,
+        "end": 1.35,
+        "tag": "ok",
+        "score": 72.0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": "Said /t/ instead of /ð/"
+      },
+      {
+        "word": "I'm",
+        "start": 1.35,
+        "end": 1.45,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "afraid",
+        "start": 1.45,
+        "end": 1.55,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "of",
+        "start": 1.55,
+        "end": 1.65,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "getting",
+        "start": 1.65,
+        "end": 1.75,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "a",
+        "start": 1.75,
+        "end": 1.85,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "cold",
+        "start": 1.85,
+        "end": 1.95,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "Oh",
+        "start": 1.95,
+        "end": 2.05,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "you'll",
+        "start": 2.05,
+        "end": 2.15,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "be",
+        "start": 2.15,
+        "end": 2.25,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "fine",
+        "start": 2.25,
+        "end": 2.35,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "What",
+        "start": 2.35,
+        "end": 2.45,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "are",
+        "start": 2.45,
+        "end": 2.55,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "you",
+        "start": 2.55,
+        "end": 2.65,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "going",
+        "start": 2.65,
+        "end": 2.75,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "to",
+        "start": 2.75,
+        "end": 2.85,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "do",
+        "start": 2.85,
+        "end": 2.95,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "there",
+        "start": 2.95,
+        "end": 3.05,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "We're",
+        "start": 3.05,
+        "end": 3.15,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "going",
+        "start": 3.15,
+        "end": 3.25,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "to",
+        "start": 3.25,
+        "end": 3.35,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "see",
+        "start": 3.35,
+        "end": 3.45,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "ice",
+        "start": 3.45,
+        "end": 3.55,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "lanterns",
+        "start": 1.45,
+        "end": 2.05,
+        "tag": "ok",
+        "score": 88.0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": "重音正确，但 /t/ 音略显生硬"
+      },
+      {
+        "word": "and",
+        "start": 2.05,
+        "end": 2.15,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "play",
+        "start": 2.15,
+        "end": 2.25,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "in",
+        "start": 2.25,
+        "end": 2.35,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "the",
+        "start": 2.35,
+        "end": 2.45,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "snow",
+        "start": 2.45,
+        "end": 2.55,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "My",
+        "start": 2.55,
+        "end": 2.65,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "uncle's",
+        "start": 2.15,
+        "end": 2.7,
+        "tag": "ok",
+        "score": 92.0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": "所有格 's' 发音清晰"
+      },
+      {
+        "word": "family",
+        "start": 2.7,
+        "end": 2.8,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "live",
+        "start": 2.8,
+        "end": 2.9,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "there",
+        "start": 2.9,
+        "end": 3.0,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "We're",
+        "start": 3.0,
+        "end": 3.1,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "going",
+        "start": 3.1,
+        "end": 3.2,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "to",
+        "start": 3.2,
+        "end": 3.3,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "visit",
+        "start": 3.3,
+        "end": 3.4,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "them",
+        "start": 3.4,
+        "end": 3.5,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "Are",
+        "start": 3.5,
+        "end": 3.6,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "you",
+        "start": 3.6,
+        "end": 3.7,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "going",
+        "start": 3.7,
+        "end": 3.8,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "to",
+        "start": 3.8,
+        "end": 3.9,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "ski",
+        "start": 3.9,
+        "end": 4.0,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "Yes",
+        "start": 4.0,
+        "end": 4.1,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "I",
+        "start": 4.1,
+        "end": 4.2,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "can't",
+        "start": 4.2,
+        "end": 4.3,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "ski",
+        "start": 4.3,
+        "end": 4.4,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "now",
+        "start": 4.4,
+        "end": 4.5,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "but",
+        "start": 4.5,
+        "end": 4.6,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "I'm",
+        "start": 4.6,
+        "end": 4.7,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "going",
+        "start": 4.7,
+        "end": 4.8,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "to",
+        "start": 4.8,
+        "end": 4.9,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "have",
+        "start": 4.9,
+        "end": 5.0,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "skiing",
+        "start": 5.0,
+        "end": 5.1,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "lessons",
+        "start": 5.1,
+        "end": 5.2,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "OK",
+        "start": 5.2,
+        "end": 5.3,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "have",
+        "start": 5.3,
+        "end": 5.4,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "a",
+        "start": 5.4,
+        "end": 5.5,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "nice",
+        "start": 5.5,
+        "end": 5.6,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "winter",
+        "start": 5.6,
+        "end": 5.7,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "vacation",
+        "start": 5.7,
+        "end": 5.8,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "You",
+        "start": 5.8,
+        "end": 5.9,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "too",
+        "start": 5.9,
+        "end": 6.0,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "I'm",
+        "start": 6.0,
+        "end": 6.1,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "going",
+        "start": 6.1,
+        "end": 6.2,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "to",
+        "start": 6.2,
+        "end": 6.3,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "bring",
+        "start": 6.3,
+        "end": 6.4,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "back",
+        "start": 6.4,
+        "end": 6.5,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "some",
+        "start": 6.5,
+        "end": 6.6,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "sausages",
+        "start": 2.8,
+        "end": 3.4,
+        "tag": "ok",
+        "score": 90.0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": "复数后缀 /ɪz/ 发音到位"
+      },
+      {
+        "word": "for",
+        "start": 3.4,
+        "end": 3.5,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "you",
+        "start": 3.5,
+        "end": 3.6,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "I",
+        "start": 3.6,
+        "end": 3.7,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "hear",
+        "start": 3.7,
+        "end": 3.8,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "they",
+        "start": 3.8,
+        "end": 3.9,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "are",
+        "start": 3.9,
+        "end": 4.0,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "famous",
+        "start": 4.0,
+        "end": 4.1,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "in",
+        "start": 4.1,
+        "end": 4.2,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "Harbin",
+        "start": 4.2,
+        "end": 4.3,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "Thank",
+        "start": 4.3,
+        "end": 4.4,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "you",
+        "start": 4.4,
+        "end": 4.5,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      }
+    ],
+    "phonemes": []
+  },
+  "analysis": {
+    "weak_words": [],
+    "weak_phonemes": [],
+    "missing_words": [
+      "today",
+      "is",
+      "the",
+      "last",
+      "day",
+      "of",
+      "school",
+      "Where",
+      "are",
+      "you",
+      "going",
+      "in",
+      "your",
+      "winter",
+      "vacation",
+      "I'm",
+      "going",
+      "to",
+      "Harbin",
+      "with",
+      "my",
+      "parents",
+      "I",
+      "don't",
+      "like",
+      "cold",
+      "I'm",
+      "afraid",
+      "of",
+      "getting",
+      "a",
+      "cold",
+      "Oh",
+      "you'll",
+      "be",
+      "fine",
+      "What",
+      "are",
+      "you",
+      "going",
+      "to",
+      "do",
+      "there",
+      "We're",
+      "going",
+      "to",
+      "see",
+      "ice",
+      "and",
+      "play",
+      "in",
+      "the",
+      "snow",
+      "My",
+      "family",
+      "live",
+      "there",
+      "We're",
+      "going",
+      "to",
+      "visit",
+      "them",
+      "Are",
+      "you",
+      "going",
+      "to",
+      "ski",
+      "Yes",
+      "I",
+      "can't",
+      "ski",
+      "now",
+      "but",
+      "I'm",
+      "going",
+      "to",
+      "have",
+      "skiing",
+      "lessons",
+      "OK",
+      "have",
+      "a",
+      "nice",
+      "winter",
+      "vacation",
+      "You",
+      "too",
+      "I'm",
+      "going",
+      "to",
+      "bring",
+      "back",
+      "some",
+      "for",
+      "you",
+      "I",
+      "hear",
+      "they",
+      "are",
+      "famous",
+      "in",
+      "Harbin",
+      "Thank",
+      "you"
+    ],
+    "confusions": [],
+    "mistakes": [
+      {
+        "type": "substitution",
+        "target": "weather",
+        "expected": "weather",
+        "got": "Said /t/ instead of /ð/",
+        "desc": "Said 'Said /t/ instead of /ð/' instead of 'weather'",
+        "severity": "medium"
+      },
+      {
+        "type": "missing",
+        "target": "today",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "is",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "the",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "last",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "day",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "of",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "school",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "Where",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "are",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "you",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "going",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "in",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "your",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "winter",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "vacation",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "I'm",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "going",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "to",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "Harbin",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "with",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "my",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "parents",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "I",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "don't",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "like",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "cold",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "I'm",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "afraid",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "of",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "getting",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "a",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "cold",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "Oh",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "you'll",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "be",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "fine",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "What",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "are",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "you",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "going",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "to",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "do",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "there",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "We're",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "going",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "to",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "see",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "ice",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "and",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "play",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "in",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "the",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "snow",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "My",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "family",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "live",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "there",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "We're",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "going",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "to",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "visit",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "them",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "Are",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "you",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "going",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "to",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "ski",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "Yes",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "I",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "can't",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "ski",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "now",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "but",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "I'm",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "going",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "to",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "have",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "skiing",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "lessons",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "OK",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "have",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "a",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "nice",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "winter",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "vacation",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "You",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "too",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "I'm",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "going",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "to",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "bring",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "back",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "some",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "for",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "you",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "I",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "hear",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "they",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "are",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "famous",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "in",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "Harbin",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "Thank",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "missing",
+        "target": "you",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      }
+    ],
+    "pace_chart_data": [
+      {
+        "x": 0.0,
+        "y": 120
+      },
+      {
+        "x": 0.5,
+        "y": 330
+      },
+      {
+        "x": 1.0,
+        "y": 660
+      },
+      {
+        "x": 1.5,
+        "y": 1110
+      },
+      {
+        "x": 2.0,
+        "y": 1440
+      },
+      {
+        "x": 2.5,
+        "y": 1680
+      },
+      {
+        "x": 3.0,
+        "y": 1680
+      },
+      {
+        "x": 3.5,
+        "y": 1530
+      },
+      {
+        "x": 4.0,
+        "y": 1230
+      }
+    ],
+    "pitch_contour": [],
+    "hesitations": {
+      "score_label": "Detected",
+      "desc": "检测到了一些填充词。尝试用停顿代替它们。",
+      "fillers": [
+        {
+          "word": "like",
+          "count": 1
+        }
+      ],
+      "examples": [],
+      "tips": [
+        "在想说什么的时候，试着深呼吸而不是发出'嗯'的声音。",
+        "尝试放慢语速，给自己更多思考时间。"
+      ]
+    },
+    "completeness": {
+      "title": "完整度分析",
+      "score_label": "需加油",
+      "coverage": 4,
+      "missing_stats": {
+        "total": 104,
+        "keywords": 76,
+        "function_words": 28
+      },
+      "insight": "内容覆盖率: 4% (漏读 76 个关键词)",
+      "tips": [
+        "尝试更仔细地阅读实词（名词、动词），它们承载了句子的核心含义。",
+        "注意不要吞掉像 'a', 'the' 这样的小词，虽然它们不重读，但也是句子的一部分。"
+      ]
+    }
+  },
+  "feedback": {
+    "cn_summary": "同学，你的声音非常悦耳且自信！你完整地完成了整段对话，大部分单词的发音都非常标准，尤其是像 'sausages' 这样复杂的词也读得很好。如果你能把语调变得更像在和朋友聊天，那就完美了。",
+    "cn_actions": [
+      "把 'weather' 最后的 'th' 发得更地道：舌尖轻轻顶住上齿龈下方，让气流摩擦而出。",
+      "在读 'Where are you going...' 时，尝试把 'going in your' 连起来，不要断开。"
+    ],
+    "practice": [
+      "对着镜子练习 /ð/ 音，确保能看到舌尖露出。",
+      "录下自己的声音并与原声对比，重点听句子末尾的升降调。"
+    ]
+  },
+  "advisor_feedback": {
+    "overall_comment": "同学，你的声音非常悦耳且自信！你完整地完成了整段对话，大部分单词的发音都非常标准，尤其是像 'sausages' 这样复杂的词也读得很好。如果你能把语调变得更像在和朋友聊天，那就完美了。",
+    "specific_suggestions": [
+      "把 'weather' 最后的 'th' 发得更地道：舌尖轻轻顶住上齿龈下方，让气流摩擦而出。",
+      "在读 'Where are you going...' 时，尝试把 'going in your' 连起来，不要断开。"
+    ],
+    "practice_tips": [
+      "对着镜子练习 /ð/ 音，确保能看到舌尖露出。",
+      "录下自己的声音并与原声对比，重点听句子末尾的升降调。"
+    ],
+    "fun_challenge": "试着模仿‘哈尔滨导游’的语气，用更兴奋的声音读出 'see ice lanterns and play in the snow' 这一句！",
+    "top_errors": [
+      {
+        "phoneme": "/ð/",
+        "description": "将 'weather' 中的浊辅音 /ð/ 读成了类似 /t/ 或 /d/ 的音，识别为 'wetter'。",
+        "words": [
+          "weather"
+        ],
+        "improvement": "练习咬舌音。发 /ð/ 时，舌尖必须轻轻伸出并置于上下齿之间，让气流通过，同时声带振动。"
+      },
+      {
+        "phoneme": "Intonation/Rhythm",
+        "description": "断句略显生硬，部分句子呈现‘单词跳跃’感，缺乏自然的连读和语调起伏。",
+        "words": [
+          "Where are you going in your winter vacation?",
+          "I'm going to Harbin with my parents."
+        ],
+        "improvement": "尝试意群（Thought Groups）练习，不要一个词一个词地蹦，而是把 'in your winter vacation' 作为一个整体读出。"
+      }
+    ]
+  },
+  "error": "'engine_raw' is undefined"
+}

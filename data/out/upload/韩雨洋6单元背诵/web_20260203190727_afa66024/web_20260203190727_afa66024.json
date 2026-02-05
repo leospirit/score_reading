@@ -1,0 +1,3384 @@
+{
+  "meta": {
+    "task_id": "upload",
+    "student_id": "韩雨洋6单元背诵",
+    "student_name": "韩雨洋6单元背诵",
+    "submission_id": "web_20260203190727_afa66024",
+    "timestamp": "2026-02-03T19:08:06.758726",
+    "engine_used": "gemini",
+    "fallback_chain": [
+      "pro"
+    ],
+    "processing_time_ms": 58776,
+    "is_auto_transcribed": false
+  },
+  "audio": {
+    "duration_sec": 57.05,
+    "silence_ratio": 0.4260915307732772,
+    "rms_db": -33.421384052706806,
+    "clipping_ratio": 0.0
+  },
+  "script_text": "Lily,today is the last day of school.Where are you going in\r\nyour winter vacation?\r\nI'm going to Harbin with my parents.I don't like cold weather.\r\nI'm afraid of getting a cold.\r\nOh,you'll be fine.What are you going to do there?\r\nWe're going to see ice lanterns and play in the snow.My\r\nuncle's family live there.We're going to visit them.\r\nAre you going to ski?\r\nYes.I can't ski now,but I'm going to have skiing lessons.\r\nOK,have a nice winter vacation!\r\nYou too!I'm going to bring back some sausages for you!I hear\r\nthey are famous in Harbin.\r\nThank you.",
+  "scores": {
+    "overall_100": 81.5,
+    "pronunciation_100": 78.0,
+    "fluency_100": 88.0,
+    "intonation_100": 82.0,
+    "completeness_100": 85.0
+  },
+  "engine_raw": {
+    "source": "Gemini (gemini-3-flash-preview)",
+    "overall_score": 82.0,
+    "accuracy_score": 78.0,
+    "fluency_score": 88.0,
+    "completeness_score": 85.0,
+    "gemini_feedback": "学生的整体语感非常好，语速适中，断句自然，展现了较强的英语口语基础。主要问题在于对‘功能词’（如 to, a）以及‘固定搭配’（如 be going to）的忽略或误用。发音习惯上，元音 /æ/ 的开口度可以再大一点，避免听起来像 /e/。此外，要注意名词单复数与冠词的匹配。",
+    "detected_transcript": "Lily, today is the last day of school. Where are you going in your winter vacation? I'm going to Harbin with my parents. I don't like cold weather. I'm afraid of getting a cold. Oh, you'll be fine. What are you going to do there? We're going to see ice lanterns and play in the snow. My uncle's family live there. We're going to visit them. Are you going ski? Yes. I can't ski now, but I'm going to have a skiing lessons. OK, have a nice winter vacation! You too! I'm bring back some sausages for you! I hear they are famous in Harbin. Thank you.",
+    "ai_referee": {
+      "status": "completed",
+      "conflicts": 4,
+      "conflict_details": [
+        {
+          "word": "last",
+          "expected": "last",
+          "got": "/æ/ 发音略扁，接近 /e/",
+          "comment": "注意 /æ/ 音需要嘴角向两侧拉开，下巴略微下拉。"
+        },
+        {
+          "word": "to",
+          "expected": "to",
+          "got": "在 Are you going to ski 处漏读",
+          "comment": "漏掉了不定式符号 to。"
+        },
+        {
+          "word": "skiing",
+          "expected": "skiing",
+          "got": "前面多读了 /ə/",
+          "comment": "不要在 skiing 前面加 a，因为后面是复数 lessons。"
+        },
+        {
+          "word": "going",
+          "expected": "going",
+          "got": "在 I'm going to bring 处漏读",
+          "comment": "漏读了核心谓语部分。"
+        }
+      ]
+    },
+    "integrated_feedback": {
+      "overall_comment": "你的声音非常好听，读起来很有节奏感，像是在真正地对话！你对长句的处理很棒，停顿非常自然。只要在细节上（比如那些不起眼的小单词）再精准一点，你的口语就会非常完美。",
+      "specific_suggestions": [
+        "练习 'going to' 的连读，可以读成轻快的 /ɡənə/，但不能省略它。",
+        "发 'last' 的时候，试着把嘴巴张得像咬苹果一样大，发出饱满的 /æ/。",
+        "注意 'lessons' 是复数，前面要把那个多余的 'a' 去掉。"
+      ],
+      "practice_tips": [
+        "尝试‘影子练习’（Shadowing），跟着原声模仿那些虚词的弱读和连读。",
+        "录下自己读 'be going to' 的句子，检查是否每个单词都读出来了。"
+      ],
+      "fun_challenge": "试着挑战用最快的速度说三遍：'I'm going to go skiing in Harbin'，看能不能把 going to 读得既快又准！",
+      "top_errors": [
+        {
+          "phoneme": "/tuː/",
+          "description": "在 'Are you going to ski' 中漏读了 'to'，听起来像 'Are you going ski'",
+          "words": [
+            "to"
+          ],
+          "improvement": "在 going 之后要清晰地发出 /tu/ 的音，确保语法结构的完整性。"
+        },
+        {
+          "phoneme": "/ə/",
+          "description": "在 'have skiing lessons' 之前多读了一个 'a'，听起来像 'have a skiing lessons'",
+          "words": [
+            "skiing"
+          ],
+          "improvement": "注意名词复数 lessons 前面不需要加不定冠词 a。"
+        },
+        {
+          "phoneme": "/ˌɡoʊ.ɪŋ tuː/",
+          "description": "在 'I'm going to bring back' 中漏读了 'going to'，听起来像 'I'm bring back'",
+          "words": [
+            "going",
+            "to"
+          ],
+          "improvement": "表达将来计划时，'be going to' 是一个整体，不能只读 I'm 而省略 going to。"
+        }
+      ]
+    },
+    "pronunciation_score": 78.0,
+    "intonation_score": 82.0,
+    "gop_mean": -3.5
+  },
+  "alignment": {
+    "words": [
+      {
+        "word": "Lily",
+        "start": 0.0,
+        "end": 0.08,
+        "tag": "ok",
+        "score": 95.0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "today",
+        "start": 0.1,
+        "end": 1.96,
+        "tag": "weak",
+        "score": 53.2,
+        "pause": {
+          "type": "bad",
+          "duration": 1.0
+        },
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "is",
+        "start": 2.96,
+        "end": 3.06,
+        "tag": "ok",
+        "score": 88.9,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "the",
+        "start": 3.14,
+        "end": 3.24,
+        "tag": "ok",
+        "score": 93.1,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "last",
+        "start": 3.32,
+        "end": 3.54,
+        "tag": "ok",
+        "score": 85.0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "day",
+        "start": 3.62,
+        "end": 3.82,
+        "tag": "ok",
+        "score": 79.0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "of",
+        "start": 3.96,
+        "end": 4.1,
+        "tag": "ok",
+        "score": 89.6,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "school",
+        "start": 4.16,
+        "end": 4.5,
+        "tag": "ok",
+        "score": 84.3,
+        "pause": {
+          "type": "optional",
+          "duration": 0.58
+        },
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "Where",
+        "start": 5.08,
+        "end": 5.34,
+        "tag": "ok",
+        "score": 83.0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "are",
+        "start": 5.4,
+        "end": 5.52,
+        "tag": "ok",
+        "score": 90.1,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "you",
+        "start": 5.56,
+        "end": 5.66,
+        "tag": "ok",
+        "score": 90.3,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "going",
+        "start": 5.72,
+        "end": 6.18,
+        "tag": "missing",
+        "score": 0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "in",
+        "start": 6.4,
+        "end": 6.5,
+        "tag": "ok",
+        "score": 82.1,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "your",
+        "start": 6.58,
+        "end": 6.86,
+        "tag": "ok",
+        "score": 80.2,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "winter",
+        "start": 6.92,
+        "end": 7.2,
+        "tag": "ok",
+        "score": 88.1,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "vacation",
+        "start": 7.28,
+        "end": 7.86,
+        "tag": "ok",
+        "score": 79.6,
+        "pause": {
+          "type": "bad",
+          "duration": 0.68
+        },
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "I'm",
+        "start": 8.54,
+        "end": 8.68,
+        "tag": "ok",
+        "score": 80.5,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "going",
+        "start": 8.76,
+        "end": 9.04,
+        "tag": "ok",
+        "score": 91.8,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "to",
+        "start": 9.12,
+        "end": 9.28,
+        "tag": "ok",
+        "score": 78.0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "Harbin",
+        "start": 9.4,
+        "end": 9.88,
+        "tag": "ok",
+        "score": 81.9,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "with",
+        "start": 9.96,
+        "end": 10.14,
+        "tag": "ok",
+        "score": 86.0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "my",
+        "start": 10.22,
+        "end": 10.36,
+        "tag": "ok",
+        "score": 70.5,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "parents",
+        "start": 10.46,
+        "end": 10.96,
+        "tag": "ok",
+        "score": 87.5,
+        "pause": {
+          "type": "bad",
+          "duration": 0.78
+        },
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "I",
+        "start": 11.74,
+        "end": 11.78,
+        "tag": "ok",
+        "score": 90.7,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "don't",
+        "start": 11.88,
+        "end": 12.06,
+        "tag": "ok",
+        "score": 95.5,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "like",
+        "start": 12.12,
+        "end": 12.32,
+        "tag": "ok",
+        "score": 86.1,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "cold",
+        "start": 12.42,
+        "end": 12.78,
+        "tag": "ok",
+        "score": 81.0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "weather",
+        "start": 12.82,
+        "end": 13.22,
+        "tag": "ok",
+        "score": 81.0,
+        "pause": {
+          "type": "bad",
+          "duration": 0.76
+        },
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "I'm",
+        "start": 13.98,
+        "end": 14.1,
+        "tag": "ok",
+        "score": 86.2,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "afraid",
+        "start": 14.2,
+        "end": 14.8,
+        "tag": "ok",
+        "score": 77.6,
+        "pause": {
+          "type": "optional",
+          "duration": 0.4
+        },
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "of",
+        "start": 15.2,
+        "end": 15.34,
+        "tag": "ok",
+        "score": 92.3,
+        "pause": {
+          "type": "bad",
+          "duration": 0.7
+        },
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "getting",
+        "start": 16.04,
+        "end": 16.4,
+        "tag": "ok",
+        "score": 83.1,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "a",
+        "start": 16.5,
+        "end": 16.52,
+        "tag": "ok",
+        "score": 100.0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "cold",
+        "start": 16.58,
+        "end": 16.88,
+        "tag": "ok",
+        "score": 81.7,
+        "pause": {
+          "type": "bad",
+          "duration": 0.8
+        },
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "Oh",
+        "start": 17.68,
+        "end": 17.76,
+        "tag": "ok",
+        "score": 92.5,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "you'll",
+        "start": 17.86,
+        "end": 18.18,
+        "tag": "ok",
+        "score": 82.0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "be",
+        "start": 18.2,
+        "end": 18.32,
+        "tag": "ok",
+        "score": 91.5,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "fine",
+        "start": 18.58,
+        "end": 18.72,
+        "tag": "ok",
+        "score": 77.7,
+        "pause": {
+          "type": "optional",
+          "duration": 0.38
+        },
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "What",
+        "start": 19.1,
+        "end": 19.26,
+        "tag": "ok",
+        "score": 88.4,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "are",
+        "start": 19.32,
+        "end": 19.42,
+        "tag": "ok",
+        "score": 92.7,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "you",
+        "start": 19.48,
+        "end": 19.56,
+        "tag": "ok",
+        "score": 95.8,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "going",
+        "start": 19.62,
+        "end": 19.86,
+        "tag": "ok",
+        "score": 92.4,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "to",
+        "start": 19.9,
+        "end": 20.0,
+        "tag": "ok",
+        "score": 85.9,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "do",
+        "start": 20.06,
+        "end": 20.28,
+        "tag": "ok",
+        "score": 74.4,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "there",
+        "start": 20.32,
+        "end": 20.54,
+        "tag": "ok",
+        "score": 94.0,
+        "pause": {
+          "type": "bad",
+          "duration": 0.86
+        },
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "We're",
+        "start": 21.4,
+        "end": 21.68,
+        "tag": "ok",
+        "score": 83.0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "going",
+        "start": 21.74,
+        "end": 22.06,
+        "tag": "ok",
+        "score": 90.3,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "to",
+        "start": 22.12,
+        "end": 22.4,
+        "tag": "weak",
+        "score": 67.8,
+        "pause": {
+          "type": "optional",
+          "duration": 0.46
+        },
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "see",
+        "start": 22.86,
+        "end": 23.12,
+        "tag": "weak",
+        "score": 66.1,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "ice",
+        "start": 23.3,
+        "end": 23.44,
+        "tag": "ok",
+        "score": 87.7,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "lanterns",
+        "start": 23.5,
+        "end": 24.0,
+        "tag": "ok",
+        "score": 82.1,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "and",
+        "start": 24.2,
+        "end": 24.34,
+        "tag": "ok",
+        "score": 94.2,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "play",
+        "start": 24.42,
+        "end": 24.72,
+        "tag": "ok",
+        "score": 77.4,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "in",
+        "start": 24.78,
+        "end": 24.86,
+        "tag": "ok",
+        "score": 80.2,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "the",
+        "start": 24.9,
+        "end": 25.02,
+        "tag": "ok",
+        "score": 84.7,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "snow",
+        "start": 25.1,
+        "end": 25.4,
+        "tag": "ok",
+        "score": 73.2,
+        "pause": {
+          "type": "bad",
+          "duration": 1.22
+        },
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "My",
+        "start": 26.62,
+        "end": 26.68,
+        "tag": "weak",
+        "score": 69.9,
+        "pause": {
+          "type": "optional",
+          "duration": 0.4
+        },
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "uncle's",
+        "start": 27.08,
+        "end": 27.58,
+        "tag": "ok",
+        "score": 84.5,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "family",
+        "start": 27.64,
+        "end": 28.24,
+        "tag": "ok",
+        "score": 75.3,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "live",
+        "start": 28.34,
+        "end": 28.68,
+        "tag": "ok",
+        "score": 74.4,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "there",
+        "start": 28.74,
+        "end": 29.0,
+        "tag": "ok",
+        "score": 94.7,
+        "pause": {
+          "type": "optional",
+          "duration": 0.36
+        },
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "We're",
+        "start": 29.36,
+        "end": 29.7,
+        "tag": "ok",
+        "score": 83.2,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "going",
+        "start": 29.76,
+        "end": 30.06,
+        "tag": "ok",
+        "score": 85.0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "to",
+        "start": 30.14,
+        "end": 30.48,
+        "tag": "weak",
+        "score": 65.6,
+        "pause": {
+          "type": "bad",
+          "duration": 0.6
+        },
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "visit",
+        "start": 31.08,
+        "end": 31.52,
+        "tag": "ok",
+        "score": 70.3,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "them",
+        "start": 31.58,
+        "end": 31.78,
+        "tag": "ok",
+        "score": 86.9,
+        "pause": {
+          "type": "bad",
+          "duration": 1.04
+        },
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "Are",
+        "start": 32.82,
+        "end": 33.02,
+        "tag": "ok",
+        "score": 79.6,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "you",
+        "start": 33.08,
+        "end": 33.2,
+        "tag": "ok",
+        "score": 85.8,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "going",
+        "start": 33.34,
+        "end": 33.66,
+        "tag": "ok",
+        "score": 85.3,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": true,
+        "diagnosis": ""
+      },
+      {
+        "word": "to",
+        "start": 33.68,
+        "end": 33.72,
+        "tag": "weak",
+        "score": 67.0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "ski",
+        "start": 33.78,
+        "end": 34.08,
+        "tag": "ok",
+        "score": 76.2,
+        "pause": {
+          "type": "bad",
+          "duration": 0.74
+        },
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "Yes",
+        "start": 34.82,
+        "end": 35.2,
+        "tag": "ok",
+        "score": 75.5,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "I",
+        "start": 35.44,
+        "end": 35.48,
+        "tag": "ok",
+        "score": 84.2,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "can't",
+        "start": 35.58,
+        "end": 35.88,
+        "tag": "ok",
+        "score": 81.9,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "ski",
+        "start": 35.92,
+        "end": 36.14,
+        "tag": "ok",
+        "score": 79.2,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "now",
+        "start": 36.28,
+        "end": 36.5,
+        "tag": "ok",
+        "score": 73.1,
+        "pause": {
+          "type": "bad",
+          "duration": 0.62
+        },
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "but",
+        "start": 37.12,
+        "end": 37.26,
+        "tag": "ok",
+        "score": 77.6,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "I'm",
+        "start": 37.5,
+        "end": 37.64,
+        "tag": "ok",
+        "score": 84.9,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "going",
+        "start": 37.74,
+        "end": 38.1,
+        "tag": "ok",
+        "score": 85.2,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "to",
+        "start": 38.2,
+        "end": 38.56,
+        "tag": "weak",
+        "score": 67.7,
+        "pause": {
+          "type": "bad",
+          "duration": 0.6
+        },
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "have",
+        "start": 39.16,
+        "end": 40.12,
+        "tag": "ok",
+        "score": 72.1,
+        "pause": {
+          "type": "bad",
+          "duration": 1.28
+        },
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "skiing",
+        "start": 41.4,
+        "end": 41.6,
+        "tag": "ok",
+        "score": 72.5,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "lessons",
+        "start": 41.88,
+        "end": 42.36,
+        "tag": "ok",
+        "score": 76.2,
+        "pause": {
+          "type": "bad",
+          "duration": 1.24
+        },
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "OK",
+        "start": 43.6,
+        "end": 43.78,
+        "tag": "ok",
+        "score": 72.4,
+        "pause": {
+          "type": "optional",
+          "duration": 0.44
+        },
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "have",
+        "start": 44.22,
+        "end": 44.5,
+        "tag": "ok",
+        "score": 84.1,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "a",
+        "start": 44.56,
+        "end": 44.6,
+        "tag": "ok",
+        "score": 82.4,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "nice",
+        "start": 44.68,
+        "end": 45.0,
+        "tag": "ok",
+        "score": 77.3,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "winter",
+        "start": 45.08,
+        "end": 45.34,
+        "tag": "ok",
+        "score": 85.7,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "vacation",
+        "start": 45.42,
+        "end": 46.02,
+        "tag": "ok",
+        "score": 77.9,
+        "pause": {
+          "type": "bad",
+          "duration": 0.86
+        },
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "You",
+        "start": 46.88,
+        "end": 47.1,
+        "tag": "ok",
+        "score": 78.0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "too",
+        "start": 47.2,
+        "end": 47.28,
+        "tag": "ok",
+        "score": 85.6,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "I'm",
+        "start": 47.36,
+        "end": 47.42,
+        "tag": "weak",
+        "score": 41.6,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "going",
+        "start": 47.62,
+        "end": 47.72,
+        "tag": "weak",
+        "score": 40,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "to",
+        "start": 47.84,
+        "end": 47.94,
+        "tag": "weak",
+        "score": 41.8,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "bring",
+        "start": 48.18,
+        "end": 48.42,
+        "tag": "ok",
+        "score": 91.7,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "back",
+        "start": 48.48,
+        "end": 48.66,
+        "tag": "ok",
+        "score": 75.9,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "some",
+        "start": 48.74,
+        "end": 48.96,
+        "tag": "ok",
+        "score": 78.3,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "sausages",
+        "start": 49.04,
+        "end": 49.56,
+        "tag": "ok",
+        "score": 74.3,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "for",
+        "start": 49.64,
+        "end": 49.84,
+        "tag": "ok",
+        "score": 72.7,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "you",
+        "start": 49.92,
+        "end": 50.12,
+        "tag": "ok",
+        "score": 88.6,
+        "pause": {
+          "type": "bad",
+          "duration": 1.02
+        },
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "I",
+        "start": 51.14,
+        "end": 51.2,
+        "tag": "ok",
+        "score": 72.0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "hear",
+        "start": 51.3,
+        "end": 51.6,
+        "tag": "ok",
+        "score": 80.2,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "they",
+        "start": 51.74,
+        "end": 51.9,
+        "tag": "ok",
+        "score": 93.1,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "are",
+        "start": 51.98,
+        "end": 52.14,
+        "tag": "ok",
+        "score": 79.9,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "famous",
+        "start": 52.18,
+        "end": 52.68,
+        "tag": "ok",
+        "score": 76.6,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "in",
+        "start": 52.76,
+        "end": 53.26,
+        "tag": "weak",
+        "score": 69.2,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "Harbin",
+        "start": 53.4,
+        "end": 53.9,
+        "tag": "ok",
+        "score": 78.0,
+        "pause": {
+          "type": "optional",
+          "duration": 0.38
+        },
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "Thank",
+        "start": 54.28,
+        "end": 54.56,
+        "tag": "ok",
+        "score": 77.2,
+        "pause": {
+          "type": "bad",
+          "duration": 2.48
+        },
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      },
+      {
+        "word": "you",
+        "start": 57.04,
+        "end": 57.07,
+        "tag": "weak",
+        "score": 50.0,
+        "pause": null,
+        "stress": 0.0,
+        "is_linked": false,
+        "diagnosis": ""
+      }
+    ],
+    "phonemes": []
+  },
+  "analysis": {
+    "weak_words": [
+      "going",
+      "I'm",
+      "to"
+    ],
+    "weak_phonemes": [
+      "ŋ"
+    ],
+    "missing_words": [
+      "going"
+    ],
+    "confusions": [],
+    "mistakes": [
+      {
+        "type": "substitution",
+        "target": "last",
+        "expected": "last",
+        "got": "/æ/ 发音略扁，接近 /e/",
+        "desc": "Said '/æ/ 发音略扁，接近 /e/' instead of 'last'",
+        "severity": "medium"
+      },
+      {
+        "type": "substitution",
+        "target": "to",
+        "expected": "to",
+        "got": "在 Are you going to ski 处漏读",
+        "desc": "Said '在 Are you going to ski 处漏读' instead of 'to'",
+        "severity": "medium"
+      },
+      {
+        "type": "substitution",
+        "target": "skiing",
+        "expected": "skiing",
+        "got": "前面多读了 /ə/",
+        "desc": "Said '前面多读了 /ə/' instead of 'skiing'",
+        "severity": "medium"
+      },
+      {
+        "type": "substitution",
+        "target": "going",
+        "expected": "going",
+        "got": "在 I'm going to bring 处漏读",
+        "desc": "Said '在 I'm going to bring 处漏读' instead of 'going'",
+        "severity": "medium"
+      },
+      {
+        "type": "missing",
+        "target": "going",
+        "desc": "Forgot to pronounce",
+        "severity": "high"
+      },
+      {
+        "type": "accuracy",
+        "target": "L",
+        "word": "Lily",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 0.0
+      },
+      {
+        "type": "accuracy",
+        "target": "I",
+        "word": "Lily",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 0.0
+      },
+      {
+        "type": "accuracy",
+        "target": "L",
+        "word": "Lily",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 0.0
+      },
+      {
+        "type": "accuracy",
+        "target": "Y",
+        "word": "Lily",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 0.0
+      },
+      {
+        "type": "accuracy",
+        "target": "T",
+        "word": "today",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 0.0
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "today",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 26.0728759765625
+      },
+      {
+        "type": "accuracy",
+        "target": "D",
+        "word": "today",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 3.775787353515625
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "today",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 37.07183074951172
+      },
+      {
+        "type": "accuracy",
+        "target": "L",
+        "word": "last",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 49.841976165771484
+      },
+      {
+        "type": "accuracy",
+        "target": "D",
+        "word": "day",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 62.65138244628906
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "day",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 36.70184326171875
+      },
+      {
+        "type": "accuracy",
+        "target": "C",
+        "word": "school",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 52.12013244628906
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "school",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 46.45832443237305
+      },
+      {
+        "type": "accuracy",
+        "target": "W",
+        "word": "Where",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 45.13383483886719
+      },
+      {
+        "type": "accuracy",
+        "target": "H",
+        "word": "Where",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 53.626625061035156
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "are",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 52.454742431640625
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "going",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 42.62553024291992
+      },
+      {
+        "type": "accuracy",
+        "target": "I",
+        "word": "going",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 60.74736404418945
+      },
+      {
+        "type": "accuracy",
+        "target": "Y",
+        "word": "your",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 63.273746490478516
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "your",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 63.821861267089844
+      },
+      {
+        "type": "accuracy",
+        "target": "I",
+        "word": "winter",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 52.726898193359375
+      },
+      {
+        "type": "accuracy",
+        "target": "T",
+        "word": "winter",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 61.72319412231445
+      },
+      {
+        "type": "accuracy",
+        "target": "V",
+        "word": "vacation",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 55.65390396118164
+      },
+      {
+        "type": "accuracy",
+        "target": "C",
+        "word": "vacation",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 44.64484405517578
+      },
+      {
+        "type": "accuracy",
+        "target": "T",
+        "word": "vacation",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 39.94820022583008
+      },
+      {
+        "type": "accuracy",
+        "target": "I",
+        "word": "vacation",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 59.241859436035156
+      },
+      {
+        "type": "accuracy",
+        "target": "'",
+        "word": "I'm",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 59.277408599853516
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "going",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 49.01539611816406
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "to",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 60.279273986816406
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "Harbin",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 49.453155517578125
+      },
+      {
+        "type": "accuracy",
+        "target": "I",
+        "word": "Harbin",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 55.25218200683594
+      },
+      {
+        "type": "accuracy",
+        "target": "W",
+        "word": "with",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 40.756134033203125
+      },
+      {
+        "type": "accuracy",
+        "target": "M",
+        "word": "my",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 55.66402053833008
+      },
+      {
+        "type": "accuracy",
+        "target": "Y",
+        "word": "my",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 49.98427200317383
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "parents",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 38.036861419677734
+      },
+      {
+        "type": "accuracy",
+        "target": "L",
+        "word": "like",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 44.5084228515625
+      },
+      {
+        "type": "accuracy",
+        "target": "C",
+        "word": "cold",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 60.20355224609375
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "cold",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 48.48617935180664
+      },
+      {
+        "type": "accuracy",
+        "target": "E",
+        "word": "weather",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 45.86774826049805
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "weather",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 38.55915832519531
+      },
+      {
+        "type": "accuracy",
+        "target": "'",
+        "word": "I'm",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 55.36250305175781
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "afraid",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 49.98048782348633
+      },
+      {
+        "type": "accuracy",
+        "target": "F",
+        "word": "afraid",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 53.21154022216797
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "afraid",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 36.1861572265625
+      },
+      {
+        "type": "accuracy",
+        "target": "E",
+        "word": "getting",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 41.258697509765625
+      },
+      {
+        "type": "accuracy",
+        "target": "T",
+        "word": "getting",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 33.06639099121094
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "cold",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 43.67238998413086
+      },
+      {
+        "type": "accuracy",
+        "target": "'",
+        "word": "you'll",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 31.091323852539062
+      },
+      {
+        "type": "accuracy",
+        "target": "L",
+        "word": "you'll",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 57.57935333251953
+      },
+      {
+        "type": "accuracy",
+        "target": "F",
+        "word": "fine",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 0.0
+      },
+      {
+        "type": "accuracy",
+        "target": "W",
+        "word": "What",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 64.15262985229492
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "going",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 44.7086296081543
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "do",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 43.69521713256836
+      },
+      {
+        "type": "accuracy",
+        "target": "W",
+        "word": "We're",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 58.94754409790039
+      },
+      {
+        "type": "accuracy",
+        "target": "'",
+        "word": "We're",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 44.15221405029297
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "going",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 53.40034103393555
+      },
+      {
+        "type": "accuracy",
+        "target": "T",
+        "word": "to",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 48.27133560180664
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "to",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 48.81810760498047
+      },
+      {
+        "type": "accuracy",
+        "target": "S",
+        "word": "see",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 36.9549560546875
+      },
+      {
+        "type": "accuracy",
+        "target": "E",
+        "word": "see",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 51.274417877197266
+      },
+      {
+        "type": "accuracy",
+        "target": "E",
+        "word": "see",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 49.22384262084961
+      },
+      {
+        "type": "accuracy",
+        "target": "C",
+        "word": "ice",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 56.514678955078125
+      },
+      {
+        "type": "accuracy",
+        "target": "L",
+        "word": "lanterns",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 63.72380828857422
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "lanterns",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 63.61258316040039
+      },
+      {
+        "type": "accuracy",
+        "target": "T",
+        "word": "lanterns",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 49.55137252807617
+      },
+      {
+        "type": "accuracy",
+        "target": "N",
+        "word": "lanterns",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 47.11802673339844
+      },
+      {
+        "type": "accuracy",
+        "target": "P",
+        "word": "play",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 52.55745315551758
+      },
+      {
+        "type": "accuracy",
+        "target": "L",
+        "word": "play",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 54.4284553527832
+      },
+      {
+        "type": "accuracy",
+        "target": "E",
+        "word": "the",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 52.57441329956055
+      },
+      {
+        "type": "accuracy",
+        "target": "S",
+        "word": "snow",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 47.750938415527344
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "snow",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 38.5794792175293
+      },
+      {
+        "type": "accuracy",
+        "target": "M",
+        "word": "My",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 27.529129028320312
+      },
+      {
+        "type": "accuracy",
+        "target": "C",
+        "word": "uncle's",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 52.539398193359375
+      },
+      {
+        "type": "accuracy",
+        "target": "L",
+        "word": "uncle's",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 55.531063079833984
+      },
+      {
+        "type": "accuracy",
+        "target": "F",
+        "word": "family",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 62.769229888916016
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "family",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 36.9107666015625
+      },
+      {
+        "type": "accuracy",
+        "target": "L",
+        "word": "family",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 54.10945129394531
+      },
+      {
+        "type": "accuracy",
+        "target": "Y",
+        "word": "family",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 42.7711296081543
+      },
+      {
+        "type": "accuracy",
+        "target": "L",
+        "word": "live",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 30.904861450195312
+      },
+      {
+        "type": "accuracy",
+        "target": "I",
+        "word": "live",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 53.36973571777344
+      },
+      {
+        "type": "accuracy",
+        "target": "W",
+        "word": "We're",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 61.58165740966797
+      },
+      {
+        "type": "accuracy",
+        "target": "E",
+        "word": "We're",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 60.92341995239258
+      },
+      {
+        "type": "accuracy",
+        "target": "'",
+        "word": "We're",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 49.44770812988281
+      },
+      {
+        "type": "accuracy",
+        "target": "G",
+        "word": "going",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 51.97560119628906
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "going",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 61.367244720458984
+      },
+      {
+        "type": "accuracy",
+        "target": "T",
+        "word": "to",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 51.6065788269043
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "to",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 38.36336135864258
+      },
+      {
+        "type": "accuracy",
+        "target": "V",
+        "word": "visit",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 44.93690490722656
+      },
+      {
+        "type": "accuracy",
+        "target": "I",
+        "word": "visit",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 39.345863342285156
+      },
+      {
+        "type": "accuracy",
+        "target": "S",
+        "word": "visit",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 53.311309814453125
+      },
+      {
+        "type": "accuracy",
+        "target": "I",
+        "word": "visit",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 62.03398132324219
+      },
+      {
+        "type": "accuracy",
+        "target": "T",
+        "word": "visit",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 62.49338912963867
+      },
+      {
+        "type": "accuracy",
+        "target": "E",
+        "word": "them",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 46.6259765625
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "Are",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 12.12701416015625
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "you",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 57.49607467651367
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "going",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 45.64203643798828
+      },
+      {
+        "type": "accuracy",
+        "target": "T",
+        "word": "to",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 34.659934997558594
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "to",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 59.80968475341797
+      },
+      {
+        "type": "accuracy",
+        "target": "K",
+        "word": "ski",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 29.17828369140625
+      },
+      {
+        "type": "accuracy",
+        "target": "Y",
+        "word": "Yes",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 57.81533432006836
+      },
+      {
+        "type": "accuracy",
+        "target": "E",
+        "word": "Yes",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 45.87401580810547
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "can't",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 44.38829803466797
+      },
+      {
+        "type": "accuracy",
+        "target": "K",
+        "word": "ski",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 34.40657043457031
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "now",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 26.493270874023438
+      },
+      {
+        "type": "accuracy",
+        "target": "W",
+        "word": "now",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 56.14707946777344
+      },
+      {
+        "type": "accuracy",
+        "target": "B",
+        "word": "but",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 27.66022491455078
+      },
+      {
+        "type": "accuracy",
+        "target": "T",
+        "word": "but",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 64.7375259399414
+      },
+      {
+        "type": "accuracy",
+        "target": "'",
+        "word": "I'm",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 56.89531326293945
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "going",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 45.65530776977539
+      },
+      {
+        "type": "accuracy",
+        "target": "T",
+        "word": "to",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 57.49800109863281
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "to",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 39.059600830078125
+      },
+      {
+        "type": "accuracy",
+        "target": "H",
+        "word": "have",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 22.479507446289062
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "have",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 30.927749633789062
+      },
+      {
+        "type": "accuracy",
+        "target": "S",
+        "word": "skiing",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 26.74999237060547
+      },
+      {
+        "type": "accuracy",
+        "target": "K",
+        "word": "skiing",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 12.899620056152344
+      },
+      {
+        "type": "accuracy",
+        "target": "I",
+        "word": "skiing",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 58.112327575683594
+      },
+      {
+        "type": "accuracy",
+        "target": "G",
+        "word": "skiing",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 59.53853988647461
+      },
+      {
+        "type": "accuracy",
+        "target": "E",
+        "word": "lessons",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 54.54984664916992
+      },
+      {
+        "type": "accuracy",
+        "target": "S",
+        "word": "lessons",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 57.76487731933594
+      },
+      {
+        "type": "accuracy",
+        "target": "S",
+        "word": "lessons",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 15.73089599609375
+      },
+      {
+        "type": "accuracy",
+        "target": "N",
+        "word": "lessons",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 56.87364196777344
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "OK",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 38.870384216308594
+      },
+      {
+        "type": "accuracy",
+        "target": "H",
+        "word": "have",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 42.759761810302734
+      },
+      {
+        "type": "accuracy",
+        "target": "N",
+        "word": "nice",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 41.737918853759766
+      },
+      {
+        "type": "accuracy",
+        "target": "I",
+        "word": "nice",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 58.28646469116211
+      },
+      {
+        "type": "accuracy",
+        "target": "C",
+        "word": "nice",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 54.44960021972656
+      },
+      {
+        "type": "accuracy",
+        "target": "I",
+        "word": "winter",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 50.32292556762695
+      },
+      {
+        "type": "accuracy",
+        "target": "V",
+        "word": "vacation",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 56.51961135864258
+      },
+      {
+        "type": "accuracy",
+        "target": "C",
+        "word": "vacation",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 41.88420104980469
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "vacation",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 40.679534912109375
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "vacation",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 39.16057205200195
+      },
+      {
+        "type": "accuracy",
+        "target": "Y",
+        "word": "You",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 38.97930145263672
+      },
+      {
+        "type": "accuracy",
+        "target": "U",
+        "word": "You",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 59.13618469238281
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "too",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 37.693416595458984
+      },
+      {
+        "type": "accuracy",
+        "target": "I",
+        "word": "I'm",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 26.651153564453125
+      },
+      {
+        "type": "accuracy",
+        "target": "'",
+        "word": "I'm",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 0.0
+      },
+      {
+        "type": "accuracy",
+        "target": "M",
+        "word": "I'm",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 5.918006896972656
+      },
+      {
+        "type": "accuracy",
+        "target": "G",
+        "word": "going",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 0.0
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "going",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 0.0
+      },
+      {
+        "type": "accuracy",
+        "target": "I",
+        "word": "going",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 0.0
+      },
+      {
+        "type": "accuracy",
+        "target": "N",
+        "word": "going",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 0.0
+      },
+      {
+        "type": "accuracy",
+        "target": "G",
+        "word": "going",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 0.0
+      },
+      {
+        "type": "accuracy",
+        "target": "T",
+        "word": "to",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 0.0
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "to",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 17.33611297607422
+      },
+      {
+        "type": "accuracy",
+        "target": "B",
+        "word": "back",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 57.80023193359375
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "back",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 40.819366455078125
+      },
+      {
+        "type": "accuracy",
+        "target": "S",
+        "word": "some",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 46.13628387451172
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "some",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 62.15615463256836
+      },
+      {
+        "type": "accuracy",
+        "target": "S",
+        "word": "sausages",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 44.74338912963867
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "sausages",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 46.02515411376953
+      },
+      {
+        "type": "accuracy",
+        "target": "S",
+        "word": "sausages",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 44.614784240722656
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "sausages",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 58.96322250366211
+      },
+      {
+        "type": "accuracy",
+        "target": "G",
+        "word": "sausages",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 49.21331787109375
+      },
+      {
+        "type": "accuracy",
+        "target": "F",
+        "word": "for",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 43.54304885864258
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "for",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 51.272438049316406
+      },
+      {
+        "type": "accuracy",
+        "target": "Y",
+        "word": "you",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 45.14142608642578
+      },
+      {
+        "type": "accuracy",
+        "target": "I",
+        "word": "I",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 55.24421310424805
+      },
+      {
+        "type": "accuracy",
+        "target": "H",
+        "word": "hear",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 58.1934928894043
+      },
+      {
+        "type": "accuracy",
+        "target": "E",
+        "word": "hear",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 59.28270721435547
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "are",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 36.76387405395508
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "famous",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 42.40281295776367
+      },
+      {
+        "type": "accuracy",
+        "target": "M",
+        "word": "famous",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 50.60899353027344
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "famous",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 62.34444046020508
+      },
+      {
+        "type": "accuracy",
+        "target": "U",
+        "word": "famous",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 52.40007400512695
+      },
+      {
+        "type": "accuracy",
+        "target": "I",
+        "word": "in",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 35.813438415527344
+      },
+      {
+        "type": "accuracy",
+        "target": "H",
+        "word": "Harbin",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 48.61859130859375
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "Harbin",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 50.632781982421875
+      },
+      {
+        "type": "accuracy",
+        "target": "I",
+        "word": "Harbin",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 47.99617004394531
+      },
+      {
+        "type": "accuracy",
+        "target": "T",
+        "word": "Thank",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 49.683406829833984
+      },
+      {
+        "type": "accuracy",
+        "target": "H",
+        "word": "Thank",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 53.54890441894531
+      },
+      {
+        "type": "accuracy",
+        "target": "A",
+        "word": "Thank",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 55.657264709472656
+      },
+      {
+        "type": "accuracy",
+        "target": "Y",
+        "word": "you",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 20.0
+      },
+      {
+        "type": "accuracy",
+        "target": "O",
+        "word": "you",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 20.0
+      },
+      {
+        "type": "accuracy",
+        "target": "U",
+        "word": "you",
+        "desc": "Pronunciation inaccuracy",
+        "severity": "medium",
+        "score": 20.0
+      }
+    ],
+    "pace_chart_data": [
+      {
+        "x": 0.0,
+        "y": 30
+      },
+      {
+        "x": 0.5,
+        "y": 60
+      },
+      {
+        "x": 1.0,
+        "y": 60
+      },
+      {
+        "x": 1.5,
+        "y": 30
+      },
+      {
+        "x": 2.0,
+        "y": 30
+      },
+      {
+        "x": 2.5,
+        "y": 90
+      },
+      {
+        "x": 3.0,
+        "y": 120
+      },
+      {
+        "x": 3.5,
+        "y": 180
+      },
+      {
+        "x": 4.0,
+        "y": 180
+      },
+      {
+        "x": 4.5,
+        "y": 150
+      },
+      {
+        "x": 5.0,
+        "y": 180
+      },
+      {
+        "x": 5.5,
+        "y": 150
+      },
+      {
+        "x": 6.0,
+        "y": 180
+      },
+      {
+        "x": 6.5,
+        "y": 150
+      },
+      {
+        "x": 7.0,
+        "y": 120
+      },
+      {
+        "x": 7.5,
+        "y": 90
+      },
+      {
+        "x": 8.0,
+        "y": 120
+      },
+      {
+        "x": 8.5,
+        "y": 120
+      },
+      {
+        "x": 9.0,
+        "y": 120
+      },
+      {
+        "x": 9.5,
+        "y": 180
+      },
+      {
+        "x": 10.0,
+        "y": 150
+      },
+      {
+        "x": 10.5,
+        "y": 120
+      },
+      {
+        "x": 11.0,
+        "y": 150
+      },
+      {
+        "x": 11.5,
+        "y": 120
+      },
+      {
+        "x": 12.0,
+        "y": 120
+      },
+      {
+        "x": 12.5,
+        "y": 150
+      },
+      {
+        "x": 13.0,
+        "y": 90
+      },
+      {
+        "x": 13.5,
+        "y": 90
+      },
+      {
+        "x": 14.0,
+        "y": 90
+      },
+      {
+        "x": 14.5,
+        "y": 90
+      },
+      {
+        "x": 15.0,
+        "y": 90
+      },
+      {
+        "x": 15.5,
+        "y": 90
+      },
+      {
+        "x": 16.0,
+        "y": 120
+      },
+      {
+        "x": 16.5,
+        "y": 90
+      },
+      {
+        "x": 17.0,
+        "y": 120
+      },
+      {
+        "x": 17.5,
+        "y": 150
+      },
+      {
+        "x": 18.0,
+        "y": 120
+      },
+      {
+        "x": 18.5,
+        "y": 180
+      },
+      {
+        "x": 19.0,
+        "y": 240
+      },
+      {
+        "x": 19.5,
+        "y": 240
+      },
+      {
+        "x": 20.0,
+        "y": 210
+      },
+      {
+        "x": 20.5,
+        "y": 150
+      },
+      {
+        "x": 21.0,
+        "y": 120
+      },
+      {
+        "x": 21.5,
+        "y": 90
+      },
+      {
+        "x": 22.0,
+        "y": 120
+      },
+      {
+        "x": 22.5,
+        "y": 150
+      },
+      {
+        "x": 23.0,
+        "y": 120
+      },
+      {
+        "x": 23.5,
+        "y": 120
+      },
+      {
+        "x": 24.0,
+        "y": 180
+      },
+      {
+        "x": 24.5,
+        "y": 180
+      },
+      {
+        "x": 25.0,
+        "y": 150
+      },
+      {
+        "x": 25.5,
+        "y": 120
+      },
+      {
+        "x": 26.0,
+        "y": 60
+      },
+      {
+        "x": 26.5,
+        "y": 60
+      },
+      {
+        "x": 27.0,
+        "y": 90
+      },
+      {
+        "x": 27.5,
+        "y": 90
+      },
+      {
+        "x": 28.0,
+        "y": 120
+      },
+      {
+        "x": 28.5,
+        "y": 90
+      },
+      {
+        "x": 29.0,
+        "y": 120
+      },
+      {
+        "x": 29.5,
+        "y": 150
+      },
+      {
+        "x": 30.0,
+        "y": 90
+      },
+      {
+        "x": 30.5,
+        "y": 120
+      },
+      {
+        "x": 31.0,
+        "y": 90
+      },
+      {
+        "x": 31.5,
+        "y": 60
+      },
+      {
+        "x": 32.0,
+        "y": 90
+      },
+      {
+        "x": 32.5,
+        "y": 90
+      },
+      {
+        "x": 33.0,
+        "y": 150
+      },
+      {
+        "x": 33.5,
+        "y": 150
+      },
+      {
+        "x": 34.0,
+        "y": 120
+      },
+      {
+        "x": 34.5,
+        "y": 150
+      },
+      {
+        "x": 35.0,
+        "y": 90
+      },
+      {
+        "x": 35.5,
+        "y": 150
+      },
+      {
+        "x": 36.0,
+        "y": 150
+      },
+      {
+        "x": 36.5,
+        "y": 120
+      },
+      {
+        "x": 37.0,
+        "y": 150
+      },
+      {
+        "x": 37.5,
+        "y": 120
+      },
+      {
+        "x": 38.0,
+        "y": 120
+      },
+      {
+        "x": 38.5,
+        "y": 90
+      },
+      {
+        "x": 39.0,
+        "y": 60
+      },
+      {
+        "x": 39.5,
+        "y": 30
+      },
+      {
+        "x": 40.0,
+        "y": 30
+      },
+      {
+        "x": 40.5,
+        "y": 30
+      },
+      {
+        "x": 41.0,
+        "y": 30
+      },
+      {
+        "x": 41.5,
+        "y": 60
+      },
+      {
+        "x": 42.0,
+        "y": 60
+      },
+      {
+        "x": 42.5,
+        "y": 60
+      },
+      {
+        "x": 43.0,
+        "y": 60
+      },
+      {
+        "x": 43.5,
+        "y": 60
+      },
+      {
+        "x": 44.0,
+        "y": 120
+      },
+      {
+        "x": 44.5,
+        "y": 150
+      },
+      {
+        "x": 45.0,
+        "y": 150
+      },
+      {
+        "x": 45.5,
+        "y": 120
+      },
+      {
+        "x": 46.0,
+        "y": 90
+      },
+      {
+        "x": 46.5,
+        "y": 120
+      },
+      {
+        "x": 47.0,
+        "y": 150
+      },
+      {
+        "x": 47.5,
+        "y": 180
+      },
+      {
+        "x": 48.0,
+        "y": 210
+      },
+      {
+        "x": 48.5,
+        "y": 180
+      },
+      {
+        "x": 49.0,
+        "y": 150
+      },
+      {
+        "x": 49.5,
+        "y": 150
+      },
+      {
+        "x": 50.0,
+        "y": 90
+      },
+      {
+        "x": 50.5,
+        "y": 120
+      },
+      {
+        "x": 51.0,
+        "y": 120
+      },
+      {
+        "x": 51.5,
+        "y": 150
+      },
+      {
+        "x": 52.0,
+        "y": 150
+      },
+      {
+        "x": 52.5,
+        "y": 120
+      },
+      {
+        "x": 53.0,
+        "y": 120
+      },
+      {
+        "x": 53.5,
+        "y": 90
+      },
+      {
+        "x": 54.0,
+        "y": 90
+      },
+      {
+        "x": 54.5,
+        "y": 60
+      },
+      {
+        "x": 55.0,
+        "y": 30
+      },
+      {
+        "x": 55.5,
+        "y": 0
+      },
+      {
+        "x": 56.0,
+        "y": 0
+      },
+      {
+        "x": 56.5,
+        "y": 30
+      },
+      {
+        "x": 57.0,
+        "y": 30
+      }
+    ],
+    "pitch_contour": [],
+    "hesitations": {
+      "score_label": "Detected",
+      "desc": "检测到了一些填充词。尝试用停顿代替它们。",
+      "fillers": [
+        {
+          "word": "like",
+          "count": 1
+        }
+      ],
+      "examples": [],
+      "tips": [
+        "在想说什么的时候，试着深呼吸而不是发出'嗯'的声音。",
+        "尝试放慢语速，给自己更多思考时间。"
+      ]
+    },
+    "completeness": {
+      "title": "完整度分析",
+      "score_label": "优秀",
+      "coverage": 99,
+      "missing_stats": {
+        "total": 1,
+        "keywords": 1,
+        "function_words": 0
+      },
+      "insight": "内容覆盖率: 99% (漏读 1 个关键词)",
+      "tips": [
+        "尝试更仔细地阅读实词（名词、动词），它们承载了句子的核心含义。"
+      ]
+    }
+  },
+  "feedback": {
+    "cn_summary": "你的声音非常好听，读起来很有节奏感，像是在真正地对话！你对长句的处理很棒，停顿非常自然。只要在细节上（比如那些不起眼的小单词）再精准一点，你的口语就会非常完美。",
+    "cn_actions": [
+      "练习 'going to' 的连读，可以读成轻快的 /ɡənə/，但不能省略它。",
+      "发 'last' 的时候，试着把嘴巴张得像咬苹果一样大，发出饱满的 /æ/。",
+      "注意 'lessons' 是复数，前面要把那个多余的 'a' 去掉。"
+    ],
+    "practice": [
+      "尝试‘影子练习’（Shadowing），跟着原声模仿那些虚词的弱读和连读。",
+      "录下自己读 'be going to' 的句子，检查是否每个单词都读出来了。"
+    ]
+  },
+  "advisor_feedback": {
+    "overall_comment": "你的声音非常好听，读起来很有节奏感，像是在真正地对话！你对长句的处理很棒，停顿非常自然。只要在细节上（比如那些不起眼的小单词）再精准一点，你的口语就会非常完美。",
+    "specific_suggestions": [
+      "练习 'going to' 的连读，可以读成轻快的 /ɡənə/，但不能省略它。",
+      "发 'last' 的时候，试着把嘴巴张得像咬苹果一样大，发出饱满的 /æ/。",
+      "注意 'lessons' 是复数，前面要把那个多余的 'a' 去掉。"
+    ],
+    "practice_tips": [
+      "尝试‘影子练习’（Shadowing），跟着原声模仿那些虚词的弱读和连读。",
+      "录下自己读 'be going to' 的句子，检查是否每个单词都读出来了。"
+    ],
+    "fun_challenge": "试着挑战用最快的速度说三遍：'I'm going to go skiing in Harbin'，看能不能把 going to 读得既快又准！",
+    "top_errors": [
+      {
+        "phoneme": "/tuː/",
+        "description": "在 'Are you going to ski' 中漏读了 'to'，听起来像 'Are you going ski'",
+        "words": [
+          "to"
+        ],
+        "improvement": "在 going 之后要清晰地发出 /tu/ 的音，确保语法结构的完整性。"
+      },
+      {
+        "phoneme": "/ə/",
+        "description": "在 'have skiing lessons' 之前多读了一个 'a'，听起来像 'have a skiing lessons'",
+        "words": [
+          "skiing"
+        ],
+        "improvement": "注意名词复数 lessons 前面不需要加不定冠词 a。"
+      },
+      {
+        "phoneme": "/ˌɡoʊ.ɪŋ tuː/",
+        "description": "在 'I'm going to bring back' 中漏读了 'going to'，听起来像 'I'm bring back'",
+        "words": [
+          "going",
+          "to"
+        ],
+        "improvement": "表达将来计划时，'be going to' 是一个整体，不能只读 I'm 而省略 going to。"
+      }
+    ]
+  },
+  "error": "'engine_raw' is undefined"
+}

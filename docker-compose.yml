@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  # 后端 API 服务
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    container_name: speech-scoring-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./score_reading:/app/score_reading
+    environment:
+      - USER_CONFIG_PATH=/app/data/config.yaml
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - GENTLE_URL=http://gentle:8765
+    depends_on:
+      - gentle
+    restart: unless-stopped
+    networks:
+      - speech-net
+
+  # 前端 Web 服务
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.web
+    container_name: speech-scoring-web
+    ports:
+      - "80:80"
+    depends_on:
+      - api
+    restart: unless-stopped
+    networks:
+      - speech-net
+
+  # Gentle 语音对齐服务
+  gentle:
+    image: lowerquality/gentle
+    container_name: speech-scoring-gentle
+    restart: unless-stopped
+    networks:
+      - speech-net
+    # 调试时可取消注释下面的端口映射
+    # ports:
+    #   - "8765:8765"
+
+networks:
+  speech-net:
+    driver: bridge

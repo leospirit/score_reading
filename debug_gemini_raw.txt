@@ -1,0 +1,106 @@
+{
+    "overall_score": 62.0,
+    "accuracy_score": 65.0,
+    "fluency_score": 58.0,
+    "completeness_score": 98.0,
+    "top_errors": [
+        {
+            "phoneme": "/s/ /z/",
+            "description": "名词复数及所有格结尾漏读，如 'lanterns' 读成 'lantern'，'uncle's' 读成 'uncle'。",
+            "words": ["lanterns", "uncle's", "lessons", "sausages"],
+            "improvement": "在朗读时有意识地延长单词末尾的 /s/ 或 /z/ 音，确保舌尖靠近上齿龈，气流均匀流出。"
+        },
+        {
+            "phoneme": "/ð/",
+            "description": "将 'weather' 中的 /ð/ 读成了类似 /d/ 的音，听起来像 'weader'。",
+            "words": ["weather"],
+            "improvement": "练习咬舌音，将舌尖轻轻放在上下齿之间吹气，而不是用舌尖顶住上齿龈发 /d/。"
+        },
+        {
+            "phoneme": "/v/",
+            "description": "将 'vacation' 读成了 'vocation'，且 'visit' 结尾多了一个元音读成了 'visity'。",
+            "words": ["vacation", "visit"],
+            "improvement": "发 /v/ 时上齿咬住下唇；'visit' 结尾的 /t/ 要轻促有力，不要拖带元音。"
+        }
+    ],
+    "word_details": [
+        {
+            "word": "the",
+            "score": 0.0,
+            "mistake_type": "Omission",
+            "phoneme_diagnosis": "漏读定冠词",
+            "comment": "注意 'the last day' 是固定搭配，不能省略。"
+        },
+        {
+            "word": "vacation",
+            "score": 60.0,
+            "mistake_type": "Mispronunciation",
+            "phoneme_diagnosis": "元音 /eɪ/ 读成了 /əʊ/，听起来像 vocation",
+            "comment": "注意第一个音节是 /veɪ/，嘴巴要向两边拉开一点。"
+        },
+        {
+            "word": "weather",
+            "score": 70.0,
+            "mistake_type": "Mispronunciation",
+            "phoneme_diagnosis": "Said /d/ instead of /ð/",
+            "comment": "咬舌音 /ð/ 没发出来，变成了 'weader'。"
+        },
+        {
+            "word": "you'll",
+            "score": 40.0,
+            "mistake_type": "Mispronunciation",
+            "phoneme_diagnosis": "漏读了缩写部分的 /l/ 音，读成了 'you'",
+            "comment": "缩写 'll' 需要舌尖抵住上齿龈发音，不能只读 you。"
+        },
+        {
+            "word": "lanterns",
+            "score": 50.0,
+            "mistake_type": "Mispronunciation",
+            "phoneme_diagnosis": "漏读复数结尾 /z/",
+            "comment": "注意名词复数形式，s 不能丢。"
+        },
+        {
+            "word": "uncle's",
+            "score": 50.0,
+            "mistake_type": "Mispronunciation",
+            "phoneme_diagnosis": "漏读所有格 /z/",
+            "comment": "Uncle's family，这里的 's 表示所属关系，必须读出来。"
+        },
+        {
+            "word": "visit",
+            "score": 65.0,
+            "mistake_type": "Mispronunciation",
+            "phoneme_diagnosis": "结尾多发了一个元音，读成 visity",
+            "comment": "单词结尾要干净利落，不要加多余的音。"
+        },
+        {
+            "word": "can't",
+            "score": 40.0,
+            "mistake_type": "Mispronunciation",
+            "phoneme_diagnosis": "否定词读成了肯定词 can",
+            "comment": "否定词 can't 的 /t/ 虽然可以失爆，但前面的元音要发得更长更重，以示区别。"
+        },
+        {
+            "word": "sausages",
+            "score": 50.0,
+            "mistake_type": "Mispronunciation",
+            "phoneme_diagnosis": "漏读复数结尾 /ɪz/",
+            "comment": "这个词的复数发音较难，是 /ɪz/，请多加练习。"
+        }
+    ],
+    "general_advice": "学生整体朗读比较完整，但存在明显的‘结尾吞音’习惯，尤其是名词复数、所有格和动词结尾。此外，在遇到长句或生词时，会有重复单词（stuttering）的现象，影响了流利度。建议加强对单词末尾辅音的控制力，并练习意群停顿，避免在单词中间或不恰当的地方断句。",
+    "detected_transcript": "Lily, today is last day of school. Where are you going in your winter vocation? I am going to Harbin with my parents. I don't like cold weader. I am afraid of getting a cold. Oh, you be fine. What... what are you going to do there? We are going to see ice lantern and play in the snow. My... my uncle family live there. We are going to visit-y them. Are you going to ski? Yes. I... I can ski now, but I am... but I am going to have skiing... skiing lesson. OK, have nice winter vocation! You too! I bring back... I am going to bring back some sausage for you! I hear they are famous in Harbin. Thank you.",
+    "feedback": {
+        "overall_comment": "同学你好！你的声音很清晰，态度也非常认真，能够完整地读完整个对话。目前的主要问题在于单词结尾的‘小尾巴’（如 s, 's, t）经常被弄丢了，这会让听众在理解语法时产生困惑。另外，朗读时有些紧张，导致了一些不必要的重复。加油，你已经做得很棒了！",
+        "specific_suggestions": [
+            "练习‘咬舌音’：对着镜子发 weather，确保舌尖露出来一点点。",
+            "强化复数意识：看到单词末尾有 s 时，强迫自己停顿 0.1 秒把音发足。",
+            "控制语速：不要急于读完，试着按意群（如 I'm going to Harbin / with my parents）来停顿。"
+        ],
+        "practice_tips": [
+            "录音对比法：听一句原音，自己读一句并录音，对比结尾音是否一致。",
+            "慢速朗读：先用 0.8 倍速朗读，确保每个辅音都到位，再恢复正常语速。"
+        ],
+        "fun_challenge": "试着挑战连续读 5 遍 'Six slippery snails slid slowly'，看能不能把每个 s 都发清楚！"
+    }
+}
