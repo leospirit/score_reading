@@ -1,0 +1,4 @@
+task_id,student_id,student_name,audio_path
+reading-001,student_a,Alice,test_audio.wav
+reading-001,student_b,Bob,test_audio.wav
+reading-002,student_a,Alice,test_audio.wav

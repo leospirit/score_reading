@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { Printer, GripVertical, Check, X, Plus, Eye, Camera, Download } from 'lucide-react';
+import JSZip from 'jszip';
 
 // 可用模块定义
 interface ModuleConfig {
@@ -215,8 +216,28 @@ export default function ReportBuilder() {
         let successCount = 0;
         let errorList: string[] = [];
 
+        let dirHandle: any = null;
+        const zip = new JSZip();
+
         try {
-            const { toPng } = await import('html-to-image');
+            console.log('检查 showDirectoryPicker 支持情况...', 'showDirectoryPicker' in window);
+            if ('showDirectoryPicker' in window) {
+                try {
+                    dirHandle = await (window as any).showDirectoryPicker({
+                        mode: 'readwrite'
+                    });
+                } catch (e: any) {
+                    if (e.name === 'AbortError') {
+                        setIsCapturing(false);
+                        return;
+                    }
+                    console.warn('无法获取目录权限，将回退到 ZIP 打包模式');
+                }
+            } else {
+                console.warn('当前浏览器不支持 Directory Picker API，将使用 ZIP 打包模式');
+            }
+
+            const { toBlob } = await import('html-to-image');
 
             for (let i = 0; i < ids.length; i++) {
                 const id = ids[i];
@@ -230,28 +251,38 @@ export default function ReportBuilder() {
                     const data = await res.json();
                     setReportData(data);
 
+                    // 等待渲染
                     await new Promise<void>(resolve => {
                         requestAnimationFrame(() => {
                             requestAnimationFrame(() => {
-                                setTimeout(resolve, 500);
+                                setTimeout(resolve, 600);
                             });
                         });
                     });
 
                     if (reportRef.current) {
-                        const dataUrl = await toPng(reportRef.current, {
-                            backgroundColor: '#ffffff',
-                            pixelRatio: 2,
-                        });
+                        const fileName = `${data.meta?.student_name || data.meta?.student_id || studentName}_report.png`;
 
-                        const link = document.createElement('a');
-                        const fileName = data.meta?.student_name || data.meta?.student_id || studentName;
-                        link.download = `${fileName}_report.png`;
-                        link.href = dataUrl;
-                        link.click();
+                        if (dirHandle) {
+                            // 直接写入文件夹
+                            const blob = await toBlob(reportRef.current, { backgroundColor: '#ffffff', pixelRatio: 2 });
+                            if (blob) {
+                                const fileHandle = await dirHandle.getFileHandle(fileName, { create: true });
+                                const writable = await fileHandle.createWritable();
+                                await writable.write(blob);
+                                await writable.close();
+                                successCount++;
+                            }
+                        } else {
+                            // 添加到 ZIP
+                            const blob = await toBlob(reportRef.current, { backgroundColor: '#ffffff', pixelRatio: 2 });
+                            if (blob) {
+                                zip.file(fileName, blob);
+                                successCount++;
+                            }
+                        }
 
-                        successCount++;
-                        await new Promise(resolve => setTimeout(resolve, 300));
+                        await new Promise(resolve => setTimeout(resolve, 200));
                     }
                 } catch (err) {
                     console.error(`生成 ${studentName} 报告失败:`, err);
@@ -259,8 +290,18 @@ export default function ReportBuilder() {
                 }
             }
 
+            // 如果使用的是 ZIP 模式，最后触发一次下载
+            if (!dirHandle && successCount > 0) {
+                setBatchProgress(prev => ({ ...prev, name: '正在打包 ZIP...' }));
+                const content = await zip.generateAsync({ type: 'blob' });
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(content);
+                link.download = `reports_batch_${new Date().getTime()}.zip`;
+                link.click();
+            }
+
             if (errorList.length === 0) {
-                alert(`✅ 已成功生成 ${successCount} 份报告图片！`);
+                alert(`✅ 已成功生成 ${successCount} 份报告！${dirHandle ? '文件已存入指定目录。' : '正在下载压缩包。'}`);
             } else {
                 alert(`⚠️ 完成！成功 ${successCount} 份，失败 ${errorList.length} 份\n失败: ${errorList.join(', ')}`);
             }
@@ -307,24 +348,6 @@ export default function ReportBuilder() {
         if (score >= 80) return { label: 'Advanced', color: '#22C55E' };
         if (score >= 60) return { label: 'High-Intermediate', color: '#3B82F6' };
         return { label: 'Beginner', color: '#EF4444' };
-    };
-
-    // 获取最严重的发音错误（按单词分组）
-    const getTopMistakes = () => {
-        if (!reportData?.analysis?.mistakes) return [];
-        const byWord: Record<string, { word: string; targets: string[]; avgScore: number }> = {};
-
-        reportData.analysis.mistakes.forEach(m => {
-            if (!byWord[m.word]) {
-                byWord[m.word] = { word: m.word, targets: [], avgScore: 0 };
-            }
-            byWord[m.word].targets.push(m.target);
-            byWord[m.word].avgScore = (byWord[m.word].avgScore + m.score) / 2;
-        });
-
-        return Object.values(byWord)
-            .sort((a, b) => a.avgScore - b.avgScore)
-            .slice(0, 5);
     };
 
     return (
@@ -704,7 +727,7 @@ export default function ReportBuilder() {
                                                     <div className="bg-gray-50 rounded-lg p-4 mb-4 leading-loose text-base">
                                                         {reportData.alignment.words.map((word, idx) => (
                                                             <span key={idx}>
-                                                                <span className="text-gray-800">{word.word}</span>
+                                                                <span className="text-gray-800">{word.word} </span>
                                                                 {word.pause && renderPauseMarker(word.pause)}
                                                             </span>
                                                         ))}

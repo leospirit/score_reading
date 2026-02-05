@@ -16,6 +16,7 @@
     "@types/react-router-dom": "^5.3.3",
     "html-to-image": "^1.11.13",
     "html2canvas": "^1.4.1",
+    "jszip": "^3.10.1",
     "lucide-react": "^0.562.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
