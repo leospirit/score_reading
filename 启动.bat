@@ -32,9 +32,12 @@ if %errorlevel% neq 0 (
 :: 检查 .env 文件
 if not exist .env (
     echo [提示] 未找到 .env 文件，正在创建...
-    echo OPENAI_API_KEY=your-api-key-here > .env
+    echo # API Keys Configuration > .env
+    echo OPENAI_API_KEY=your-openai-key-here >> .env
+    echo GEMINI_API_KEY=your-gemini-key-here >> .env
+    echo AZURE_API_KEY=your-azure-key-here >> .env
     echo.
-    echo [重要] 请编辑 .env 文件，填入你的 OpenAI API Key！
+    echo [重要] 请编辑 .env 文件，填入所需引擎的 API Key（可以只填一个或多个）！
     echo.
     notepad .env
     pause

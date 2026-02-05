@@ -4,11 +4,14 @@
 
 ### 前置要求
 1. 安装 [Docker Desktop](https://www.docker.com/products/docker-desktop/)
-2. 获取 [OpenAI API Key](https://platform.openai.com/api-keys)
+2. 获取以下至少一个 AI 引擎的 API Key:
+   - [OpenAI API Key](https://platform.openai.com/api-keys) (推荐)
+   - [Google Gemini API Key](https://aistudio.google.com/app/apikey) (用于 Pro 评估)
+   - [Azure Speech Key](https://portal.azure.com/) (用于 Azure 引擎)
 
 ### 启动步骤
 1. 双击 `启动.bat`
-2. 首次运行会提示填入 OpenAI API Key
+2. 首次运行会弹出记事本提示填入 API Key（OpenAI/Gemini/Azure 选填）
 3. 等待构建完成（首次约 5-10 分钟）
 4. 浏览器自动打开 http://localhost
 
